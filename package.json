@@ -1,0 +1,9 @@
+{
+  "name": "myvaludex-cards-cdn",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "update": "node scripts/fetch-cards.mjs"
+  },
+  "engines": { "node": ">=20.0.0" }
+}

@@ -2,8 +2,8 @@ name: Update Cards (daily)
 
 on:
   schedule:
-    - cron: "0 3 * * *"    # täglich 03:00 UTC
-  workflow_dispatch:        # manuell startbar
+    - cron: "0 3 * * *"     # täglich 03:00 UTC
+  workflow_dispatch:         # manuell startbar
 
 permissions:
   contents: write
@@ -16,7 +16,7 @@ jobs:
       - name: Checkout (full history)
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0      # wichtig für rebase
+          fetch-depth: 0
           ref: main
 
       - name: Setup Node
@@ -24,7 +24,8 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Pre-pull (make sure we're up-to-date)
+      # Vor dem Bauen: auf neuesten Stand rebasen
+      - name: Pre-pull (rebase onto latest main)
         run: |
           git fetch origin main
           git pull --rebase origin main || true
@@ -49,11 +50,18 @@ jobs:
           fi
           git commit -m "chore: refresh cards ($(date -u +'%Y-%m-%d'))"
 
-      - name: Rebase onto latest main (just in case)
+      # Kurz vor dem Push nochmal rebasen (falls du im Browser etwas geändert hast)
+      - name: Rebase again (just in case)
         run: |
           git fetch origin main
           git pull --rebase origin main || true
 
-      - name: Push
+      - name: Push (with fallback)
         run: |
-          git push origin HEAD:main
+          set -e
+          if ! git push origin HEAD:main; then
+            echo "Non-fast-forward, trying force-with-lease…"
+            git fetch origin main
+            git pull --rebase origin main || true
+            git push --force-with-lease origin HEAD:main
+          fi

@@ -1,8 +1,8 @@
-name: Cards Update (daily)
+name: Cards Daily
 
 on:
   schedule:
-    - cron: "0 3 * * *"
+    - cron: "0 3 * * *"   # täglich 03:00 UTC
   workflow_dispatch:
 
 permissions:
@@ -28,12 +28,8 @@ jobs:
           git fetch origin main
           git reset --hard origin/main
 
-      # >>> NEU: pokedex.json generieren (EN-Namen -> Dex 1..1025)
-      - name: Build pokedex.json (EN)
-        run: node scripts/build-pokedex.mjs
-
-      # Karten-JSONs bauen (nutzt data/pokedex.json automatisch)
-      - name: Run builder
+      # Wichtig: KEIN build-pokedex hier! Wir verwenden die vorhandene Datei.
+      - name: Run builder (cards)
         env:
           POKEMONTCG_API_KEY: ${{ secrets.POKEMONTCG_API_KEY }}
         run: npm run update

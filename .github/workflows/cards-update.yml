@@ -1,0 +1,58 @@
+name: Cards Update (daily)
+
+on:
+  schedule:
+    - cron: "0 3 * * *"    # täglich 03:00 UTC
+  workflow_dispatch:        # manuell startbar
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout (full history)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - name: Setup Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # Stelle sicher, dass wir exakt auf dem aktuellen Remote-Stand starten
+      - name: Sync to latest remote main (hard reset)
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+
+      - name: Run builder
+        env:
+          POKEMONTCG_API_KEY: ${{ secrets.POKEMONTCG_API_KEY }}
+        run: |
+          npm run update
+
+      # Commit & Push – inkl. Rebase und Fallback force-with-lease
+      - name: Commit & Push (safe)
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: refresh cards ($(date -u +'%Y-%m-%d'))"
+          # zuerst normal versuchen
+          if git push origin HEAD:main; then
+            exit 0
+          fi
+          echo "Non-fast-forward, rebasing…"
+          git fetch origin main
+          git pull --rebase origin main || true
+          # falls es immer noch klemmt: force-with-lease (sicherer Force)
+          git push --force-with-lease origin HEAD:main

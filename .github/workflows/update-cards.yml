@@ -2,8 +2,8 @@ name: Update Cards (daily)
 
 on:
   schedule:
-    - cron: "0 3 * * *"   # täglich 03:00 UTC
-  workflow_dispatch:       # manuell startbar
+    - cron: "0 3 * * *"    # täglich 03:00 UTC
+  workflow_dispatch:        # manuell startbar
 
 permissions:
   contents: write
@@ -16,13 +16,18 @@ jobs:
       - name: Checkout (full history)
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0          # wichtig für rebase/pull
+          fetch-depth: 0      # wichtig für rebase
           ref: main
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+
+      - name: Pre-pull (make sure we're up-to-date)
+        run: |
+          git fetch origin main
+          git pull --rebase origin main || true
 
       - name: Run builder
         env:
@@ -44,11 +49,9 @@ jobs:
           fi
           git commit -m "chore: refresh cards ($(date -u +'%Y-%m-%d'))"
 
-      # <- WICHTIG: erst neu ziehen, dann pushen
-      - name: Rebase onto latest main
+      - name: Rebase onto latest main (just in case)
         run: |
           git fetch origin main
-          # versucht sauberes Rebase; falls nichts zu tun, trotzdem ok
           git pull --rebase origin main || true
 
       - name: Push

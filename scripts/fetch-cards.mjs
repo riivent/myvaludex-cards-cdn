@@ -9,12 +9,16 @@ const API_BASE = "https://api.pokemontcg.io/v2/cards";
 const PAGE_SIZE = 250;
 const OUT_DIR = join(__dirname, "..", "public", "cards", "name");
 const NAMES_FILE = join(__dirname, "..", "data", "names.json");
+const POKEDEX_FILE = join(__dirname, "..", "data", "pokedex.json"); // <— NEU
 
-// Optional: GitHub Secret POKEMONTCG_API_KEY setzen (später in Schritt 4)
+// Optional: GitHub Secret POKEMONTCG_API_KEY (empfohlen)
 const API_HEADERS = process.env.POKEMONTCG_API_KEY
   ? { "X-Api-Key": process.env.POKEMONTCG_API_KEY }
   : {};
 
+let POKEDEX_MAP = {}; // wird in main() geladen
+
+/* ---------------- Slimming ---------------- */
 function slimCard(c) {
   return {
     id: c.id,
@@ -29,13 +33,29 @@ function slimCard(c) {
   };
 }
 
-function buildQuery(raw) {
-  const n = raw.trim();
+/* ---------------- Query-Building ---------------- */
+function normalizeQuotes(s) {
+  return s.replace(/"/g, '\\"');
+}
 
-  // Farfetch'd Varianten
+function dexForName(name) {
+  if (!name) return null;
+  // exakte Keys oder case-insensitive Match
+  if (POKEDEX_MAP[name] != null) return POKEDEX_MAP[name];
+  const key = Object.keys(POKEDEX_MAP).find(k => k.toLowerCase() === name.toLowerCase());
+  return key ? POKEDEX_MAP[key] : null;
+}
+
+function buildQuery(nameRaw) {
+  const n = (nameRaw || "").trim();
+
+  // 1) Falls Mapping existiert → sicher über nationalPokedexNumbers suchen
+  const dex = dexForName(n);
+  if (dex != null) return `nationalPokedexNumbers:${dex}`;
+
+  // 2) Spezialfälle (falls kein Mapping gepflegt ist)
   if (/^farfetch/i.test(n)) return `(name:"Farfetch'd" OR name:"Farfetchd")`;
 
-  // Nidoran ♂ / ♀
   if (/nidoran/i.test(n)) {
     const male = /(♂|male|männlich|\(m\)|\bm\b)/i.test(n);
     const female = /(♀|female|weiblich|\(w\)|\bf\b)/i.test(n);
@@ -46,13 +66,13 @@ function buildQuery(raw) {
     return `(${nm} OR ${nf})`;
   }
 
-  // Mr. Mime
   if (/^mr\.?\s*mime/i.test(n)) return `name:"Mr. Mime"`;
 
-  // Standard: genauer Name
-  return `name:"${n.replace(/"/g, '\\"')}"`;
+  // 3) Standard: Name-Phrase
+  return `name:"${normalizeQuotes(n)}"`;
 }
 
+/* ---------------- Fetching ---------------- */
 async function fetchAllPages(q) {
   let page = 1;
   let out = [];
@@ -69,7 +89,6 @@ async function fetchAllPages(q) {
     if (data.length < PAGE_SIZE) break;
     page++;
     if (page > 50) break; // safety
-    // kleine Pause, um Limits zu schonen
     await sleep(120);
   }
   return out;
@@ -103,7 +122,6 @@ async function ensureDir(d) {
 }
 
 function outPathForName(name) {
-  // sicherer Dateiname (URL-encoded)
   return join(OUT_DIR, `${encodeURIComponent(name)}.json`);
 }
 
@@ -117,11 +135,21 @@ async function buildOne(name) {
 
 function sleep(ms){ return new Promise(r => setTimeout(r, ms)); }
 
+/* ---------------- Main ---------------- */
 async function main() {
   const names = JSON.parse(await readFile(NAMES_FILE, "utf8"));
+
+  // Mapping laden (optional)
+  try {
+    const raw = await readFile(POKEDEX_FILE, "utf8");
+    POKEDEX_MAP = JSON.parse(raw || "{}");
+  } catch {
+    POKEDEX_MAP = {};
+  }
+
   await ensureDir(OUT_DIR);
 
-  const CONCURRENCY = 4; // behutsam/stabil
+  const CONCURRENCY = 4;
   let i = 0;
   const results = [];
 
@@ -141,7 +169,6 @@ async function main() {
 
   await Promise.all(Array.from({ length: CONCURRENCY }, worker));
 
-  // Index publizieren (Name + Count)
   await writeFile(
     join(__dirname, "..", "public", "cards", "name", "index.json"),
     JSON.stringify(results, null, 2)

@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: cards-daily
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,7 +20,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          ref: main
 
       - name: Setup Node 20
         uses: actions/setup-node@v4
@@ -28,26 +31,43 @@ jobs:
           git fetch origin main
           git reset --hard origin/main
 
-      # Wichtig: KEIN build-pokedex hier! Wir verwenden die vorhandene Datei.
+      # Falls du Dependencies hast, behalte das. Sonst ist es no-op.
+      - name: Install (optional)
+        run: npm ci || true
+
       - name: Run builder (cards)
         env:
           POKEMONTCG_API_KEY: ${{ secrets.POKEMONTCG_API_KEY }}
         run: npm run update
 
-      - name: Commit & Push (safe)
+      - name: Coverage summary (cards)
+        run: |
+          node -e "
+            const fs=require('fs');
+            const pathA='./public/cards/name/index.json';
+            const pathB='./public/cards/index.json';
+            const p=fs.existsSync(pathA)?pathA:pathB;
+            const idx=JSON.parse(fs.readFileSync(p,'utf8'));
+            const total=idx.length;
+            const zeros=idx.filter(x=>x.count===0);
+            console.log('TOTAL names in index:', total);
+            console.log('ZERO-count species:', zeros.length);
+            console.log('First 20 zero-count:', zeros.slice(0,20).map(z=>z.name).join(', '));
+          "
+
+      - name: Configure Git author
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          if git diff --cached --quiet; then
+
+      - name: Commit & Push (safe)
+        run: |
+          set -e
+          if git diff --quiet; then
             echo "No changes to commit."
             exit 0
           fi
+          git add -A
           git commit -m "chore: refresh cards ($(date -u +'%Y-%m-%d'))"
-          if git push origin HEAD:main; then
-            exit 0
-          fi
-          echo "Non-fast-forward, rebasing…"
-          git fetch origin main
           git pull --rebase origin main || true
           git push --force-with-lease origin HEAD:main

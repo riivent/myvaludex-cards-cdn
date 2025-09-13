@@ -15,6 +15,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout (full history)
         uses: actions/checkout@v4
@@ -31,7 +32,7 @@ jobs:
           git fetch origin main
           git reset --hard origin/main
 
-      # Falls du Dependencies hast, behalte das. Sonst ist es no-op.
+      # Falls du Dependencies hast, bleibt das; sonst macht es nichts.
       - name: Install (optional)
         run: npm ci || true
 
@@ -44,16 +45,44 @@ jobs:
         run: |
           node -e "
             const fs=require('fs');
-            const pathA='./public/cards/name/index.json';
-            const pathB='./public/cards/index.json';
-            const p=fs.existsSync(pathA)?pathA:pathB;
+            const A='./public/cards/name/index.json';
+            const B='./public/cards/index.json';
+            const p=fs.existsSync(A)?A:(fs.existsSync(B)?B:null);
+            if(!p){ console.log('index.json not found'); process.exit(0); }
             const idx=JSON.parse(fs.readFileSync(p,'utf8'));
             const total=idx.length;
             const zeros=idx.filter(x=>x.count===0);
+            const first20=zeros.slice(0,20).map(z=>z.name);
             console.log('TOTAL names in index:', total);
             console.log('ZERO-count species:', zeros.length);
-            console.log('First 20 zero-count:', zeros.slice(0,20).map(z=>z.name).join(', '));
+            console.log('First 20 zero-count:', first20.join(', '));
+            const sum=[
+              '## Cards coverage',
+              '',
+              `- **TOTAL names:** ${total}`,
+              `- **ZERO-count species:** ${zeros.length}`,
+              '',
+              (first20.length? '**First 20 zero-count:** ' + first20.join(', ') : '')
+            ].join('\n');
+            try { fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, sum+'\n'); } catch {}
           "
+
+      - name: Verify vs API (diff)
+        env:
+          POKEMONTCG_API_KEY: ${{ secrets.POKEMONTCG_API_KEY }}
+        run: node scripts/verify-cards.mjs
+
+      - name: Upload reports (index & verify)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cards-reports
+          path: |
+            public/cards/index.json
+            public/cards/name/index.json
+            public/cards/_verify.json
+          if-no-files-found: ignore
+          retention-days: 7
 
       - name: Configure Git author
         run: |

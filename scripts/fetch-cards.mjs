@@ -8,20 +8,21 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 /* ===================== Config ===================== */
 const API_BASE = "https://api.pokemontcg.io/v2/cards";
 const PAGE_SIZE = 250;
-const OUT_DIR = join(__dirname, "..", "public", "cards", "name");
-const POKEDEX_FILE = join(__dirname, "..", "data", "pokedex.json");
+
+const OUT_DIR = join(__dirname, "..", "public", "cards", "name");     // /public/cards/name/<Name>.json
+const POKEDEX_FILE = join(__dirname, "..", "data", "pokedex.json");   // { "Bulbasaur": 1, ... }
 
 // Tuning
-const CHUNK_CONCURRENCY = 2;      // <-- wie gewünscht
-const WRITE_PAUSE_MS = 5;
+const CHUNK_CONCURRENCY = 3;       // Parallelität für Dex-Bereiche
+const WRITE_PAUSE_MS = 5;          // kleine Pause zwischen Dateischreibungen
 
-// Gen-basierte Ranges
+// Dex-Ranges (nach Generationen)
 const DEX_CHUNKS = [
   [1,151],[152,251],[252,386],[387,493],[494,649],
   [650,721],[722,809],[810,905],[906,1025]
 ];
 
-// API headers (Key optional, empfohlen)
+// API headers (Key optional – empfohlen)
 const API_HEADERS = {
   "Accept": "application/json",
   "User-Agent": "myvaludex-cards-cdn/1.0 (+https://github.com/)",
@@ -34,12 +35,14 @@ function isTransientStatus(s){ return s===408 || s===429 || (s>=500&&s<=599) || 
 
 async function httpJson(url, { maxRetries = 6, baseDelay = 800 } = {}) {
   let lastErr;
-  for (let a=0; a<=maxRetries; a++) {
-    try {
+  for (let a=0; a<=maxRetries; a++){
+    try{
       const res = await fetch(url, { headers: API_HEADERS });
       if (res.ok) return await res.json();
-      if (!isTransientStatus(res.status) || a===maxRetries) throw new Error(`API ${res.status}`);
-    } catch (e) { lastErr = e; }
+      if (!isTransientStatus(res.status) || a===maxRetries) {
+        throw new Error(`API ${res.status}`);
+      }
+    }catch(e){ lastErr = e; }
     const delay = baseDelay * Math.pow(2, a) + Math.floor(Math.random()*300);
     await sleep(delay);
   }
@@ -69,7 +72,7 @@ function sortCards(arr){
     return (a.id||"").localeCompare(b.id||"");
   });
 }
-async function ensureDir(d){ await mkdir(d, {recursive:true}); }
+async function ensureDir(d){ await mkdir(d, { recursive: true }); }
 
 /* ===================== Fetching ===================== */
 async function fetchRangeBasic(start, end){
@@ -83,14 +86,18 @@ async function fetchRangeBasic(start, end){
     total = typeof body?.totalCount === "number" ? body.totalCount : all.length + data.length;
     all.push(...data);
     if (data.length < PAGE_SIZE) break;
-    page++; guard++; if (guard > 140) break;
+    page++; guard++; if (guard > 140) break;  // Safety guard
     await sleep(120);
   }
   return all;
 }
 
 async function fetchByName(name){
-  const q = `name:"${String(name).replace(/"/g,'\\"')}"`;
+  // Spezial: Ogerpon hat viele Varianten – mit OR-Query holen.
+  const q = name === "Ogerpon"
+    ? '(name:"Ogerpon" OR name:"Ogerpon ex" OR name:"Ogerpon (Teal Mask)" OR name:"Ogerpon (Hearthflame Mask)" OR name:"Ogerpon (Wellspring Mask)" OR name:"Ogerpon (Cornerstone Mask)")'
+    : `name:"${String(name).replace(/"/g,'\\"')}"`;
+
   const url = `${API_BASE}?q=${encodeURIComponent(q)}&page=1&pageSize=${PAGE_SIZE}&orderBy=set.releaseDate,number`;
   const body = await httpJson(url, { maxRetries: 6, baseDelay: 900 });
   return Array.isArray(body?.data) ? body.data : [];
@@ -110,7 +117,7 @@ async function fetchRangeAdaptive(start, end, numToName, depth=0){
       ]);
       return [...a, ...b];
     }
-    // letzter Versuch: Name-Fetch pro Dexnummer (kleine Bereiche)
+    // letzter Versuch: kleine Bereiche per Namens-Fallback
     console.warn(`Fallback to names for ${start}-${end}`);
     const out = [];
     for (let n=start; n<=end; n++){
@@ -126,23 +133,24 @@ async function fetchRangeAdaptive(start, end, numToName, depth=0){
 
 /* ===================== Main ===================== */
 async function main(){
+  // Pokedex laden (Name -> Nummer)
   const rawDex = await readFile(POKEDEX_FILE, "utf8");
-  const dexMap = JSON.parse(rawDex);   // EN-Name -> Nummer
-  const numToName = {};                // Nummer -> EN-Name
+  const dexMap = JSON.parse(rawDex);
+  const numToName = {};
   for (const [name, num] of Object.entries(dexMap)) numToName[num] = name;
 
   await ensureDir(OUT_DIR);
 
-  // Sammelbucket: Name -> Karten[]
+  // Sammel-Bucket
   const bucket = {};
   for (const name of Object.keys(dexMap)) bucket[name] = [];
 
-  // Chunks mit limitierter Parallelität
+  // Dex-Chunks mit begrenzter Parallelität
   let idx=0;
   async function worker(){
     while (idx < DEX_CHUNKS.length) {
-      const myIndex = idx++;
-      const [start, end] = DEX_CHUNKS[myIndex];
+      const my = idx++;
+      const [start, end] = DEX_CHUNKS[my];
       console.log(`Fetch range ${start}-${end}`);
 
       let cards = [];
@@ -153,6 +161,7 @@ async function main(){
         cards = [];
       }
 
+      // Karten den passenden Namen zuordnen
       for (const c of cards) {
         const nums = Array.isArray(c.nationalPokedexNumbers) ? c.nationalPokedexNumbers : [];
         for (const dn of nums) {
@@ -160,29 +169,38 @@ async function main(){
           if (name) bucket[name].push(c);
         }
       }
-
       await sleep(400);
     }
   }
   await Promise.all(Array.from({length: CHUNK_CONCURRENCY}, () => worker()));
 
-  // Augment: Karten ohne Dex-Nummer via Namenssuche (Paradox/Sonderfälle)
+  // Augment: Namen, bei denen oft Karten ohne Dex-Nummer existieren
   const AUGMENT_SET = new Set([
+    // Paradox (Past/Future)
     "Great Tusk","Scream Tail","Brute Bonnet","Flutter Mane","Slither Wing","Sandy Shocks","Roaring Moon",
     "Walking Wake","Raging Bolt","Gouging Fire",
     "Iron Treads","Iron Bundle","Iron Hands","Iron Jugulis","Iron Moth","Iron Thorns","Iron Valiant",
     "Iron Leaves","Iron Crown","Iron Boulder",
+
+    // Ogerpon (+ Masken)
+    "Ogerpon","Ogerpon (Teal Mask)","Ogerpon (Hearthflame Mask)",
+    "Ogerpon (Wellspring Mask)","Ogerpon (Cornerstone Mask)",
+
+    // Sonderzeichen/Punkt/Apostroph/Bindestrich
     "Mr. Mime","Mr. Rime","Mime Jr.","Farfetch'd","Sirfetch'd","Ho-Oh","Type: Null",
     "Jangmo-o","Hakamo-o","Kommo-o","Porygon-Z"
   ]);
+
   const namesForAugment = [];
   for (const [name, num] of Object.entries(dexMap)) {
     const have = (bucket[name] || []).length;
+    // Paldea (906+) mit wenig Treffern + definierte Spezialnamen
     if (AUGMENT_SET.has(name) || (num >= 906 && have < 6)) namesForAugment.push(name);
   }
+
   console.log(`Augment via name-search for ${namesForAugment.length} species...`);
-  const AUG_CONCURRENCY = 3;
   let ai = 0;
+  const AUG_CONCURRENCY = 3;
   await Promise.all(Array.from({length: AUG_CONCURRENCY}, async () => {
     while (ai < namesForAugment.length) {
       const i = ai++;
@@ -219,7 +237,7 @@ async function main(){
     count: (bucket[n] ? dedupeById(bucket[n]).length : 0)
   }));
 
-  // 1) im name/-Ordner (kann in GitHub-UI wegen 1000er-Grenze ausgeblendet werden)
+  // 1) im name/-Ordner (GitHub-UI zeigt evtl. nur 1000 Dateien)
   await writeFile(join(OUT_DIR, "index.json"), JSON.stringify(finalIndex, null, 2));
   // 2) zusätzlich eine Ebene höher – immer gut auffindbar
   await writeFile(join(__dirname, "..", "public", "cards", "index.json"), JSON.stringify(finalIndex, null, 2));

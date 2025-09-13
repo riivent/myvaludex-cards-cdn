@@ -5,28 +5,30 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
+/* ===================== Config ===================== */
 const API_BASE = "https://api.pokemontcg.io/v2/cards";
 const PAGE_SIZE = 250;
 const OUT_DIR = join(__dirname, "..", "public", "cards", "name");
 const POKEDEX_FILE = join(__dirname, "..", "data", "pokedex.json");
 
-// --- Tuning ---
-const CHUNK_CONCURRENCY = 1;       // bei Bedarf später auf 2–3 erhöhen
+// Tuning
+const CHUNK_CONCURRENCY = 2;      // <-- wie gewünscht
 const WRITE_PAUSE_MS = 5;
 
-// API headers (Key optional, aber empfohlen)
+// Gen-basierte Ranges
+const DEX_CHUNKS = [
+  [1,151],[152,251],[252,386],[387,493],[494,649],
+  [650,721],[722,809],[810,905],[906,1025]
+];
+
+// API headers (Key optional, empfohlen)
 const API_HEADERS = {
   "Accept": "application/json",
   "User-Agent": "myvaludex-cards-cdn/1.0 (+https://github.com/)",
   ...(process.env.POKEMONTCG_API_KEY ? { "X-Api-Key": process.env.POKEMONTCG_API_KEY } : {})
 };
 
-// Gen-basierte grobe Ranges
-const DEX_CHUNKS = [
-  [1,151],[152,251],[252,386],[387,493],[494,649],
-  [650,721],[722,809],[810,905],[906,1025]
-];
-
+/* ===================== Utils ===================== */
 function sleep(ms){ return new Promise(r => setTimeout(r, ms)); }
 function isTransientStatus(s){ return s===408 || s===429 || (s>=500&&s<=599) || s===404; }
 
@@ -67,10 +69,9 @@ function sortCards(arr){
     return (a.id||"").localeCompare(b.id||"");
   });
 }
-
 async function ensureDir(d){ await mkdir(d, {recursive:true}); }
 
-/* ---------- Basis: kompletten Range seitenweise holen ---------- */
+/* ===================== Fetching ===================== */
 async function fetchRangeBasic(start, end){
   const all = [];
   let page=1, guard=0, total=Infinity;
@@ -88,7 +89,6 @@ async function fetchRangeBasic(start, end){
   return all;
 }
 
-/* ---------- Fallback: einzelne Namen holen ---------- */
 async function fetchByName(name){
   const q = `name:"${String(name).replace(/"/g,'\\"')}"`;
   const url = `${API_BASE}?q=${encodeURIComponent(q)}&page=1&pageSize=${PAGE_SIZE}&orderBy=set.releaseDate,number`;
@@ -96,7 +96,6 @@ async function fetchByName(name){
   return Array.isArray(body?.data) ? body.data : [];
 }
 
-/* ---------- Adaptive Strategie: Range halbieren -> notfalls Name ---------- */
 async function fetchRangeAdaptive(start, end, numToName, depth=0){
   try {
     return await fetchRangeBasic(start, end);
@@ -111,44 +110,25 @@ async function fetchRangeAdaptive(start, end, numToName, depth=0){
       ]);
       return [...a, ...b];
     }
-    // letzter Versuch: per Namen (kleiner Bereich)
+    // letzter Versuch: Name-Fetch pro Dexnummer (kleine Bereiche)
     console.warn(`Fallback to names for ${start}-${end}`);
     const out = [];
     for (let n=start; n<=end; n++){
       const name = numToName[n];
       if (!name) continue;
-      try {
-        const byName = await fetchByName(name);
-        out.push(...byName);
-      } catch (e2) {
-        console.error(`Name fallback failed for ${name}: ${String(e2?.message||e2)}`);
-      }
+      try { out.push(...(await fetchByName(name))); }
+      catch (e2){ console.error(`Name fallback failed for ${name}: ${String(e2?.message||e2)}`); }
       await sleep(120);
     }
     return out;
   }
 }
 
-/* ---------- Dateien für einen Chunk schreiben ---------- */
-async function writeChunkFiles({start, end}, numToName, bucket){
-  const namesInChunk = Object.entries(numToName)
-    .filter(([num]) => Number(num) >= start && Number(num) <= end)
-    .map(([, name]) => name);
-
-  for (const name of namesInChunk) {
-    const raw = bucket[name] || [];
-    const slim = sortCards(dedupeById(raw.map(slimCard)));
-    const path = join(OUT_DIR, `${encodeURIComponent(name)}.json`);
-    await writeFile(path, JSON.stringify(slim));
-    await sleep(WRITE_PAUSE_MS);
-  }
-}
-
-/* ---------------- Main ---------------- */
+/* ===================== Main ===================== */
 async function main(){
   const rawDex = await readFile(POKEDEX_FILE, "utf8");
-  const dexMap = JSON.parse(rawDex);          // EN-Name -> Nummer
-  const numToName = {};                       // Nummer -> EN-Name
+  const dexMap = JSON.parse(rawDex);   // EN-Name -> Nummer
+  const numToName = {};                // Nummer -> EN-Name
   for (const [name, num] of Object.entries(dexMap)) numToName[num] = name;
 
   await ensureDir(OUT_DIR);
@@ -157,6 +137,7 @@ async function main(){
   const bucket = {};
   for (const name of Object.keys(dexMap)) bucket[name] = [];
 
+  // Chunks mit limitierter Parallelität
   let idx=0;
   async function worker(){
     while (idx < DEX_CHUNKS.length) {
@@ -169,7 +150,7 @@ async function main(){
         cards = await fetchRangeAdaptive(start, end, numToName, 0);
       } catch (e) {
         console.error(`Range ${start}-${end} failed hard: ${String(e?.message||e)}`);
-        cards = []; // weiter gehen, wir schreiben leere Dateien
+        cards = [];
       }
 
       for (const c of cards) {
@@ -180,23 +161,70 @@ async function main(){
         }
       }
 
-      // Zwischenergebnis schreiben
-      await writeChunkFiles({start, end}, numToName, bucket);
-
-      // Partial-Index aktualisieren
-      const partialIndex = Object.entries(dexMap)
-        .sort((a,b)=>a[1]-b[1])
-        .map(([name]) => ({ name, count: dedupeById(bucket[name]).length }));
-      await writeFile(join(OUT_DIR, "index.json"), JSON.stringify(partialIndex, null, 2));
-
       await sleep(400);
     }
   }
+  await Promise.all(Array.from({length: CHUNK_CONCURRENCY}, () => worker()));
 
-  const workers = Array.from({length: CHUNK_CONCURRENCY}, () => worker());
-  await Promise.all(workers);
+  // Augment: Karten ohne Dex-Nummer via Namenssuche (Paradox/Sonderfälle)
+  const AUGMENT_SET = new Set([
+    "Great Tusk","Scream Tail","Brute Bonnet","Flutter Mane","Slither Wing","Sandy Shocks","Roaring Moon",
+    "Walking Wake","Raging Bolt","Gouging Fire",
+    "Iron Treads","Iron Bundle","Iron Hands","Iron Jugulis","Iron Moth","Iron Thorns","Iron Valiant",
+    "Iron Leaves","Iron Crown","Iron Boulder",
+    "Mr. Mime","Mr. Rime","Mime Jr.","Farfetch'd","Sirfetch'd","Ho-Oh","Type: Null",
+    "Jangmo-o","Hakamo-o","Kommo-o","Porygon-Z"
+  ]);
+  const namesForAugment = [];
+  for (const [name, num] of Object.entries(dexMap)) {
+    const have = (bucket[name] || []).length;
+    if (AUGMENT_SET.has(name) || (num >= 906 && have < 6)) namesForAugment.push(name);
+  }
+  console.log(`Augment via name-search for ${namesForAugment.length} species...`);
+  const AUG_CONCURRENCY = 3;
+  let ai = 0;
+  await Promise.all(Array.from({length: AUG_CONCURRENCY}, async () => {
+    while (ai < namesForAugment.length) {
+      const i = ai++;
+      const name = namesForAugment[i];
+      try {
+        const extra = await fetchByName(name);
+        const seen = new Set((bucket[name] || []).map(c => c.id));
+        let added = 0;
+        for (const c of extra) {
+          if (!seen.has(c.id)) { (bucket[name] ||= []).push(c); seen.add(c.id); added++; }
+        }
+        if (added) console.log(`+ ${name}: +${added} via name`);
+      } catch (e) {
+        console.warn(`augment failed for ${name}: ${String(e?.message||e)}`);
+      }
+      await sleep(120);
+    }
+  }));
 
-  console.log("DONE: all chunks processed");
+  /* ---------- Finaler Pass: garantiert alle 1025 Dateien + Index an 2 Orten ---------- */
+  const namesAll = Object.entries(dexMap)
+    .sort((a,b) => a[1] - b[1])
+    .map(([n]) => n);
+
+  for (const name of namesAll) {
+    const raw = bucket[name] || [];
+    const slim = sortCards(dedupeById(raw.map(slimCard)));
+    await writeFile(join(OUT_DIR, `${encodeURIComponent(name)}.json`), JSON.stringify(slim));
+    await sleep(WRITE_PAUSE_MS);
+  }
+
+  const finalIndex = namesAll.map(n => ({
+    name: n,
+    count: (bucket[n] ? dedupeById(bucket[n]).length : 0)
+  }));
+
+  // 1) im name/-Ordner (kann in GitHub-UI wegen 1000er-Grenze ausgeblendet werden)
+  await writeFile(join(OUT_DIR, "index.json"), JSON.stringify(finalIndex, null, 2));
+  // 2) zusätzlich eine Ebene höher – immer gut auffindbar
+  await writeFile(join(__dirname, "..", "public", "cards", "index.json"), JSON.stringify(finalIndex, null, 2));
+
+  console.log("DONE:", namesAll.length, "names");
 }
 
 main().catch(err => { console.error(err); process.exit(1); });

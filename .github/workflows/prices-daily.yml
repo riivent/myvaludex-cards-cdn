@@ -1,346 +1,47 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
-import { useNavigate } from "react-router-dom";
-import { pokedex } from "../data/pokedex";
+name: Prices Daily
 
-/* ==== HAPTIC ====================================================== */
-const triggerHaptic = (kind = "light") => {
-  try {
-    const vibrate =
-      typeof navigator !== "undefined" &&
-      typeof navigator.vibrate === "function"
-        ? navigator.vibrate.bind(navigator)
-        : null;
-    if (vibrate) {
-      if (kind === "heavy") vibrate(30);
-      else if (kind === "medium") vibrate([15, 30, 15]);
-      else if (kind === "success") vibrate([10, 50, 10]);
-      else vibrate(12);
-    }
-    if (window?.webkit?.messageHandlers?.haptic?.postMessage) {
-      const map = {
-        light: "impactLight",
-        medium: "impactMedium",
-        heavy: "impactHeavy",
-        success: "notificationSuccess",
-      };
-      window.webkit.messageHandlers.haptic.postMessage(map[kind] || map.light);
-    }
-  } catch {}
-};
-/* ================================================================ */
+on:
+  workflow_dispatch:
+  schedule:
+    # täglich 02:15 UTC (nach Cards-Run)
+    - cron: "15 2 * * *"
 
-/* ==== SVGs ======================================================= */
-const StarSVG = ({ filled = false, size = 22 }) => {
-  const yellow = "#F59E0B";
-  return filled ? (
-    <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M12 2l2.94 6.17 6.79.62-5.11 4.42 1.53 6.61L12 16.98 5.85 19.82l1.53-6.61L2.27 8.79l6.79-.62L12 2z" fill={yellow} stroke="#D97706" strokeWidth="1"/>
-    </svg>
-  ) : (
-    <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M12 2l2.94 6.17 6.79.62-5.11 4.42 1.53 6.61L12 16.98 5.85 19.82l1.53-6.61L2.27 8.79l6.79-.62L12 2z" fill="none" stroke="#9CA3AF" strokeWidth="2" strokeLinejoin="round"/>
-    </svg>
-  );
-};
+permissions:
+  contents: write
 
-const PokeballSVG = ({ caught = false, size = 22 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true" role="img">
-    <defs><clipPath id="pbTop"><rect x="2" y="2" width="20" height="10" /></clipPath></defs>
-    <circle cx="12" cy="12" r="10" fill="#ffffff" stroke="#111827" strokeWidth="2" />
-    {caught && <circle cx="12" cy="12" r="10" fill="#ef4444" clipPath="url(#pbTop)" />}
-    <rect x="2" y="11" width="20" height="2" fill="#111827" />
-    <circle cx="12" cy="12" r="4" fill="#ffffff" stroke="#111827" strokeWidth="2" />
-    {caught && <circle cx="12" cy="12" r="2" fill="#111827" />}
-  </svg>
-);
-/* ================================================================ */
+concurrency:
+  group: prices-daily
+  cancel-in-progress: false
 
-export default function Suche() {
-  const [query, setQuery] = useState("");
-  const [filtered, setFiltered] = useState(pokedex);
-  const [filterMode, setFilterMode] = useState("all"); // 'all' | 'caught' | 'fav'
-  const navigate = useNavigate();
+jobs:
+  build-prices:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
 
-  // Header-Höhe (Spacer)
-  const headerRef = useRef(null);
-  const [headerH, setHeaderH] = useState(0);
-  useEffect(() => {
-    const el = headerRef.current;
-    if (!el) return;
-    const measure = () => setHeaderH(el.getBoundingClientRect().height || 0);
-    const ro = new ResizeObserver(measure);
-    ro.observe(el); measure();
-    addEventListener("resize", measure);
-    return () => { ro.disconnect(); removeEventListener("resize", measure); };
-  }, []);
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
-  // Daten: caught / favorites
-  const [caughtArray, setCaughtArray] = useState(() => {
-    try { return JSON.parse(localStorage.getItem("caught_pokemon_ids") || "[]"); } catch { return []; }
-  });
-  const [favArray, setFavArray] = useState(() => {
-    try { return JSON.parse(localStorage.getItem("favorite_pokemon_ids") || "[]"); } catch { return []; }
-  });
-  useEffect(() => { try { localStorage.setItem("caught_pokemon_ids", JSON.stringify(caughtArray)); } catch {} }, [caughtArray]);
-  useEffect(() => { try { localStorage.setItem("favorite_pokemon_ids", JSON.stringify(favArray)); } catch {} }, [favArray]);
+      - name: Use Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
-  // Filter + Suche
-  useEffect(() => {
-    const q = query.toLowerCase();
-    let base = pokedex;
-    if (filterMode === "caught") base = base.filter(p => caughtArray.includes(p.id));
-    if (filterMode === "fav")    base = base.filter(p => favArray.includes(p.id));
-    setFiltered(base.filter(p =>
-      p.name.toLowerCase().includes(q) ||
-      p.id.toString().padStart(4, "0").includes(q)
-    ));
-  }, [query, filterMode, caughtArray, favArray]);
+      # Keine Abhängigkeiten nötig – direkt das Skript starten
+      - name: Build price time-series
+        env:
+          PRICECHARTING_API_KEY: ${{ secrets.PRICECHARTING_API_KEY }}   # optional
+          PRICECHARTING_ENDPOINT: ${{ secrets.PRICECHARTING_ENDPOINT }} # optional (Proxy)
+        run: node scripts/fetch-prices.mjs
 
-  const isCaught = (id) => caughtArray.includes(id);
-  const isFav    = (id) => favArray.includes(id);
-  const doCatch   = (id) => setCaughtArray(prev => prev.includes(id) ? prev : [...prev, id]);
-  const doRelease = (id) => setCaughtArray(prev => prev.filter(x => x !== id));
-  const addFav    = (id) => setFavArray(prev => prev.includes(id) ? prev : [...prev, id]);
-  const removeFav = (id) => setFavArray(prev => prev.filter(x => x !== id));
-
-  const toggleCaught = () => setFilterMode(m => (m === "caught" ? "all" : "caught"));
-  const toggleFav    = () => setFilterMode(m => (m === "fav"    ? "all" : "fav"));
-
-  // Long-Press
-  const LONG_MS = 650, MOVE_TOL = 18;
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [activeId, setActiveId] = useState(null);
-  const [activeRect, setActiveRect] = useState(null);
-  const tileRefs = useRef(new Map());
-
-  const openMenuFor = useCallback((id) => {
-    const el = tileRefs.current.get(id);
-    if (el) {
-      const r = el.getBoundingClientRect();
-      setActiveRect({ top: r.top, left: r.left, width: r.width, height: r.height });
-    } else setActiveRect(null);
-    setActiveId(id);
-    setMenuOpen(true);
-    triggerHaptic("medium");
-  }, []);
-
-  const closeMenu = useCallback(() => {
-    setMenuOpen(false); setActiveId(null); setActiveRect(null);
-  }, []);
-
-  useEffect(() => {
-    const prev = document.body.style.overflow;
-    if (menuOpen) document.body.style.overflow = "hidden";
-    return () => { document.body.style.overflow = prev; };
-  }, [menuOpen]);
-
-  // Scroll-freundliches Pressable
-  const Pressable = ({ id, onTap, onLongPress, children }) => {
-    const ref = useRef(null);
-    useEffect(() => {
-      const el = ref.current; if (!el) return;
-      tileRefs.current.set(id, el);
-
-      let timer = null, sx = 0, sy = 0, moved = false, down = false;
-      const start = (x, y) => { down = true; moved = false; sx = x; sy = y;
-        timer = setTimeout(() => { timer = null; if (!moved && down) onLongPress?.(); }, LONG_MS); };
-      const move  = (x, y) => { if (!down) return;
-        if (Math.abs(x - sx) > MOVE_TOL || Math.abs(y - sy) > MOVE_TOL) { moved = true; if (timer) { clearTimeout(timer); timer = null; } } };
-      const end   = () => { if (!down) return; down = false; const wasLong = !timer; if (timer) { clearTimeout(timer); timer = null; } if (!moved && !wasLong) onTap?.(); };
-
-      const tStart = (e) => { const t = e.touches[0]; start(t.clientX, t.clientY); };
-      const tMove  = (e) => { const t = e.touches[0]; move(t.clientX, t.clientY); };
-      const tEnd   = () => end(); const tCancel = () => end();
-      el.addEventListener("touchstart", tStart, { passive: true });
-      el.addEventListener("touchmove",  tMove,  { passive: true });
-      el.addEventListener("touchend",   tEnd,   { passive: true });
-      el.addEventListener("touchcancel",tCancel,{ passive: true });
-
-      const mDown = (e) => start(e.clientX, e.clientY);
-      const mMove = (e) => move(e.clientX, e.clientY);
-      const mUp   = () => end(); const mLeave = () => end();
-      el.addEventListener("mousedown", mDown);
-      el.addEventListener("mousemove", mMove);
-      el.addEventListener("mouseup",   mUp);
-      el.addEventListener("mouseleave",mLeave);
-
-      const preventContext = (e) => e.preventDefault();
-      el.addEventListener("contextmenu", preventContext);
-
-      return () => {
-        tileRefs.current.delete(id);
-        el.removeEventListener("touchstart", tStart);
-        el.removeEventListener("touchmove",  tMove);
-        el.removeEventListener("touchend",   tEnd);
-        el.removeEventListener("touchcancel",tCancel);
-        el.removeEventListener("mousedown",  mDown);
-        el.removeEventListener("mousemove",  mMove);
-        el.removeEventListener("mouseup",    mUp);
-        el.removeEventListener("mouseleave", mLeave);
-        el.removeEventListener("contextmenu", preventContext);
-        if (timer) clearTimeout(timer);
-      };
-    }, [id, onTap, onLongPress]);
-
-    return (
-      <div ref={ref} style={{ WebkitTouchCallout: "none", WebkitUserSelect: "none", userSelect: "none", touchAction: "pan-y" }}>
-        {children}
-      </div>
-    );
-  };
-
-  const chipCommon = "flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold transition-shadow";
-  const activeClasses = "ring-2 ring-offset-2 ring-yellow-400 dark:ring-yellow-300 ring-offset-white dark:ring-offset-gray-900";
-
-  const activeName = activeId ? (pokedex.find(p => p.id === activeId)?.name || "???") : "";
-
-  return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 pb-24">
-      {/* Header */}
-      <div ref={headerRef} className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
-        <div className="px-4 pt-[env(safe-area-inset-top,0px)]">
-          <div className="w-full relative flex items-center justify-center mb-1">
-            <button onClick={toggleCaught} aria-label="Nur gefangene anzeigen"
-              className={`absolute left-4 ${chipCommon} ${filterMode === "caught" ? `bg-red-100 text-red-800 dark:bg-red-800 dark:text-red-50 ${activeClasses}` : "bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100"}`}>
-              <PokeballSVG caught={true} size={16} /><span>{caughtArray.length}</span>
-            </button>
-            <img src="/logo.png" alt="App Logo" className="h-12 w-auto select-none pointer-events-none" />
-            <button onClick={toggleFav} aria-label="Nur Lieblings-Pokémon anzeigen"
-              className={`absolute right-4 ${chipCommon} ${filterMode === "fav" ? `bg-yellow-100 text-yellow-900 dark:bg-yellow-700 dark:text-yellow-50 ${activeClasses}` : "bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100"}`}>
-              <StarSVG filled={true} size={16} /><span>{favArray.length}</span>
-            </button>
-          </div>
-          <input type="text" placeholder="Suche nach Name oder Nummer"
-            className="w-full p-3 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-black dark:text-white"
-            value={query} onChange={(e)=>setQuery(e.target.value)} style={{ marginTop: 0, marginBottom: 0 }}/>
-        </div>
-      </div>
-
-      {/* Spacer */}
-      <div style={{ height: headerH - 48 }} />
-
-      {/* Grid */}
-      <div className="grid grid-cols-3 gap-3" style={{ padding: "0 16px" }}>
-        {filtered.map((p) => {
-          const caught = isCaught(p.id), fav = isFav(p.id);
-          return (
-            <Pressable key={p.id} id={p.id}
-              onTap={() => navigate(`/pokemon/${p.id}`)}
-              onLongPress={() => openMenuFor(p.id)}>
-              <div
-                className={`aspect-square rounded-2xl shadow p-2 relative flex flex-col items-center overflow-hidden select-none bg-gray-50 ${fav ? "ring-4 ring-yellow-400" : ""}`}
-                style={{ background: caught ? "linear-gradient(to bottom, rgba(255,0,0,0.4) 0% 49%, black 49% 51%, rgba(255,255,255,0.4) 51% 100%)" : "#f9fafb" }}
-                ref={(el)=>{ if(el) tileRefs.current.set(p.id, el); }}>
-                <div className="absolute top-1 right-2 text-xs text-gray-500 z-20">#{p.id.toString().padStart(4,"0")}</div>
-                <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${p.id}.png`}
-                  alt={p.name} className="max-h-[56%] object-contain mt-3 z-10 mx-auto select-none pointer-events-none" draggable={false}/>
-                <div className="text-center text-sm font-bold mt-1 mb-0 z-10">{p.name}</div>
-              </div>
-            </Pressable>
-          );
-        })}
-      </div>
-
-      {/* Popup + Highlight */}
-      {menuOpen && (
-        <div className="fixed inset-0 z-[70]">
-          {/* Backdrop mit weichem Fade */}
-          <div
-            className="absolute inset-0 backdrop-blur-md transition-opacity duration-200"
-            style={{ background: "rgba(0,0,0,0.4)", opacity: 1 }}
-            onClick={closeMenu}
-          />
-
-          {/* Preview-Kachel mit Keyframe-Animation (sanft auf 1.12, mini Overshoot 1.14) */}
-          {activeRect && activeId && (
-            <div
-              key={activeId}
-              className="fixed rounded-2xl shadow-2xl overflow-hidden relative popup-animate"
-              style={{
-                top: activeRect.top,
-                left: activeRect.left,
-                width: activeRect.width,
-                height: activeRect.height,
-                boxShadow: "0 20px 60px rgba(0,0,0,.35)",
-                background: "linear-gradient(180deg, #F8FAFC 0%, #EEF2F7 100%)"
-              }}
-            >
-              {/* Pokédex Nummer absolut im Eck */}
-              <div className="absolute right-[8px] top-[0px]">
-                <span className="text-xs font-medium text-gray-500 dark:text-gray-300">
-                  #{activeId.toString().padStart(4, "0")}
-                </span>
-              </div>
-
-              {/* Inhalt */}
-              <div
-                style={{ display: "grid", gridTemplateRows: "1fr auto", height: "100%", padding: "8px" }}
-                className="dark:bg-gray-800"
-              >
-                <div className="flex items-center justify-center min-h-0">
-                  <img
-                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${activeId}.png`}
-                    alt={activeName}
-                    style={{ maxWidth: "70%", maxHeight: "70%", objectFit: "contain" }}
-                    draggable={false}
-                  />
-                </div>
-
-                {/* Name – absolut unten für Feintuning */}
-                <div className="absolute bottom-[3px] left-0 w-full text-center">
-                  <span className="block text-sm sm:text-base md:text-lg font-bold text-gray-800 dark:text-white break-words">
-                    {activeName}
-                  </span>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Menü */}
-          <div
-            className="fixed rounded-2xl bg-gray-900 text-white shadow-2xl"
-            style={{
-              top: activeRect ? Math.min(activeRect.top + activeRect.height + 12, window.innerHeight - 120) : "50%",
-              left: activeRect ? Math.min(activeRect.left, window.innerWidth - 300) : "50%",
-              transform: activeRect ? "none" : "translate(-50%,-50%)",
-              width: 300,
-              overflow: "hidden",
-              backdropFilter: "saturate(160%) blur(12px)",
-              background: "rgba(17,24,39,0.9)"
-            }}
-          >
-            <button
-              className="w-full flex items-center justify-between px-4 py-3 text-lg"
-              style={{ lineHeight: 1 }}
-              onClick={() => {
-                if (!isFav(activeId)) addFav(activeId); else removeFav(activeId);
-                triggerHaptic("light");
-                closeMenu();
-              }}
-            >
-              <span>Als Lieblings Pokémon</span>
-              <span aria-hidden className="inline-flex items-center justify-center">
-                <StarSVG filled={isFav(activeId)} size={22} />
-              </span>
-            </button>
-            <div className="h-px bg-white/10" />
-            <button
-              className="w-full flex items-center justify-between px-4 py-3 text-lg"
-              style={{ lineHeight: 1 }}
-              onClick={() => {
-                if (!isCaught(activeId)) doCatch(activeId); else doRelease(activeId);
-                triggerHaptic("light");
-                closeMenu();
-              }}
-            >
-              <span>Pokémon gefangen!</span>
-              <span aria-hidden className="inline-flex items-center justify-center">
-                <PokeballSVG caught={isCaught(activeId)} size={22} />
-              </span>
-            </button>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
+      - name: Commit & Push (if changed)
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/prices
+          if git diff --cached --quiet; then
+            echo "No price changes to commit."
+          else
+            git commit -m "chore: refresh price series ($(date -u +%F))"
+            git push
+          fi

@@ -5,39 +5,46 @@ on:
     branches: [ main ]
   workflow_dispatch:
   schedule:
-    - cron: "0 3 * * *" # täglich 03:00 UTC
+    - cron: "0 3 * * *"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      # Install NUR wenn ein Lockfile da ist – sonst überspringen.
       - name: Install (if lockfile present)
         run: |
-          if [ -f package-lock.json ]; then
-            npm ci
-          elif [ -f npm-shrinkwrap.json ]; then
-            npm ci
-          else
-            echo "No lockfile found, skipping npm ci"
-          fi
+          if [ -f package-lock.json ]; then npm ci;
+          elif [ -f npm-shrinkwrap.json ]; then npm ci;
+          else echo "No lockfile, skipping npm ci"; fi
 
-      # Baue Name-JSONs (dein bestehender Schritt)
       - name: Build name JSONs
         run: npm run build:names
 
-      # NEU: Dex-Index generieren (legt public/cards/dex/*.json an)
       - name: Build dex JSONs
         run: npm run build:dex
 
-      # Dein vorhandener Deploy-Schritt (Pages/Worker o.ä.)
-      - name: Deploy
-        run: npm run deploy
+      # Packe den richtigen Ordner als Pages-Artefakt:
+      # Wenn deine Name-Dateien in ./cards/* liegen, dann artefakt=./ (root) oder ./cards
+      # Wenn sie in ./public/cards/* liegen, dann artefakt=./public
+      - name: Upload artifact for Pages (public if exists)
+        run: |
+          if [ -d public ]; then echo "artifact=public" >> $GITHUB_OUTPUT; else echo "artifact=." >> $GITHUB_OUTPUT; fi
+        id: choose
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ steps.choose.outputs.artifact }}
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

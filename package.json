@@ -6,7 +6,8 @@
     "build:names": "node scripts/fetch-cards.mjs",
     "update": "npm run build:names",
     "build:dex": "node scripts/build-dex-index.mjs",
-    "build": "npm run build:names && npm run build:dex"
+    "build": "npm run build:names && npm run build:dex",
+    "deploy": "echo 'TODO: deploy to Pages/Worker here'" 
   },
   "engines": { "node": ">=20.0.0" }
 }

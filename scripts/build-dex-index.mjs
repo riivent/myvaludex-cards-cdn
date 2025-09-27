@@ -3,14 +3,35 @@ import fs from "fs";
 import path from "path";
 
 const root = path.resolve(process.cwd());
-const NAME_DIR = path.join(root, "public", "cards", "name");
-const DEX_DIR  = path.join(root, "public", "cards", "dex");
 
+// Finde dynamisch, wo die Name-JSONs liegen (public/cards/name ODER cards/name)
+function resolveCardsBase() {
+  const candidates = [
+    path.join(root, "public", "cards"),
+    path.join(root, "cards"),
+  ];
+  for (const c of candidates) {
+    if (fs.existsSync(path.join(c, "name"))) return c;
+  }
+  // Wenn keiner existiert, aber "public" existiert, nutzen wir public/cards
+  const publicCards = path.join(root, "public", "cards");
+  if (fs.existsSync(path.join(root, "public"))) return publicCards;
+  // Fallback: root/cards
+  return path.join(root, "cards");
+}
+
+const CARDS_BASE = resolveCardsBase();
+const NAME_DIR   = path.join(CARDS_BASE, "name");
+const DEX_DIR    = path.join(CARDS_BASE, "dex");
+
+function ensureDir(d) {
+  if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true });
+}
 function toArray(payload) {
   if (!payload) return [];
   if (Array.isArray(payload)) return payload;
-  if (Array.isArray(payload.data)) return payload.data;
-  if (Array.isArray(payload.cards)) return payload.cards;
+  if (Array.isArray(payload?.data)) return payload.data;
+  if (Array.isArray(payload?.cards)) return payload.cards;
   return [];
 }
 function readJsonSafe(fp) {
@@ -31,22 +52,27 @@ function getDexIds(card) {
   if (typeof card?.dex   === "number") out.add(card.dex);
   return [...out];
 }
-function ensureDir(d) { if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true }); }
 
 function writeDexFiles(mapDexToCards) {
   ensureDir(DEX_DIR);
+
   for (const [dex, arr] of mapDexToCards.entries()) {
+    // unique by id
     const uniq = Array.from(new Map(arr.map(c => [c.id, c])).values());
-    uniq.sort((a,b) => {
-      const ad = Date.parse(a?.set?.releaseDate||a?._raw?.set?.releaseDate||a?.releaseDate||"1970-01-01");
-      const bd = Date.parse(b?.set?.releaseDate||b?._raw?.set?.releaseDate||b?.releaseDate||"1970-01-01");
+
+    // sort: newest sets first, dann Kartennummer
+    uniq.sort((a, b) => {
+      const ad = Date.parse(a?.set?.releaseDate || a?._raw?.set?.releaseDate || a?.releaseDate || "1970-01-01");
+      const bd = Date.parse(b?.set?.releaseDate || b?._raw?.set?.releaseDate || b?.releaseDate || "1970-01-01");
       if (bd !== ad) return bd - ad;
-      return String(b.number||"").localeCompare(String(a.number||""));
+      return String(b.number || "").localeCompare(String(a.number || ""));
     });
+
     const json = JSON.stringify(uniq);
     const d  = String(dex);
-    const d3 = d.padStart(3,"0");
-    const d4 = d.padStart(4,"0");
+    const d3 = d.padStart(3, "0");
+    const d4 = d.padStart(4, "0");
+
     fs.writeFileSync(path.join(DEX_DIR, `${d4}.json`), json); // kanonisch
     fs.writeFileSync(path.join(DEX_DIR, `${d3}.json`), json); // kompat
     fs.writeFileSync(path.join(DEX_DIR, `${d}.json`),  json); // kompat
@@ -54,10 +80,15 @@ function writeDexFiles(mapDexToCards) {
 }
 
 function main() {
+  console.log("Cards base:", CARDS_BASE);
+  console.log("Name dir  :", NAME_DIR);
+  console.log("Dex dir   :", DEX_DIR);
+
   if (!fs.existsSync(NAME_DIR)) {
-    console.error("Missing directory:", NAME_DIR);
+    console.error("ERROR: Not found:", NAME_DIR);
     process.exit(1);
   }
+
   const entries = fs.readdirSync(NAME_DIR).filter(f => f.endsWith(".json"));
   const dexMap = new Map(); // dex:number -> cards[]
 
@@ -76,4 +107,5 @@ function main() {
   writeDexFiles(dexMap);
   console.log("Dex index built:", dexMap.size, "dex buckets");
 }
+
 main();

@@ -3,7 +3,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "update": "node scripts/fetch-cards.mjs"
+    "build:names": "node scripts/fetch-cards.mjs",
+    "update": "npm run build:names",
+    "build:dex": "node scripts/build-dex-index.mjs",
+    "build": "npm run build:names && npm run build:dex"
   },
   "engines": { "node": ">=20.0.0" }
 }

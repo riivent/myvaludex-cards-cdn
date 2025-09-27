@@ -1,7 +1,9 @@
 name: Build CDN
+
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
   schedule:
     - cron: "0 3 * * *" # täglich 03:00 UTC
 
@@ -9,10 +11,33 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with: { node-version: 20 }
-      - run: npm ci
-      - run: npm run build:names    # <- dein bestehender Schritt für public/cards/name/*.json
-      - run: npm run build:dex      # <- NEU: erzeugt public/cards/dex/*.json
-      - run: npm run deploy         # <- wie bisher (Pages/Worker)
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Install NUR wenn ein Lockfile da ist – sonst überspringen.
+      - name: Install (if lockfile present)
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          elif [ -f npm-shrinkwrap.json ]; then
+            npm ci
+          else
+            echo "No lockfile found, skipping npm ci"
+          fi
+
+      # Baue Name-JSONs (dein bestehender Schritt)
+      - name: Build name JSONs
+        run: npm run build:names
+
+      # NEU: Dex-Index generieren (legt public/cards/dex/*.json an)
+      - name: Build dex JSONs
+        run: npm run build:dex
+
+      # Dein vorhandener Deploy-Schritt (Pages/Worker o.ä.)
+      - name: Deploy
+        run: npm run deploy

@@ -13,12 +13,10 @@ function toArray(payload) {
   if (Array.isArray(payload.cards)) return payload.cards;
   return [];
 }
-
 function readJsonSafe(fp) {
   try { return JSON.parse(fs.readFileSync(fp, "utf8")); }
   catch { return null; }
 }
-
 function getDexIds(card) {
   const out = new Set();
   const push = (arr) => Array.isArray(arr) && arr.forEach(v => {
@@ -33,15 +31,11 @@ function getDexIds(card) {
   if (typeof card?.dex   === "number") out.add(card.dex);
   return [...out];
 }
-
-function ensureDir(d) {
-  if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true });
-}
+function ensureDir(d) { if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true }); }
 
 function writeDexFiles(mapDexToCards) {
   ensureDir(DEX_DIR);
   for (const [dex, arr] of mapDexToCards.entries()) {
-    // unique by id + sort by set.releaseDate desc
     const uniq = Array.from(new Map(arr.map(c => [c.id, c])).values());
     uniq.sort((a,b) => {
       const ad = Date.parse(a?.set?.releaseDate||a?._raw?.set?.releaseDate||a?.releaseDate||"1970-01-01");
@@ -49,17 +43,13 @@ function writeDexFiles(mapDexToCards) {
       if (bd !== ad) return bd - ad;
       return String(b.number||"").localeCompare(String(a.number||""));
     });
-
     const json = JSON.stringify(uniq);
-    const d    = String(dex);
-    const d3   = d.padStart(3, "0");
-    const d4   = d.padStart(4, "0");
-
-    // 4-stellig (kanonisch)
-    fs.writeFileSync(path.join(DEX_DIR, `${d4}.json`), json);
-    // 3-stellig + unpadded als Backups/Kompat
-    fs.writeFileSync(path.join(DEX_DIR, `${d3}.json`), json);
-    fs.writeFileSync(path.join(DEX_DIR, `${d}.json`),  json);
+    const d  = String(dex);
+    const d3 = d.padStart(3,"0");
+    const d4 = d.padStart(4,"0");
+    fs.writeFileSync(path.join(DEX_DIR, `${d4}.json`), json); // kanonisch
+    fs.writeFileSync(path.join(DEX_DIR, `${d3}.json`), json); // kompat
+    fs.writeFileSync(path.join(DEX_DIR, `${d}.json`),  json); // kompat
   }
 }
 
@@ -69,15 +59,13 @@ function main() {
     process.exit(1);
   }
   const entries = fs.readdirSync(NAME_DIR).filter(f => f.endsWith(".json"));
-
   const dexMap = new Map(); // dex:number -> cards[]
+
   for (const file of entries) {
-    const full = path.join(NAME_DIR, file);
-    const payload = readJsonSafe(full);
+    const payload = readJsonSafe(path.join(NAME_DIR, file));
     const cards = toArray(payload);
     for (const c of cards) {
       const ids = getDexIds(c);
-      // Falls Karte keine Dex trägt (selten), skip – wir wollen nur verlässliche Zuordnung
       for (const id of ids) {
         if (!dexMap.has(id)) dexMap.set(id, []);
         dexMap.get(id).push(c);
@@ -88,5 +76,4 @@ function main() {
   writeDexFiles(dexMap);
   console.log("Dex index built:", dexMap.size, "dex buckets");
 }
-
 main();

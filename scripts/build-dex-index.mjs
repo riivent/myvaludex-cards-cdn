@@ -4,7 +4,7 @@ import path from "path";
 
 const root = path.resolve(process.cwd());
 
-// Finde dynamisch, wo die Name-JSONs liegen (public/cards/name ODER cards/name)
+// Findet dynamisch den richtigen "cards"-Ordner
 function resolveCardsBase() {
   const candidates = [
     path.join(root, "public", "cards"),
@@ -13,7 +13,7 @@ function resolveCardsBase() {
   for (const c of candidates) {
     if (fs.existsSync(path.join(c, "name"))) return c;
   }
-  // Wenn keiner existiert, aber "public" existiert, nutzen wir public/cards
+  // Falls keiner existiert, aber "public" existiert: public/cards verwenden
   const publicCards = path.join(root, "public", "cards");
   if (fs.existsSync(path.join(root, "public"))) return publicCards;
   // Fallback: root/cards
@@ -24,26 +24,12 @@ const CARDS_BASE = resolveCardsBase();
 const NAME_DIR   = path.join(CARDS_BASE, "name");
 const DEX_DIR    = path.join(CARDS_BASE, "dex");
 
-function ensureDir(d) {
-  if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true });
-}
-function toArray(payload) {
-  if (!payload) return [];
-  if (Array.isArray(payload)) return payload;
-  if (Array.isArray(payload?.data)) return payload.data;
-  if (Array.isArray(payload?.cards)) return payload.cards;
-  return [];
-}
-function readJsonSafe(fp) {
-  try { return JSON.parse(fs.readFileSync(fp, "utf8")); }
-  catch { return null; }
-}
+function ensureDir(d) { if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true }); }
+function toArray(p) { if (Array.isArray(p)) return p; if (Array.isArray(p?.data)) return p.data; if (Array.isArray(p?.cards)) return p.cards; return []; }
+function readJsonSafe(fp) { try { return JSON.parse(fs.readFileSync(fp, "utf8")); } catch { return null; } }
 function getDexIds(card) {
   const out = new Set();
-  const push = (arr) => Array.isArray(arr) && arr.forEach(v => {
-    const n = parseInt(String(v), 10);
-    if (!Number.isNaN(n)) out.add(n);
-  });
+  const push = (arr) => Array.isArray(arr) && arr.forEach(v => { const n = parseInt(String(v), 10); if (!Number.isNaN(n)) out.add(n); });
   push(card?.nationalPokedexNumbers);
   push(card?._raw?.nationalPokedexNumbers);
   push(card?.pokedexNumbers);
@@ -55,24 +41,21 @@ function getDexIds(card) {
 
 function writeDexFiles(mapDexToCards) {
   ensureDir(DEX_DIR);
-
   for (const [dex, arr] of mapDexToCards.entries()) {
     // unique by id
     const uniq = Array.from(new Map(arr.map(c => [c.id, c])).values());
-
-    // sort: newest sets first, dann Kartennummer
-    uniq.sort((a, b) => {
+    // newest sets first, dann Karten-Nr.
+    uniq.sort((a,b) => {
       const ad = Date.parse(a?.set?.releaseDate || a?._raw?.set?.releaseDate || a?.releaseDate || "1970-01-01");
       const bd = Date.parse(b?.set?.releaseDate || b?._raw?.set?.releaseDate || b?.releaseDate || "1970-01-01");
       if (bd !== ad) return bd - ad;
-      return String(b.number || "").localeCompare(String(a.number || ""));
+      return String(b.number||"").localeCompare(String(a.number||""));
     });
 
     const json = JSON.stringify(uniq);
     const d  = String(dex);
-    const d3 = d.padStart(3, "0");
-    const d4 = d.padStart(4, "0");
-
+    const d3 = d.padStart(3,"0");
+    const d4 = d.padStart(4,"0");
     fs.writeFileSync(path.join(DEX_DIR, `${d4}.json`), json); // kanonisch
     fs.writeFileSync(path.join(DEX_DIR, `${d3}.json`), json); // kompat
     fs.writeFileSync(path.join(DEX_DIR, `${d}.json`),  json); // kompat
@@ -90,7 +73,7 @@ function main() {
   }
 
   const entries = fs.readdirSync(NAME_DIR).filter(f => f.endsWith(".json"));
-  const dexMap = new Map(); // dex:number -> cards[]
+  const dexMap = new Map();
 
   for (const file of entries) {
     const payload = readJsonSafe(path.join(NAME_DIR, file));

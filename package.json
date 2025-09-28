@@ -4,10 +4,9 @@
   "type": "module",
   "scripts": {
     "build:names": "node scripts/fetch-cards.mjs",
-    "update": "npm run build:names",
     "build:dex": "node scripts/build-dex-index.mjs",
     "build": "npm run build:names && npm run build:dex",
-    "deploy": "echo 'TODO: deploy to Pages/Worker here'" 
+    "update": "npm run build"  // alias, falls du bisher 'npm run update' genutzt hast
   },
   "engines": { "node": ">=20.0.0" }
 }

@@ -1,15 +1,14 @@
-name: Build & Deploy CDN
+name: Build & Deploy CDN (fast)
 
 on:
   push:
     branches: [ main ]
-  schedule:
-    - cron: "0 3 * * *"   # täglich 03:00 UTC
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     concurrency:
       group: cdn-${{ github.ref }}
       cancel-in-progress: true
@@ -23,7 +22,6 @@ jobs:
         with:
           node-version: 20
 
-      # Wenn du kein Lockfile hast, nimm npm i – ansonsten npm ci
       - name: Install (if lockfile present)
         run: |
           if [ -f package-lock.json ] || [ -f npm-shrinkwrap.json ]; then
@@ -32,8 +30,21 @@ jobs:
             npm i --no-audit --no-fund
           fi
 
-      - name: Build (names + dex)
-        run: npm run build
+      # Wenn deine Name-JSONs bereits im Repo sind:
+      - name: Build dex only
+        run: npm run build:dex
+
+      - name: Show dex files
+        run: |
+          if [ -d public/cards/dex ]; then
+            echo "Dex in public/"
+            ls -lah public/cards/dex | head -60
+          elif [ -d cards/dex ]; then
+            echo "Dex in cards/"
+            ls -lah cards/dex | head -60
+          else
+            echo "ERROR: Kein dex/ Ordner gefunden" && exit 1
+          fi
 
       - name: Deploy to Cloudflare Workers
         uses: cloudflare/wrangler-action@v3

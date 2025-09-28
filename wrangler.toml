@@ -1,0 +1,6 @@
+name = "myvaludex-cards"
+main = "src/worker.js"         # kann existieren, muss aber nicht (siehe unten)
+compatibility_date = "2024-01-01"
+
+# WICHTIG: Hier liegt dein fertiger CDN-Output
+assets = { directory = "public" }

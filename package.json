@@ -6,7 +6,7 @@
     "build:names": "node scripts/fetch-cards.mjs",
     "build:dex": "node scripts/build-dex-index.mjs",
     "build": "npm run build:names && npm run build:dex",
-    "update": "npm run build"  // alias, falls du bisher 'npm run update' genutzt hast
+    "update": "npm run build"
   },
   "engines": { "node": ">=20.0.0" }
 }

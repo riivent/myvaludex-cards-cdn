@@ -1,6 +1,6 @@
 name = "myvaludex-cards"
-main = "src/worker.js"         # kann existieren, muss aber nicht (siehe unten)
+main = "src/worker.js"
 compatibility_date = "2024-01-01"
 
-# WICHTIG: Hier liegt dein fertiger CDN-Output
+# Hier liegt dein fertiger Output (names + dex)
 assets = { directory = "public" }

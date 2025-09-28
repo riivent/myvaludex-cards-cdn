@@ -1,4 +1,4 @@
-name: Build CDN
+name: Build & Deploy CDN
 
 on:
   push:
@@ -10,28 +10,34 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    concurrency:
+      group: cdn-${{ github.ref }}
+      cancel-in-progress: true
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      # Wenn du KEINE deps hast, reicht 'npm run build'.
-      # (Falls du ein lockfile hast, kannst du vorher 'npm ci' machen.)
-      - name: Build cards (names + dex)
+      # Wenn du kein Lockfile hast, nimm npm i – ansonsten npm ci
+      - name: Install (if lockfile present)
+        run: |
+          if [ -f package-lock.json ] || [ -f npm-shrinkwrap.json ]; then
+            npm ci
+          else
+            npm i --no-audit --no-fund
+          fi
+
+      - name: Build (names + dex)
         run: npm run build
 
-      - name: Commit & push updated JSONs
-        uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Deploy to Cloudflare Workers
+        uses: cloudflare/wrangler-action@v3
         with:
-          commit_message: "chore: refresh cards (auto)"
-          branch: main
-          file_pattern: |
-            public/cards/**
-            cards/**
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command: deploy

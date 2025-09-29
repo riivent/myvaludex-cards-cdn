@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build:names": "node scripts/fetch-cards.mjs",
-    "build:dex": "node scripts/build-dex-index.mjs",
+    "build:dex": "node scripts/build-dex-jsons.mjs",
     "build": "npm run build:names && npm run build:dex",
     "update": "npm run build"
   },

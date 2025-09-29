@@ -8,22 +8,28 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: cards-daily
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 50
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
-      cancel-in-progress: true
+    timeout-minutes: 60
 
     steps:
-      - uses: actions/checkout@v4
-        with: { fetch-depth: 0 }
+      - name: Checkout (full history)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - uses: actions/setup-node@v4
-        with: { node-version: 20 }
+      - name: Setup Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
 
-      - name: Install (if lockfile present)
+      - name: Install dependencies (if lockfile present)
         run: |
           if [ -f package-lock.json ] || [ -f npm-shrinkwrap.json ]; then
             npm ci
@@ -31,12 +37,13 @@ jobs:
             npm i --no-audit --no-fund
           fi
 
+      # Baut Namen und DEX (npm run build -> build:names + build:dex)
       - name: Build names + dex
         env:
           POKEMONTCG_API_KEY: ${{ secrets.POKEMONTCG_API_KEY }}
         run: npm run build
 
-      - name: Sanity: list dex (both)
+      - name: Sanity check (dex files)
         run: |
           ls -lah public/cards/dex 2>/dev/null | head -60 || true
           ls -lah cards/dex         2>/dev/null | head -60 || true
@@ -46,7 +53,7 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Commit & Push (only if changed)
+      - name: Commit & push changes (if any)
         run: |
           set -e
           if git diff --quiet; then

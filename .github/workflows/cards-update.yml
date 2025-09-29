@@ -2,7 +2,7 @@ name: Cards Daily (names + dex)
 
 on:
   schedule:
-    - cron: "0 3 * * *"   # täglich 03:00 UTC
+    - cron: "0 3 * * *"
   workflow_dispatch:
 
 permissions:
@@ -15,7 +15,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 240   # <— vorher 60, jetzt 4h
 
     steps:
       - name: Checkout (full history)
@@ -23,22 +23,20 @@ jobs:
         with:
           fetch-depth: 0
 
-      # Mit Cache WENN Lockfile existiert
-      - name: Setup Node 20 (with cache)
-        if: hashFiles('package-lock.json', 'npm-shrinkwrap.json', 'yarn.lock') != ''
+      - name: Setup Node 20 (with cache if lockfile)
+        if: hashFiles('package-lock.json','npm-shrinkwrap.json','yarn.lock') != ''
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: npm
 
-      # Ohne Cache WENN KEINE Lockfile existiert
       - name: Setup Node 20 (no cache)
-        if: hashFiles('package-lock.json', 'npm-shrinkwrap.json', 'yarn.lock') == ''
+        if: hashFiles('package-lock.json','npm-shrinkwrap.json','yarn.lock') == ''
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
-      - name: Install dependencies
+      - name: Install deps
         run: |
           if [ -f package-lock.json ] || [ -f npm-shrinkwrap.json ]; then
             npm ci
@@ -46,23 +44,10 @@ jobs:
             npm i --no-audit --no-fund || true
           fi
 
-      # Baut Namen + Dex (dein package.json: "build": "npm run build:names && npm run build:dex")
       - name: Build names + dex
         env:
           POKEMONTCG_API_KEY: ${{ secrets.POKEMONTCG_API_KEY }}
         run: npm run build
-
-      - name: Sanity check (dex files)
-        run: |
-          echo "public/cards/dex:"
-          if [ -d public/cards/dex ]; then ls -lah public/cards/dex | head -60; else echo "missing"; fi
-          echo "cards/dex:"
-          if [ -d cards/dex ]; then ls -lah cards/dex | head -60; else echo "missing"; fi
-
-      - name: Configure Git author
-        run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
       - name: Commit & push changes (if any)
         run: |
@@ -70,14 +55,9 @@ jobs:
             echo "No changes to commit."
             exit 0
           fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit -m "chore: refresh cards + dex ($(date -u +'%Y-%m-%d'))"
           git pull --rebase origin main || true
           git push --force-with-lease origin HEAD:main
-
-      - name: Deploy to Cloudflare Workers
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CF_API_TOKEN }}
-          accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          command: deploy

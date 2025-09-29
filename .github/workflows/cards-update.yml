@@ -1,4 +1,4 @@
-name: Cards Daily
+name: Cards Daily (names + dex)
 
 on:
   schedule:
@@ -8,88 +8,45 @@ on:
 permissions:
   contents: write
 
-concurrency:
-  group: cards-daily
-  cancel-in-progress: true
-
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 50
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true
 
     steps:
-      - name: Checkout (full history)
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
 
-      - name: Setup Node 20
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
 
-      - name: Sync to latest remote main (hard reset)
+      - name: Install (if lockfile present)
         run: |
-          git fetch origin main
-          git reset --hard origin/main
+          if [ -f package-lock.json ] || [ -f npm-shrinkwrap.json ]; then
+            npm ci
+          else
+            npm i --no-audit --no-fund
+          fi
 
-      # Falls du Dependencies hast, bleibt das; sonst macht es nichts.
-      - name: Install (optional)
-        run: npm ci || true
-
-      - name: Run builder (cards)
+      - name: Build names + dex
         env:
           POKEMONTCG_API_KEY: ${{ secrets.POKEMONTCG_API_KEY }}
-        run: npm run update
+        run: npm run build
 
-      - name: Coverage summary (cards)
+      - name: Sanity: list dex (both)
         run: |
-          node -e "
-            const fs=require('fs');
-            const A='./public/cards/name/index.json';
-            const B='./public/cards/index.json';
-            const p=fs.existsSync(A)?A:(fs.existsSync(B)?B:null);
-            if(!p){ console.log('index.json not found'); process.exit(0); }
-            const idx=JSON.parse(fs.readFileSync(p,'utf8'));
-            const total=idx.length;
-            const zeros=idx.filter(x=>x.count===0);
-            const first20=zeros.slice(0,20).map(z=>z.name);
-            console.log('TOTAL names in index:', total);
-            console.log('ZERO-count species:', zeros.length);
-            console.log('First 20 zero-count:', first20.join(', '));
-            const sum=[
-              '## Cards coverage',
-              '',
-              `- **TOTAL names:** ${total}`,
-              `- **ZERO-count species:** ${zeros.length}`,
-              '',
-              (first20.length? '**First 20 zero-count:** ' + first20.join(', ') : '')
-            ].join('\n');
-            try { fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, sum+'\n'); } catch {}
-          "
-
-      - name: Verify vs API (diff)
-        env:
-          POKEMONTCG_API_KEY: ${{ secrets.POKEMONTCG_API_KEY }}
-        run: node scripts/verify-cards.mjs
-
-      - name: Upload reports (index & verify)
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: cards-reports
-          path: |
-            public/cards/index.json
-            public/cards/name/index.json
-            public/cards/_verify.json
-          if-no-files-found: ignore
-          retention-days: 7
+          ls -lah public/cards/dex 2>/dev/null | head -60 || true
+          ls -lah cards/dex         2>/dev/null | head -60 || true
 
       - name: Configure Git author
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Commit & Push (safe)
+      - name: Commit & Push (only if changed)
         run: |
           set -e
           if git diff --quiet; then
@@ -97,6 +54,13 @@ jobs:
             exit 0
           fi
           git add -A
-          git commit -m "chore: refresh cards ($(date -u +'%Y-%m-%d'))"
+          git commit -m "chore: refresh cards + dex ($(date -u +'%Y-%m-%d'))"
           git pull --rebase origin main || true
           git push --force-with-lease origin HEAD:main
+
+      - name: Deploy to Cloudflare Workers
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command: deploy

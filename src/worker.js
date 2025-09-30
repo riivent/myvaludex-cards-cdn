@@ -1,96 +1,59 @@
-// src/worker.js
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
-    const BASE = (env.ASSET_BASE || "https://riivent.github.io/myvaludex-cards-cdn").replace(/\/$/, "");
+    const ORIGIN = "https://riivent.github.io/myvaludex-cards-cdn";
 
-    // CORS / preflight
-    if (request.method === "OPTIONS") {
-      return new Response(null, { headers: corsHeaders() });
+    // Health
+    if (url.pathname === "/" || url.pathname === "/_health") {
+      return new Response("ok", { headers: { "cache-control": "no-store" } });
     }
 
-    const send = (data, status = 200, extra = {}) =>
-      new Response(typeof data === "string" ? data : JSON.stringify(data), {
-        status,
-        headers: {
-          "content-type": "application/json; charset=utf-8",
-          "cache-control": "public, max-age=300, s-maxage=3600",
-          ...corsHeaders(),
-          ...extra,
-        },
-      });
-
-    try {
-      const parts = url.pathname.replace(/^\/+/, "").split("/"); // e.g. cards/name/Pikachu.json
-
-      if (parts[0] !== "cards") {
-        return send({ error: "Use /cards/name/<Name>.json or /cards/dex/<Dex>.json" }, 404);
+    // -------- DEX: allow 0001 or 1 --------
+    // /cards/dex/<id>.json  where <id> may be "0001" or "1"
+    if (/^\/cards\/dex\/[^/]+\.json$/i.test(url.pathname)) {
+      const m = url.pathname.match(/^\/cards\/dex\/([^/]+)\.json$/i);
+      const raw = m?.[1] ?? "";
+      const n = Number.parseInt(raw, 10);   // "0001" -> 1
+      if (!Number.isFinite(n)) {
+        return json({ error: "bad dex id" }, 400);
       }
-
-      // /cards/dex/:dex.json  (dex darf 1 oder 0001 sein)
-      if (parts[1] === "dex") {
-        const raw = (parts[2] || "").replace(/\.json$/i, "");
-        if (!raw) return send({ error: "Missing dex" }, 400);
-
-        const digits = raw.replace(/\D/g, "");
-        const pad = digits.padStart(4, "0");
-        const target = `${BASE}/cards/dex/${pad}.json`;
-
-        const r = await fetch(target, { cf: { cacheEverything: true, cacheTtl: 3600 } });
-        if (!r.ok) return send({ error: "dex not found", upstream: target, status: r.status }, r.status);
-
-        const resp = new Response(r.body, r);
-        resp.headers.set("access-control-allow-origin", "*");
-        resp.headers.set("cache-control", "public, max-age=300, s-maxage=3600");
-        return resp;
-      }
-
-      // /cards/name/:name.json
-      if (parts[1] === "name") {
-        const raw = (parts[2] || "").replace(/\.json$/i, "");
-        if (!raw) return send({ error: "Missing name" }, 400);
-
-        const tried = [];
-        for (const variant of nameVariants(decodeURIComponent(raw))) {
-          const target = `${BASE}/cards/name/${encodeURIComponent(variant)}.json`;
-          tried.push(target);
-          const r = await fetch(target, { cf: { cacheEverything: true, cacheTtl: 3600 } });
-          if (r.ok) {
-            const resp = new Response(r.body, r);
-            resp.headers.set("access-control-allow-origin", "*");
-            resp.headers.set("cache-control", "public, max-age=300, s-maxage=3600");
-            return resp;
-          }
-        }
-        return send({ error: "name not found", tried }, 404);
-      }
-
-      return send({ error: "Bad route" }, 404);
-    } catch (err) {
-      return send({ error: "Worker exception", message: String(err) }, 500);
+      const target = `${ORIGIN}/cards/dex/${n}.json`; // unpadded on the origin
+      return proxyJSON(target);
     }
-  },
+
+    // -------- NAME passthrough (funktioniert bei dir bereits) --------
+    // keep normalization minimal – deine Namen-JSONs sind schon im CDN
+    if (/^\/cards\/name\/.+\.json$/i.test(url.pathname)) {
+      const name = decodeURIComponent(url.pathname.replace(/^\/cards\/name\/|\.json$/g, ""));
+      const target = `${ORIGIN}/cards/name/${encodeURIComponent(name)}.json`;
+      return proxyJSON(target);
+    }
+
+    // Fallback: alles andere direkt weiterreichen
+    const fallback = `${ORIGIN}${url.pathname}${url.search}`;
+    return fetch(fallback, { cf: { cacheEverything: true } });
+  }
 };
 
-function corsHeaders() {
-  return {
-    "access-control-allow-origin": "*",
-    "access-control-allow-methods": "GET,HEAD,OPTIONS",
-    "access-control-allow-headers": "Content-Type",
-  };
+async function proxyJSON(target) {
+  const res = await fetch(target, { cf: { cacheEverything: true } });
+  if (!res.ok) {
+    return json({ error: `${res.status} ${res.statusText}`, upstream: target }, res.status);
+  }
+  const h = new Headers(res.headers);
+  h.set("content-type", "application/json; charset=utf-8");
+  h.set("access-control-allow-origin", "*");
+  h.set("cache-control", "public, max-age=3600, s-maxage=86400, stale-while-revalidate=60");
+  return new Response(res.body, { status: res.status, headers: h });
 }
 
-function nameVariants(input) {
-  // Robust gegen Apostrophe/Diakritik/Schreibweise
-  const s = input.trim();
-  const set = new Set();
-
-  set.add(s); // as-is
-  set.add(s.replace(/’/g, "'")); // curly -> straight
-  set.add(s.replace(/'/g, "’")); // straight -> curly
-  set.add(s.replace(/é/g, "e")); // fallback für é
-  set.add(s.replace(/\b\w/g, (c) => c.toUpperCase())); // Title Case
-  set.add(s.replace(/\s+JR\.?$/i, " Jr.")); // Mime Jr. usw.
-
-  return [...set];
+function json(obj, status = 200) {
+  return new Response(JSON.stringify(obj), {
+    status,
+    headers: {
+      "content-type": "application/json; charset=utf-8",
+      "access-control-allow-origin": "*",
+      "cache-control": "no-store"
+    }
+  });
 }

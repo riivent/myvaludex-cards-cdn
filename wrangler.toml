@@ -1,6 +1,11 @@
 name = "myvaludex-cards"
 main = "src/worker.js"
 compatibility_date = "2024-01-01"
+workers_dev = true
 
-# Hier liegt dein fertiger Output (names + dex)
+# Statische Dateien (falls du später etwas aus /public direkt ausliefern willst)
 assets = { directory = "public" }
+
+# Environment-Variablen für den Worker
+[vars]
+ASSET_BASE = "https://riivent.github.io/myvaludex-cards-cdn"

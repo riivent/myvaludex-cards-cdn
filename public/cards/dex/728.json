@@ -19,18 +19,18 @@
     "tcgplayer": {
       "prices": {
         "normal": {
-          "low": 0.04,
+          "low": 0.02,
           "mid": 0.19,
           "high": 2,
           "market": 0.16,
-          "directLow": null
+          "directLow": 0.04
         },
         "reverseHolofoil": {
           "low": 0.1,
           "mid": 0.38,
           "high": 1.51,
           "market": 0.38,
-          "directLow": null
+          "directLow": 0.62
         }
       }
     },
@@ -38,12 +38,12 @@
       "prices": {
         "averageSellPrice": 0.11,
         "lowPrice": 0.02,
-        "trendPrice": 0.2,
+        "trendPrice": 0.19,
         "germanProLow": 0,
         "suggestedPrice": 0,
         "reverseHoloSell": 0.43,
         "reverseHoloLow": 0.05,
-        "reverseHoloTrend": 0.32,
+        "reverseHoloTrend": 0.3,
         "lowPriceExPlus": 0.02,
         "avg1": 0.02,
         "avg7": 0.22,
@@ -74,11 +74,11 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 0.4,
+          "low": 0.35,
           "mid": 1.13,
           "high": 7.99,
           "market": 1.16,
-          "directLow": null
+          "directLow": 1.18
         }
       }
     },
@@ -188,15 +188,15 @@
       "prices": {
         "normal": {
           "low": 0.05,
-          "mid": 0.21,
-          "high": 1.49,
+          "mid": 0.22,
+          "high": 1.56,
           "market": 0.2,
           "directLow": null
         },
         "reverseHolofoil": {
-          "low": 0.22,
+          "low": 0.1,
           "mid": 0.4,
-          "high": 1.53,
+          "high": 1.68,
           "market": 0.36,
           "directLow": null
         }
@@ -297,16 +297,16 @@
       "prices": {
         "normal": {
           "low": 0.1,
-          "mid": 0.32,
+          "mid": 0.33,
           "high": 5,
-          "market": 0.26,
+          "market": 0.25,
           "directLow": null
         },
         "holofoil": {
           "low": 1,
           "mid": 2.21,
           "high": 7.99,
-          "market": 2.06,
+          "market": 2.14,
           "directLow": null
         }
       }

@@ -27,7 +27,7 @@
         },
         "reverseHolofoil": {
           "low": 0.77,
-          "mid": 0.77,
+          "mid": 0.82,
           "high": 0.99,
           "market": 0.65,
           "directLow": null
@@ -130,7 +130,7 @@
       "prices": {
         "normal": {
           "low": 0.1,
-          "mid": 0.31,
+          "mid": 0.3,
           "high": 0.75,
           "market": 0.33,
           "directLow": null
@@ -185,7 +185,7 @@
       "prices": {
         "normal": {
           "low": 0.21,
-          "mid": 0.36,
+          "mid": 0.35,
           "high": 1,
           "market": 0.28,
           "directLow": null
@@ -203,16 +203,16 @@
       "prices": {
         "averageSellPrice": 0.13,
         "lowPrice": 0.02,
-        "trendPrice": 0.19,
+        "trendPrice": 0.2,
         "germanProLow": 0,
         "suggestedPrice": 0,
         "reverseHoloSell": 0,
         "reverseHoloLow": 0.2,
         "reverseHoloTrend": 0.74,
         "lowPriceExPlus": 0.02,
-        "avg1": 0.07,
+        "avg1": 0.25,
         "avg7": 0.15,
-        "avg30": 0.15,
+        "avg30": 0.16,
         "reverseHoloAvg1": 1.5,
         "reverseHoloAvg7": 0.53,
         "reverseHoloAvg30": 0.64
@@ -243,7 +243,7 @@
           "mid": 0.15,
           "high": 1.49,
           "market": 0.1,
-          "directLow": 0.07
+          "directLow": 0.06
         },
         "reverseHolofoil": {
           "low": 0.05,
@@ -265,8 +265,8 @@
         "reverseHoloLow": 0.1,
         "reverseHoloTrend": 0.21,
         "lowPriceExPlus": 0.02,
-        "avg1": 0.08,
-        "avg7": 0.09,
+        "avg1": 0.04,
+        "avg7": 0.08,
         "avg30": 0.07,
         "reverseHoloAvg1": 0.29,
         "reverseHoloAvg7": 0.28,
@@ -294,7 +294,7 @@
     "tcgplayer": {
       "prices": {
         "reverseHolofoil": {
-          "low": 0.18,
+          "low": 0.19,
           "mid": 0.3,
           "high": 1.51,
           "market": 0.26,
@@ -302,7 +302,7 @@
         },
         "normal": {
           "low": 0.03,
-          "mid": 0.17,
+          "mid": 0.18,
           "high": 1.49,
           "market": 0.14,
           "directLow": null
@@ -311,17 +311,17 @@
     },
     "cardmarket": {
       "prices": {
-        "averageSellPrice": 0.09,
+        "averageSellPrice": 0.06,
         "lowPrice": 0.02,
         "trendPrice": 0.07,
         "germanProLow": 0,
         "suggestedPrice": 0,
-        "reverseHoloSell": 0.31,
+        "reverseHoloSell": 0.22,
         "reverseHoloLow": 0.05,
         "reverseHoloTrend": 0.31,
         "lowPriceExPlus": 0.02,
         "avg1": 0.02,
-        "avg7": 0.05,
+        "avg7": 0.04,
         "avg30": 0.06,
         "reverseHoloAvg1": 0.25,
         "reverseHoloAvg7": 0.31,
@@ -375,9 +375,9 @@
         "reverseHoloLow": 0.02,
         "reverseHoloTrend": 0.22,
         "lowPriceExPlus": 0.02,
-        "avg1": 0.06,
-        "avg7": 0.05,
-        "avg30": 0.06,
+        "avg1": 0.09,
+        "avg7": 0.06,
+        "avg30": 0.07,
         "reverseHoloAvg1": 0.15,
         "reverseHoloAvg7": 0.2,
         "reverseHoloAvg30": 0.21
@@ -430,11 +430,11 @@
         "reverseHoloLow": 0.04,
         "reverseHoloTrend": 0.21,
         "lowPriceExPlus": 0.02,
-        "avg1": 0.03,
+        "avg1": 0.05,
         "avg7": 0.03,
         "avg30": 0.04,
         "reverseHoloAvg1": 0.15,
-        "reverseHoloAvg7": 0.19,
+        "reverseHoloAvg7": 0.2,
         "reverseHoloAvg30": 0.16
       }
     }
@@ -483,12 +483,12 @@
         "suggestedPrice": 0,
         "reverseHoloSell": 0.1,
         "reverseHoloLow": 0.02,
-        "reverseHoloTrend": 0.1,
+        "reverseHoloTrend": 0.09,
         "lowPriceExPlus": 0.02,
-        "avg1": 0.04,
+        "avg1": 0.03,
         "avg7": 0.05,
         "avg30": 0.04,
-        "reverseHoloAvg1": 0.1,
+        "reverseHoloAvg1": 0.08,
         "reverseHoloAvg7": 0.1,
         "reverseHoloAvg30": 0.1
       }
@@ -514,10 +514,10 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 5,
-          "mid": 7.3,
+          "low": 6,
+          "mid": 7.21,
           "high": 30,
-          "market": 6.43,
+          "market": 6.39,
           "directLow": null
         }
       }
@@ -525,17 +525,17 @@
     "cardmarket": {
       "prices": {
         "averageSellPrice": 5.74,
-        "lowPrice": 3.4,
-        "trendPrice": 5.69,
+        "lowPrice": 3.3,
+        "trendPrice": 5.61,
         "germanProLow": 0,
         "suggestedPrice": 0,
         "reverseHoloSell": 0,
         "reverseHoloLow": 0,
         "reverseHoloTrend": 0,
-        "lowPriceExPlus": 3.4,
-        "avg1": 5.59,
-        "avg7": 6.06,
-        "avg30": 5.74,
+        "lowPriceExPlus": 3.3,
+        "avg1": 5.41,
+        "avg7": 5.88,
+        "avg30": 5.73,
         "reverseHoloAvg1": 0,
         "reverseHoloAvg7": 0,
         "reverseHoloAvg30": 0

@@ -26,7 +26,7 @@
           "directLow": 0.69
         },
         "reverseHolofoil": {
-          "low": 0.55,
+          "low": 0.67,
           "mid": 1.18,
           "high": 6,
           "market": 1.1,
@@ -78,11 +78,11 @@
           "mid": 0.71,
           "high": 3.14,
           "market": 0.86,
-          "directLow": 0.71
+          "directLow": null
         },
         "reverseHolofoil": {
           "low": 0.69,
-          "mid": 0.92,
+          "mid": 1.15,
           "high": 3.49,
           "market": 0.99,
           "directLow": null
@@ -131,7 +131,7 @@
       "prices": {
         "normal": {
           "low": 0.17,
-          "mid": 0.47,
+          "mid": 0.48,
           "high": 5,
           "market": 0.56,
           "directLow": null
@@ -195,8 +195,8 @@
           "low": 0.2,
           "mid": 0.82,
           "high": 3.98,
-          "market": 0.82,
-          "directLow": 0.97
+          "market": 0.84,
+          "directLow": null
         }
       }
     },
@@ -305,7 +305,7 @@
           "low": 0.17,
           "mid": 0.49,
           "high": 2.54,
-          "market": 0.46,
+          "market": 0.47,
           "directLow": null
         }
       }
@@ -407,8 +407,8 @@
         "normal": {
           "low": 0.01,
           "mid": 0.15,
-          "high": 5.02,
-          "market": 0.13,
+          "high": 999,
+          "market": 0.12,
           "directLow": 0.06
         },
         "reverseHolofoil": {
@@ -416,7 +416,7 @@
           "mid": 0.2,
           "high": 2,
           "market": 0.16,
-          "directLow": null
+          "directLow": 0.13
         }
       }
     },
@@ -518,7 +518,7 @@
           "low": 0.01,
           "mid": 0.1,
           "high": 1.53,
-          "market": 0.03,
+          "market": 0.04,
           "directLow": 0.01
         },
         "reverseHolofoil": {
@@ -572,8 +572,8 @@
         "holofoil": {
           "low": 9,
           "mid": 11.96,
-          "high": 60.78,
-          "market": 10.95,
+          "high": 20,
+          "market": 10.91,
           "directLow": null
         }
       }

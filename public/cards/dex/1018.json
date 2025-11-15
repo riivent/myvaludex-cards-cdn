@@ -75,10 +75,10 @@
       "prices": {
         "holofoil": {
           "low": 1.5,
-          "mid": 2.83,
+          "mid": 2.87,
           "high": 18,
-          "market": 2.63,
-          "directLow": 2.21
+          "market": 2.61,
+          "directLow": 2.37
         }
       }
     },
@@ -127,7 +127,7 @@
           "mid": 0.97,
           "high": 15.24,
           "market": 0.82,
-          "directLow": 0.5
+          "directLow": 0.3
         }
       }
     },
@@ -173,10 +173,10 @@
       "prices": {
         "holofoil": {
           "low": 0.75,
-          "mid": 1.57,
+          "mid": 1.58,
           "high": 19.99,
-          "market": 1.12,
-          "directLow": 1.19
+          "market": 1.11,
+          "directLow": 0.89
         }
       }
     },
@@ -221,10 +221,10 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 10,
-          "mid": 14.06,
+          "low": 6.69,
+          "mid": 14,
           "high": 50,
-          "market": 11.7,
+          "market": 11.65,
           "directLow": 13
         }
       }
@@ -279,10 +279,29 @@
           "low": 0.01,
           "mid": 0.15,
           "high": 20,
-          "market": 0.09,
-          "directLow": 0.09
+          "market": 0.08,
+          "directLow": 0.08
         }
       }
     }
+  },
+  {
+    "id": "me2-75",
+    "name": "Archaludon",
+    "images": {
+      "small": "https://images.pokemontcg.io/me2/75.png",
+      "large": "https://images.pokemontcg.io/me2/75_hires.png"
+    },
+    "set": {
+      "name": "Phantasmal Flames",
+      "series": "Mega Evolution",
+      "releaseDate": "2025/11/14"
+    },
+    "number": "75",
+    "rarity": "Uncommon",
+    "subtypes": [
+      "Stage 1"
+    ],
+    "tcgplayer": {}
   }
 ]

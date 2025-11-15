@@ -68,7 +68,7 @@
       "prices": {
         "normal": {
           "low": 0.35,
-          "mid": 0.53,
+          "mid": 0.52,
           "high": 7,
           "market": 0.54,
           "directLow": null
@@ -116,16 +116,16 @@
       "prices": {
         "holofoil": {
           "low": 3,
-          "mid": 3.52,
+          "mid": 3.42,
           "high": 8.2,
-          "market": 3.4,
+          "market": 3.3,
           "directLow": null
         },
         "reverseHolofoil": {
           "low": 3.91,
           "mid": 7.04,
           "high": 102.35,
-          "market": 4.64,
+          "market": 4.51,
           "directLow": null
         }
       }
@@ -171,7 +171,7 @@
       "prices": {
         "holofoil": {
           "low": 14.27,
-          "mid": 28.09,
+          "mid": 28.5,
           "high": 99.99,
           "market": 26.66,
           "directLow": 34
@@ -267,7 +267,7 @@
       "prices": {
         "holofoil": {
           "low": 2.9,
-          "mid": 4.5,
+          "mid": 4.4,
           "high": 9.99,
           "market": 3.75,
           "directLow": null
@@ -275,8 +275,8 @@
         "reverseHolofoil": {
           "low": 1,
           "mid": 2.17,
-          "high": 3.82,
-          "market": 2.91,
+          "high": 2.31,
+          "market": 3.13,
           "directLow": null
         }
       }
@@ -328,9 +328,9 @@
           "directLow": null
         },
         "reverseHolofoil": {
-          "low": 2.05,
-          "mid": 7.92,
-          "high": 13.95,
+          "low": 1.94,
+          "mid": 7.65,
+          "high": 13.82,
           "market": 4.9,
           "directLow": null
         }
@@ -378,7 +378,7 @@
       "prices": {
         "holofoil": {
           "low": 6,
-          "mid": 10.78,
+          "mid": 11,
           "high": 25,
           "market": 10.67,
           "directLow": 8.44
@@ -427,7 +427,7 @@
       "prices": {
         "holofoil": {
           "low": 20,
-          "mid": 33.38,
+          "mid": 33,
           "high": 99.99,
           "market": 37.09,
           "directLow": 20.38
@@ -475,7 +475,7 @@
       "prices": {
         "holofoil": {
           "low": 0.5,
-          "mid": 0.99,
+          "mid": 1,
           "high": 2.5,
           "market": 1.17,
           "directLow": null
@@ -530,7 +530,7 @@
       "prices": {
         "normal": {
           "low": 0.08,
-          "mid": 0.57,
+          "mid": 0.56,
           "high": 1.49,
           "market": 0.57,
           "directLow": null
@@ -697,9 +697,9 @@
       "prices": {
         "holofoil": {
           "low": 0.04,
-          "mid": 0.55,
+          "mid": 0.51,
           "high": 5,
-          "market": 0.4,
+          "market": 0.35,
           "directLow": 0.31
         }
       }
@@ -715,7 +715,7 @@
         "reverseHoloLow": 0,
         "reverseHoloTrend": 0,
         "lowPriceExPlus": 0.02,
-        "avg1": 0.41,
+        "avg1": 0.37,
         "avg7": 0.35,
         "avg30": 0.35,
         "reverseHoloAvg1": 0,
@@ -746,9 +746,9 @@
       "prices": {
         "holofoil": {
           "low": 0.51,
-          "mid": 1.53,
-          "high": 8.95,
-          "market": 1.09,
+          "mid": 1.5,
+          "high": 8.99,
+          "market": 1,
           "directLow": null
         }
       }
@@ -794,10 +794,10 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 44.96,
-          "mid": 48.55,
+          "low": 43.48,
+          "mid": 48.5,
           "high": 159.99,
-          "market": 46.46,
+          "market": 46.26,
           "directLow": 45.53
         }
       }
@@ -821,5 +821,24 @@
         "reverseHoloAvg30": 0
       }
     }
+  },
+  {
+    "id": "me2-40",
+    "name": "Meloetta",
+    "images": {
+      "small": "https://images.pokemontcg.io/me2/40.png",
+      "large": "https://images.pokemontcg.io/me2/40_hires.png"
+    },
+    "set": {
+      "name": "Phantasmal Flames",
+      "series": "Mega Evolution",
+      "releaseDate": "2025/11/14"
+    },
+    "number": "40",
+    "rarity": "Uncommon",
+    "subtypes": [
+      "Basic"
+    ],
+    "tcgplayer": {}
   }
 ]

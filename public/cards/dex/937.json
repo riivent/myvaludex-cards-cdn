@@ -21,15 +21,15 @@
         "reverseHolofoil": {
           "low": 0.08,
           "mid": 0.23,
-          "high": 2.95,
-          "market": 0.22,
+          "high": 2.99,
+          "market": 0.23,
           "directLow": null
         },
         "holofoil": {
           "low": 0.01,
           "mid": 0.17,
           "high": 10,
-          "market": 0.14,
+          "market": 0.15,
           "directLow": 0.1
         }
       }
@@ -75,7 +75,7 @@
       "prices": {
         "reverseHolofoil": {
           "low": 0.05,
-          "mid": 0.22,
+          "mid": 0.23,
           "high": 3.04,
           "market": 0.23,
           "directLow": null
@@ -93,18 +93,18 @@
       "prices": {
         "averageSellPrice": 0.06,
         "lowPrice": 0.02,
-        "trendPrice": 0.04,
+        "trendPrice": 0.03,
         "germanProLow": 0,
         "suggestedPrice": 0,
         "reverseHoloSell": 0.13,
         "reverseHoloLow": 0.02,
         "reverseHoloTrend": 0.19,
         "lowPriceExPlus": 0.02,
-        "avg1": 0.04,
-        "avg7": 0.07,
+        "avg1": 0.02,
+        "avg7": 0.06,
         "avg30": 0.06,
-        "reverseHoloAvg1": 0.09,
-        "reverseHoloAvg7": 0.21,
+        "reverseHoloAvg1": 0.1,
+        "reverseHoloAvg7": 0.22,
         "reverseHoloAvg30": 0.15
       }
     }
@@ -130,10 +130,10 @@
       "prices": {
         "holofoil": {
           "low": 4,
-          "mid": 6.42,
-          "high": 51.57,
-          "market": 5.73,
-          "directLow": 7.16
+          "mid": 6.45,
+          "high": 52.74,
+          "market": 5.86,
+          "directLow": 8.14
         }
       }
     },
@@ -179,24 +179,24 @@
         "reverseHolofoil": {
           "low": 0.04,
           "mid": 0.25,
-          "high": 2.2,
-          "market": 0.25,
+          "high": 2.99,
+          "market": 0.26,
           "directLow": 0.22
         },
         "normal": {
           "low": 0.01,
           "mid": 0.1,
-          "high": 2,
-          "market": 0.07,
+          "high": 2.99,
+          "market": 0.08,
           "directLow": 0.06
         }
       }
     },
     "cardmarket": {
       "prices": {
-        "averageSellPrice": 0.04,
+        "averageSellPrice": 0.03,
         "lowPrice": 0.02,
-        "trendPrice": 0.03,
+        "trendPrice": 0.02,
         "germanProLow": 0,
         "suggestedPrice": 0,
         "reverseHoloSell": 0.16,
@@ -206,7 +206,7 @@
         "avg1": 0.03,
         "avg7": 0.03,
         "avg30": 0.03,
-        "reverseHoloAvg1": 0.35,
+        "reverseHoloAvg1": 0.12,
         "reverseHoloAvg7": 0.18,
         "reverseHoloAvg30": 0.16
       }
@@ -234,28 +234,28 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 0.98,
-          "mid": 5.99,
-          "high": 19.93,
-          "market": 4.69,
-          "directLow": 2.82
+          "low": 3.25,
+          "mid": 5.47,
+          "high": 19.99,
+          "market": 4.71,
+          "directLow": null
         }
       }
     },
     "cardmarket": {
       "prices": {
         "averageSellPrice": 6.58,
-        "lowPrice": 4.75,
+        "lowPrice": 4.95,
         "trendPrice": 6.23,
         "germanProLow": 0,
         "suggestedPrice": 0,
         "reverseHoloSell": 0,
         "reverseHoloLow": 0,
         "reverseHoloTrend": 0,
-        "lowPriceExPlus": 4.75,
-        "avg1": 6.48,
-        "avg7": 6.23,
-        "avg30": 6.57,
+        "lowPriceExPlus": 4.95,
+        "avg1": 5.71,
+        "avg7": 6.15,
+        "avg30": 6.59,
         "reverseHoloAvg1": 0,
         "reverseHoloAvg7": 0,
         "reverseHoloAvg30": 0
@@ -282,10 +282,10 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 15,
-          "mid": 20,
+          "low": 15.01,
+          "mid": 20.04,
           "high": 72.25,
-          "market": 16.94,
+          "market": 16.8,
           "directLow": null
         }
       }
@@ -332,13 +332,32 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 109.13,
-          "mid": 137.65,
+          "low": 105,
+          "mid": 137.71,
           "high": 249.99,
-          "market": 125.64,
+          "market": 125.46,
           "directLow": null
         }
       }
     }
+  },
+  {
+    "id": "me2-20",
+    "name": "Ceruledge",
+    "images": {
+      "small": "https://images.pokemontcg.io/me2/20.png",
+      "large": "https://images.pokemontcg.io/me2/20_hires.png"
+    },
+    "set": {
+      "name": "Phantasmal Flames",
+      "series": "Mega Evolution",
+      "releaseDate": "2025/11/14"
+    },
+    "number": "20",
+    "rarity": "Uncommon",
+    "subtypes": [
+      "Stage 1"
+    ],
+    "tcgplayer": {}
   }
 ]

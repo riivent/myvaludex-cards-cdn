@@ -20,10 +20,10 @@
       "prices": {
         "holofoil": {
           "low": 4,
-          "mid": 5,
+          "mid": 5.13,
           "high": 10,
-          "market": 6.37,
-          "directLow": null
+          "market": 6.42,
+          "directLow": 5.25
         }
       }
     },
@@ -68,9 +68,9 @@
       "prices": {
         "holofoil": {
           "low": 3,
-          "mid": 4.32,
+          "mid": 4.35,
           "high": 10,
-          "market": 4.29,
+          "market": 4.35,
           "directLow": 4.48
         }
       }
@@ -78,16 +78,16 @@
     "cardmarket": {
       "prices": {
         "averageSellPrice": 1.11,
-        "lowPrice": 0.35,
-        "trendPrice": 1.04,
+        "lowPrice": 0.45,
+        "trendPrice": 0.99,
         "germanProLow": 0,
         "suggestedPrice": 0,
         "reverseHoloSell": 0,
         "reverseHoloLow": 0,
         "reverseHoloTrend": 0,
-        "lowPriceExPlus": 0.35,
-        "avg1": 1.33,
-        "avg7": 1.02,
+        "lowPriceExPlus": 0.45,
+        "avg1": 0.9,
+        "avg7": 1.01,
         "avg30": 1.11,
         "reverseHoloAvg1": 0,
         "reverseHoloAvg7": 0,
@@ -119,8 +119,8 @@
           "low": 0.33,
           "mid": 0.99,
           "high": 4.95,
-          "market": 0.83,
-          "directLow": 0.93
+          "market": 0.81,
+          "directLow": 0.99
         }
       }
     },
@@ -128,15 +128,15 @@
       "prices": {
         "averageSellPrice": 0.97,
         "lowPrice": 0.3,
-        "trendPrice": 0.95,
+        "trendPrice": 0.94,
         "germanProLow": 0,
         "suggestedPrice": 0,
         "reverseHoloSell": 0,
         "reverseHoloLow": 0,
         "reverseHoloTrend": 0,
         "lowPriceExPlus": 0.3,
-        "avg1": 0.9,
-        "avg7": 1,
+        "avg1": 0.97,
+        "avg7": 0.93,
         "avg30": 0.97,
         "reverseHoloAvg1": 0,
         "reverseHoloAvg7": 0,
@@ -181,19 +181,19 @@
     },
     "cardmarket": {
       "prices": {
-        "averageSellPrice": 0.03,
+        "averageSellPrice": 0.04,
         "lowPrice": 0.02,
-        "trendPrice": 0.04,
+        "trendPrice": 0.03,
         "germanProLow": 0,
         "suggestedPrice": 0,
         "reverseHoloSell": 0.13,
         "reverseHoloLow": 0.02,
-        "reverseHoloTrend": 0.14,
+        "reverseHoloTrend": 0.13,
         "lowPriceExPlus": 0.02,
-        "avg1": 0.03,
+        "avg1": 0.02,
         "avg7": 0.04,
         "avg30": 0.04,
-        "reverseHoloAvg1": 0.12,
+        "reverseHoloAvg1": 0.13,
         "reverseHoloAvg7": 0.12,
         "reverseHoloAvg30": 0.13
       }
@@ -245,12 +245,12 @@
         "reverseHoloLow": 0.02,
         "reverseHoloTrend": 0.15,
         "lowPriceExPlus": 0.02,
-        "avg1": 0.06,
+        "avg1": 0.02,
         "avg7": 0.04,
         "avg30": 0.04,
-        "reverseHoloAvg1": 0.19,
-        "reverseHoloAvg7": 0.11,
-        "reverseHoloAvg30": 0.12
+        "reverseHoloAvg1": 0.06,
+        "reverseHoloAvg7": 0.1,
+        "reverseHoloAvg30": 0.11
       }
     }
   },
@@ -298,14 +298,14 @@
         "suggestedPrice": 0,
         "reverseHoloSell": 0.18,
         "reverseHoloLow": 0.02,
-        "reverseHoloTrend": 0.29,
+        "reverseHoloTrend": 0.28,
         "lowPriceExPlus": 0.02,
-        "avg1": 0.07,
+        "avg1": 0.02,
         "avg7": 0.06,
         "avg30": 0.04,
-        "reverseHoloAvg1": 0.79,
-        "reverseHoloAvg7": 0.24,
-        "reverseHoloAvg30": 0.17
+        "reverseHoloAvg1": 0.18,
+        "reverseHoloAvg7": 0.25,
+        "reverseHoloAvg30": 0.18
       }
     }
   },
@@ -330,10 +330,10 @@
       "prices": {
         "holofoil": {
           "low": 19.5,
-          "mid": 24.93,
+          "mid": 24.9,
           "high": 100,
-          "market": 23.54,
-          "directLow": 29.99
+          "market": 23.6,
+          "directLow": 21.01
         }
       }
     },
@@ -406,7 +406,7 @@
         "avg1": 0.02,
         "avg7": 0.03,
         "avg30": 0.03,
-        "reverseHoloAvg1": 0.11,
+        "reverseHoloAvg1": 0.07,
         "reverseHoloAvg7": 0.1,
         "reverseHoloAvg30": 0.09
       }

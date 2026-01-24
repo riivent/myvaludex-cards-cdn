@@ -75,7 +75,7 @@
       "prices": {
         "normal": {
           "low": 4.99,
-          "mid": 6.35,
+          "mid": 6.25,
           "high": 18.99,
           "market": 6.21,
           "directLow": null
@@ -132,15 +132,15 @@
           "low": 0.01,
           "mid": 0.25,
           "high": 999,
-          "market": 0.21,
-          "directLow": null
+          "market": 0.2,
+          "directLow": 0.1
         },
         "normal": {
           "low": 0.01,
           "mid": 0.2,
           "high": 999,
           "market": 0.13,
-          "directLow": null
+          "directLow": 0.1
         }
       }
     }

@@ -19,17 +19,17 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 0.13,
+          "low": 0.14,
           "mid": 0.35,
           "high": 3.41,
-          "market": 0.31,
-          "directLow": null
+          "market": 0.29,
+          "directLow": 0.25
         },
         "reverseHolofoil": {
           "low": 0.11,
-          "mid": 0.39,
-          "high": 2.26,
-          "market": 0.39,
+          "mid": 0.4,
+          "high": 2,
+          "market": 0.4,
           "directLow": null
         }
       }
@@ -53,5 +53,24 @@
         "reverseHoloAvg30": 0.5
       }
     }
+  },
+  {
+    "id": "me2pt5-98",
+    "name": "Spectrier",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me2pt5-98/small",
+      "large": "https://images.scrydex.com/pokemon/me2pt5-98/large"
+    },
+    "set": {
+      "name": "Ascended Heroes",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/01/30"
+    },
+    "number": "98",
+    "rarity": "Rare",
+    "subtypes": [
+      "Basic"
+    ],
+    "tcgplayer": {}
   }
 ]

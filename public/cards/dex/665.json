@@ -27,7 +27,7 @@
         },
         "reverseHolofoil": {
           "low": 0.25,
-          "mid": 0.76,
+          "mid": 0.78,
           "high": 2,
           "market": 0.79,
           "directLow": null
@@ -77,15 +77,15 @@
           "low": 0.02,
           "mid": 0.23,
           "high": 1.49,
-          "market": 0.23,
+          "market": 0.24,
           "directLow": null
         },
         "reverseHolofoil": {
           "low": 0.12,
-          "mid": 0.59,
+          "mid": 0.6,
           "high": 2.99,
-          "market": 0.6,
-          "directLow": 1
+          "market": 0.65,
+          "directLow": 0.66
         }
       }
     },
@@ -139,7 +139,7 @@
           "low": 0.25,
           "mid": 0.43,
           "high": 2.99,
-          "market": 0.44,
+          "market": 0.51,
           "directLow": null
         }
       }
@@ -188,7 +188,7 @@
           "mid": 0.14,
           "high": 19.5,
           "market": 0.08,
-          "directLow": 0.04
+          "directLow": 0.02
         },
         "reverseHolofoil": {
           "low": 0.01,
@@ -240,7 +240,7 @@
       "prices": {
         "reverseHolofoil": {
           "low": 0.01,
-          "mid": 0.16,
+          "mid": 0.17,
           "high": 25,
           "market": 0.13,
           "directLow": null
@@ -249,7 +249,7 @@
           "low": 0.01,
           "mid": 0.15,
           "high": 25,
-          "market": 0.06,
+          "market": 0.07,
           "directLow": null
         }
       }
@@ -298,7 +298,7 @@
           "mid": 0.16,
           "high": 2.99,
           "market": 0.14,
-          "directLow": 0.1
+          "directLow": 0.08
         },
         "normal": {
           "low": 0.01,
@@ -328,5 +328,43 @@
         "reverseHoloAvg30": 0.08
       }
     }
+  },
+  {
+    "id": "me3-8",
+    "name": "Spewpa",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me3-8/small",
+      "large": "https://images.scrydex.com/pokemon/me3-8/large"
+    },
+    "set": {
+      "name": "Perfect Order",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/03/27"
+    },
+    "number": "8",
+    "rarity": "Common",
+    "subtypes": [
+      "Stage 1"
+    ],
+    "tcgplayer": {}
+  },
+  {
+    "id": "me3-89",
+    "name": "Spewpa",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me3-89/small",
+      "large": "https://images.scrydex.com/pokemon/me3-89/large"
+    },
+    "set": {
+      "name": "Perfect Order",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/03/27"
+    },
+    "number": "89",
+    "rarity": "Illustration Rare",
+    "subtypes": [
+      "Stage 1"
+    ],
+    "tcgplayer": {}
   }
 ]

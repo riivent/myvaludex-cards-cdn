@@ -27,8 +27,8 @@
         },
         "reverseHolofoil": {
           "low": 0.6,
-          "mid": 0.92,
-          "high": 1.11,
+          "mid": 0.94,
+          "high": 1.75,
           "market": 0.94,
           "directLow": null
         }
@@ -77,12 +77,12 @@
           "low": 0.07,
           "mid": 0.25,
           "high": 5,
-          "market": 0.22,
-          "directLow": 0.25
+          "market": 0.23,
+          "directLow": 0.24
         },
         "reverseHolofoil": {
           "low": 0.14,
-          "mid": 0.62,
+          "mid": 0.59,
           "high": 3.49,
           "market": 0.72,
           "directLow": null
@@ -185,9 +185,9 @@
       "prices": {
         "normal": {
           "low": 0.01,
-          "mid": 0.22,
+          "mid": 0.21,
           "high": 4,
-          "market": 0.19,
+          "market": 0.2,
           "directLow": null
         },
         "reverseHolofoil": {
@@ -195,7 +195,7 @@
           "mid": 0.41,
           "high": 2.5,
           "market": 0.4,
-          "directLow": 0.45
+          "directLow": 0.38
         }
       }
     },
@@ -304,10 +304,29 @@
           "low": 0.01,
           "mid": 0.1,
           "high": 999,
-          "market": 0.07,
+          "market": 0.06,
           "directLow": 0.01
         }
       }
     }
+  },
+  {
+    "id": "me3-35",
+    "name": "Spritzee",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me3-35/small",
+      "large": "https://images.scrydex.com/pokemon/me3-35/large"
+    },
+    "set": {
+      "name": "Perfect Order",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/03/27"
+    },
+    "number": "35",
+    "rarity": "Common",
+    "subtypes": [
+      "Basic"
+    ],
+    "tcgplayer": {}
   }
 ]

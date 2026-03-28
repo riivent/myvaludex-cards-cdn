@@ -118,12 +118,12 @@
           "low": 0.08,
           "mid": 0.3,
           "high": 1.63,
-          "market": 0.33,
+          "market": 0.32,
           "directLow": 0.26
         },
         "reverseHolofoil": {
           "low": 0.5,
-          "mid": 1.17,
+          "mid": 1.29,
           "high": 15,
           "market": 1.65,
           "directLow": null
@@ -179,7 +179,7 @@
         "reverseHolofoil": {
           "low": 1.38,
           "mid": 1.95,
-          "high": 4.18,
+          "high": 9.17,
           "market": 3.98,
           "directLow": null
         }
@@ -274,9 +274,9 @@
         "normal": {
           "low": 0.06,
           "mid": 0.3,
-          "high": 1.4,
+          "high": 1,
           "market": 0.36,
-          "directLow": 0.3
+          "directLow": 0.27
         },
         "reverseHolofoil": {
           "low": 0.7,
@@ -330,14 +330,14 @@
           "low": 0.02,
           "mid": 0.33,
           "high": 1.62,
-          "market": 0.34,
+          "market": 0.35,
           "directLow": null
         },
         "reverseHolofoil": {
           "low": 0.38,
           "mid": 1.42,
           "high": 2,
-          "market": 1.3,
+          "market": 1.32,
           "directLow": null
         }
       }
@@ -383,10 +383,10 @@
       "prices": {
         "holofoil": {
           "low": 1,
-          "mid": 2.33,
+          "mid": 2.32,
           "high": 9.99,
-          "market": 2.33,
-          "directLow": 1.82
+          "market": 2.27,
+          "directLow": 1.89
         }
       }
     },
@@ -434,11 +434,11 @@
           "mid": 0.22,
           "high": 19.5,
           "market": 0.24,
-          "directLow": 0.23
+          "directLow": 0.1
         },
         "reverseHolofoil": {
           "low": 0.2,
-          "mid": 0.4,
+          "mid": 0.41,
           "high": 2,
           "market": 0.36,
           "directLow": 0.58
@@ -537,10 +537,10 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 18.66,
+          "low": 18.49,
           "mid": 23.17,
           "high": 100,
-          "market": 20.12,
+          "market": 20.34,
           "directLow": 28.99
         }
       }
@@ -692,9 +692,9 @@
         },
         "holofoil": {
           "low": 0.68,
-          "mid": 1.25,
+          "mid": 1.24,
           "high": 9.99,
-          "market": 1.18,
+          "market": 1.15,
           "directLow": null
         }
       }
@@ -749,7 +749,7 @@
           "low": 0.01,
           "mid": 0.12,
           "high": 2.07,
-          "market": 0.08,
+          "market": 0.07,
           "directLow": 0.04
         },
         "reverseHolofoil": {
@@ -828,5 +828,24 @@
         "reverseHoloAvg30": 0
       }
     }
+  },
+  {
+    "id": "me3-4",
+    "name": "Snivy",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me3-4/small",
+      "large": "https://images.scrydex.com/pokemon/me3-4/large"
+    },
+    "set": {
+      "name": "Perfect Order",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/03/27"
+    },
+    "number": "4",
+    "rarity": "Common",
+    "subtypes": [
+      "Basic"
+    ],
+    "tcgplayer": {}
   }
 ]

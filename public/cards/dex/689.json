@@ -75,7 +75,7 @@
       "prices": {
         "normal": {
           "low": 0.13,
-          "mid": 0.34,
+          "mid": 0.35,
           "high": 19.5,
           "market": 0.34,
           "directLow": 0.2
@@ -137,7 +137,7 @@
         },
         "reverseHolofoil": {
           "low": 0.13,
-          "mid": 0.47,
+          "mid": 0.49,
           "high": 2.78,
           "market": 0.46,
           "directLow": null
@@ -273,5 +273,24 @@
         "reverseHoloAvg30": 0.23
       }
     }
+  },
+  {
+    "id": "me3-43",
+    "name": "Barbaracle",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me3-43/small",
+      "large": "https://images.scrydex.com/pokemon/me3-43/large"
+    },
+    "set": {
+      "name": "Perfect Order",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/03/27"
+    },
+    "number": "43",
+    "rarity": "Uncommon",
+    "subtypes": [
+      "Stage 1"
+    ],
+    "tcgplayer": {}
   }
 ]

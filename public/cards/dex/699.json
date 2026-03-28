@@ -21,9 +21,9 @@
       "prices": {
         "holofoil": {
           "low": 16,
-          "mid": 20.02,
+          "mid": 20,
           "high": 30,
-          "market": 18.98,
+          "market": 19.53,
           "directLow": null
         }
       }
@@ -69,8 +69,8 @@
       "prices": {
         "normal": {
           "low": 6,
-          "mid": 8.11,
-          "high": 10.72,
+          "mid": 8.15,
+          "high": 11.76,
           "market": 8.39,
           "directLow": null
         },
@@ -126,7 +126,7 @@
           "low": 7.99,
           "mid": 9.23,
           "high": 14.9,
-          "market": 9.1,
+          "market": 9.12,
           "directLow": null
         },
         "holofoil": {
@@ -157,5 +157,43 @@
         "reverseHoloAvg30": 16.22
       }
     }
+  },
+  {
+    "id": "me3-24",
+    "name": "Aurorus",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me3-24/small",
+      "large": "https://images.scrydex.com/pokemon/me3-24/large"
+    },
+    "set": {
+      "name": "Perfect Order",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/03/27"
+    },
+    "number": "24",
+    "rarity": "Rare",
+    "subtypes": [
+      "Stage 2"
+    ],
+    "tcgplayer": {}
+  },
+  {
+    "id": "me3-92",
+    "name": "Aurorus",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me3-92/small",
+      "large": "https://images.scrydex.com/pokemon/me3-92/large"
+    },
+    "set": {
+      "name": "Perfect Order",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/03/27"
+    },
+    "number": "92",
+    "rarity": "Illustration Rare",
+    "subtypes": [
+      "Stage 2"
+    ],
+    "tcgplayer": {}
   }
 ]

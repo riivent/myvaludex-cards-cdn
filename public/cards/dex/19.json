@@ -22,7 +22,7 @@
           "low": 0.1,
           "mid": 0.49,
           "high": 23,
-          "market": 0.79,
+          "market": 0.77,
           "directLow": 0.19
         }
       }
@@ -116,17 +116,17 @@
       "prices": {
         "1stEdition": {
           "low": 0.79,
-          "mid": 1.74,
+          "mid": 1.73,
           "high": 19.99,
-          "market": 1.75,
+          "market": 1.81,
           "directLow": null
         },
         "unlimited": {
           "low": 0.19,
           "mid": 0.5,
           "high": 4,
-          "market": 0.68,
-          "directLow": 0.69
+          "market": 0.67,
+          "directLow": null
         }
       }
     },
@@ -171,17 +171,17 @@
       "prices": {
         "1stEdition": {
           "low": 1.25,
-          "mid": 2.48,
+          "mid": 2.72,
           "high": 19.99,
-          "market": 1.92,
+          "market": 2.03,
           "directLow": null
         },
         "unlimited": {
           "low": 0.25,
           "mid": 0.54,
           "high": 9.99,
-          "market": 0.64,
-          "directLow": 0.49
+          "market": 0.66,
+          "directLow": null
         }
       }
     },
@@ -228,8 +228,8 @@
           "low": 1.81,
           "mid": 3,
           "high": 56,
-          "market": 2.49,
-          "directLow": null
+          "market": 2.43,
+          "directLow": 2.74
         },
         "unlimited": {
           "low": 0.4,
@@ -390,10 +390,10 @@
     "tcgplayer": {
       "prices": {
         "normal": {
-          "low": 4,
+          "low": 3.95,
           "mid": 8.58,
           "high": 29.99,
-          "market": 4.08,
+          "market": 4.09,
           "directLow": null
         }
       }
@@ -448,7 +448,7 @@
           "low": 7.99,
           "mid": 14.99,
           "high": 15.97,
-          "market": 8.4,
+          "market": 9.92,
           "directLow": null
         }
       }
@@ -549,15 +549,15 @@
       "prices": {
         "normal": {
           "low": 0.34,
-          "mid": 0.7,
+          "mid": 0.66,
           "high": 6.24,
-          "market": 0.7,
+          "market": 0.71,
           "directLow": 4.99
         },
         "reverseHolofoil": {
-          "low": 27.26,
-          "mid": 27.26,
-          "high": 27.26,
+          "low": 26.99,
+          "mid": 26.99,
+          "high": 26.99,
           "market": 34,
           "directLow": null
         }
@@ -873,7 +873,7 @@
           "low": 0.05,
           "mid": 0.27,
           "high": 1.55,
-          "market": 0.27,
+          "market": 0.28,
           "directLow": null
         },
         "reverseHolofoil": {
@@ -933,7 +933,7 @@
         },
         "reverseHolofoil": {
           "low": 0.02,
-          "mid": 0.32,
+          "mid": 0.34,
           "high": 1.5,
           "market": 0.34,
           "directLow": 0.2
@@ -1039,7 +1039,7 @@
           "mid": 0.15,
           "high": 1.49,
           "market": 0.09,
-          "directLow": null
+          "directLow": 0.04
         },
         "reverseHolofoil": {
           "low": 0.1,
@@ -1091,7 +1091,7 @@
       "prices": {
         "normal": {
           "low": 0.01,
-          "mid": 0.17,
+          "mid": 0.18,
           "high": 19.5,
           "market": 0.12,
           "directLow": 0.1
@@ -1153,7 +1153,7 @@
         },
         "normal": {
           "low": 0.09,
-          "mid": 0.27,
+          "mid": 0.26,
           "high": 19.5,
           "market": 0.26,
           "directLow": 0.25
@@ -1258,7 +1258,7 @@
           "low": 0.01,
           "mid": 0.14,
           "high": 2,
-          "market": 0.13,
+          "market": 0.12,
           "directLow": null
         },
         "reverseHolofoil": {
@@ -1311,16 +1311,16 @@
       "prices": {
         "reverseHolofoil": {
           "low": 0.03,
-          "mid": 0.23,
+          "mid": 0.22,
           "high": 20,
-          "market": 0.2,
+          "market": 0.19,
           "directLow": 0.15
         },
         "normal": {
           "low": 0.01,
           "mid": 0.15,
           "high": 19.5,
-          "market": 0.12,
+          "market": 0.11,
           "directLow": 0.04
         }
       }
@@ -1399,5 +1399,24 @@
         "reverseHoloAvg30": 0.07
       }
     }
+  },
+  {
+    "id": "me3-60",
+    "name": "Rattata",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me3-60/small",
+      "large": "https://images.scrydex.com/pokemon/me3-60/large"
+    },
+    "set": {
+      "name": "Perfect Order",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/03/27"
+    },
+    "number": "60",
+    "rarity": "Common",
+    "subtypes": [
+      "Basic"
+    ],
+    "tcgplayer": {}
   }
 ]

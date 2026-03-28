@@ -23,7 +23,7 @@
           "low": 1.99,
           "mid": 3.99,
           "high": 9999,
-          "market": 3.64,
+          "market": 3.59,
           "directLow": 3.83
         }
       }
@@ -120,7 +120,7 @@
           "low": 0.4,
           "mid": 0.99,
           "high": 13.95,
-          "market": 0.79,
+          "market": 0.78,
           "directLow": 0.84
         }
       }
@@ -215,11 +215,11 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 16.7,
-          "mid": 24.32,
+          "low": 18.75,
+          "mid": 24.07,
           "high": 80,
-          "market": 22.44,
-          "directLow": 28.63
+          "market": 22.16,
+          "directLow": 29.78
         }
       }
     },
@@ -267,8 +267,8 @@
           "low": 3.99,
           "mid": 5.56,
           "high": 39.95,
-          "market": 5.16,
-          "directLow": 5.16
+          "market": 5.21,
+          "directLow": 5.21
         }
       }
     },
@@ -371,8 +371,8 @@
           "low": 5.5,
           "mid": 7.99,
           "high": 50,
-          "market": 7.52,
-          "directLow": 8.77
+          "market": 7.47,
+          "directLow": 8.78
         }
       }
     },
@@ -417,17 +417,17 @@
       "prices": {
         "holofoil": {
           "low": 0.01,
-          "mid": 0.21,
+          "mid": 0.2,
           "high": 10.17,
-          "market": 0.23,
-          "directLow": 0.1
+          "market": 0.13,
+          "directLow": 0.13
         },
         "reverseHolofoil": {
           "low": 0.02,
-          "mid": 0.26,
+          "mid": 0.25,
           "high": 10.25,
-          "market": 0.26,
-          "directLow": 0.25
+          "market": 0.25,
+          "directLow": 0.19
         }
       }
     },
@@ -450,5 +450,24 @@
         "reverseHoloAvg30": 0.18
       }
     }
+  },
+  {
+    "id": "me3-54",
+    "name": "Chien-Pao",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me3-54/small",
+      "large": "https://images.scrydex.com/pokemon/me3-54/large"
+    },
+    "set": {
+      "name": "Perfect Order",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/03/27"
+    },
+    "number": "54",
+    "rarity": "Rare",
+    "subtypes": [
+      "Basic"
+    ],
+    "tcgplayer": {}
   }
 ]

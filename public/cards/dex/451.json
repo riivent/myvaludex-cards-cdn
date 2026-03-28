@@ -20,14 +20,14 @@
       "prices": {
         "normal": {
           "low": 0.15,
-          "mid": 0.33,
+          "mid": 0.32,
           "high": 4.9,
           "market": 0.34,
           "directLow": 0.75
         },
         "reverseHolofoil": {
           "low": 0.5,
-          "mid": 1.46,
+          "mid": 1.42,
           "high": 10.97,
           "market": 0.94,
           "directLow": null
@@ -75,7 +75,7 @@
       "prices": {
         "normal": {
           "low": 0.2,
-          "mid": 0.43,
+          "mid": 0.44,
           "high": 5,
           "market": 0.44,
           "directLow": null
@@ -137,8 +137,8 @@
         },
         "reverseHolofoil": {
           "low": 0.75,
-          "mid": 1.25,
-          "high": 1.57,
+          "mid": 1.41,
+          "high": 2.87,
           "market": 1,
           "directLow": null
         }
@@ -247,7 +247,7 @@
         },
         "reverseHolofoil": {
           "low": 0.22,
-          "mid": 0.45,
+          "mid": 0.44,
           "high": 2.37,
           "market": 0.37,
           "directLow": 0.27
@@ -493,5 +493,24 @@
         "reverseHoloAvg30": 0.39
       }
     }
+  },
+  {
+    "id": "me3-51",
+    "name": "Skorupi",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me3-51/small",
+      "large": "https://images.scrydex.com/pokemon/me3-51/large"
+    },
+    "set": {
+      "name": "Perfect Order",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/03/27"
+    },
+    "number": "51",
+    "rarity": "Common",
+    "subtypes": [
+      "Basic"
+    ],
+    "tcgplayer": {}
   }
 ]

@@ -20,7 +20,7 @@
       "prices": {
         "holofoil": {
           "low": 5.39,
-          "mid": 8.82,
+          "mid": 9.4,
           "high": 18.98,
           "market": 12.47,
           "directLow": null
@@ -69,10 +69,10 @@
       "prices": {
         "holofoil": {
           "low": 3.35,
-          "mid": 10.71,
+          "mid": 10.69,
           "high": 222.59,
           "market": 10.56,
-          "directLow": 11.62
+          "directLow": 12.14
         }
       }
     },
@@ -120,7 +120,7 @@
           "low": 7,
           "mid": 12.79,
           "high": 9999,
-          "market": 12.79,
+          "market": 12.61,
           "directLow": null
         }
       }
@@ -204,9 +204,9 @@
       "prices": {
         "holofoil": {
           "low": 0.5,
-          "mid": 1.23,
+          "mid": 1.24,
           "high": 5,
-          "market": 1.4,
+          "market": 1.44,
           "directLow": 1.99
         }
       }
@@ -259,7 +259,7 @@
         },
         "reverseHolofoil": {
           "low": 0.63,
-          "mid": 0.97,
+          "mid": 0.95,
           "high": 2.99,
           "market": 1.01,
           "directLow": 0.63
@@ -310,7 +310,7 @@
           "low": 7,
           "mid": 12.3,
           "high": 65.98,
-          "market": 15.22,
+          "market": 15.27,
           "directLow": null
         }
       }
@@ -566,7 +566,7 @@
           "mid": 5.81,
           "high": 14,
           "market": 5.3,
-          "directLow": 5.81
+          "directLow": 6.1
         }
       }
     },
@@ -667,7 +667,7 @@
       "prices": {
         "holofoil": {
           "low": 8,
-          "mid": 10.67,
+          "mid": 10.66,
           "high": 33.87,
           "market": 10.9,
           "directLow": 9.14
@@ -813,10 +813,10 @@
       "prices": {
         "holofoil": {
           "low": 1.43,
-          "mid": 2.04,
+          "mid": 2.06,
           "high": 7,
-          "market": 2.12,
-          "directLow": 2.04
+          "market": 2.1,
+          "directLow": 2.27
         },
         "reverseHolofoil": {
           "low": 1.5,
@@ -922,11 +922,11 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 0.96,
-          "mid": 1.92,
+          "low": 0.91,
+          "mid": 1.9,
           "high": 99.99,
-          "market": 1.57,
-          "directLow": 2.23
+          "market": 1.6,
+          "directLow": 1.5
         }
       }
     },
@@ -973,7 +973,7 @@
           "low": 0.01,
           "mid": 0.25,
           "high": 19.5,
-          "market": 0.2,
+          "market": 0.19,
           "directLow": 0.05
         }
       }
@@ -982,14 +982,14 @@
       "prices": {
         "averageSellPrice": 0.16,
         "lowPrice": 0.02,
-        "trendPrice": 0.18,
+        "trendPrice": 0.16,
         "germanProLow": 0,
         "suggestedPrice": 0,
         "reverseHoloSell": 0,
         "reverseHoloLow": 0,
         "reverseHoloTrend": 0,
         "lowPriceExPlus": 0.02,
-        "avg1": 0.17,
+        "avg1": 0.06,
         "avg7": 0.16,
         "avg30": 0.16,
         "reverseHoloAvg1": 0,
@@ -1188,7 +1188,7 @@
           "mid": 0.2,
           "high": 999,
           "market": 0.17,
-          "directLow": 0.12
+          "directLow": 0.11
         }
       }
     },
@@ -1233,7 +1233,7 @@
       "prices": {
         "reverseHolofoil": {
           "low": 0.01,
-          "mid": 0.25,
+          "mid": 0.26,
           "high": 999,
           "market": 0.27,
           "directLow": 0.25
@@ -1242,10 +1242,50 @@
           "low": 0.01,
           "mid": 0.2,
           "high": 999,
-          "market": 0.16,
-          "directLow": 0.18
+          "market": 0.15,
+          "directLow": 0.14
         }
       }
     }
+  },
+  {
+    "id": "me3-53",
+    "name": "Yveltal ex",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me3-53/small",
+      "large": "https://images.scrydex.com/pokemon/me3-53/large"
+    },
+    "set": {
+      "name": "Perfect Order",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/03/27"
+    },
+    "number": "53",
+    "rarity": "Double Rare",
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "tcgplayer": {}
+  },
+  {
+    "id": "me3-105",
+    "name": "Yveltal ex",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me3-105/small",
+      "large": "https://images.scrydex.com/pokemon/me3-105/large"
+    },
+    "set": {
+      "name": "Perfect Order",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/03/27"
+    },
+    "number": "105",
+    "rarity": "Ultra Rare",
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "tcgplayer": {}
   }
 ]

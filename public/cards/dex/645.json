@@ -20,7 +20,7 @@
       "prices": {
         "holofoil": {
           "low": 16.39,
-          "mid": 21.3,
+          "mid": 19.61,
           "high": 44.98,
           "market": 29.92,
           "directLow": null
@@ -69,7 +69,7 @@
       "prices": {
         "holofoil": {
           "low": 194.9,
-          "mid": 195.46,
+          "mid": 194.93,
           "high": 499.99,
           "market": 112.01,
           "directLow": null
@@ -173,7 +173,7 @@
       "prices": {
         "holofoil": {
           "low": 10.28,
-          "mid": 14.46,
+          "mid": 14.35,
           "high": 20,
           "market": 14.57,
           "directLow": null
@@ -270,7 +270,7 @@
       "prices": {
         "holofoil": {
           "low": 0.69,
-          "mid": 0.96,
+          "mid": 0.95,
           "high": 6,
           "market": 0.92,
           "directLow": null
@@ -606,7 +606,7 @@
           "directLow": 0.04
         },
         "reverseHolofoil": {
-          "low": 0.01,
+          "low": 0.06,
           "mid": 0.2,
           "high": 4.99,
           "market": 0.16,
@@ -681,5 +681,24 @@
         "reverseHoloAvg30": 0
       }
     }
+  },
+  {
+    "id": "me3-41",
+    "name": "Landorus",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me3-41/small",
+      "large": "https://images.scrydex.com/pokemon/me3-41/large"
+    },
+    "set": {
+      "name": "Perfect Order",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/03/27"
+    },
+    "number": "41",
+    "rarity": "Rare",
+    "subtypes": [
+      "Basic"
+    ],
+    "tcgplayer": {}
   }
 ]

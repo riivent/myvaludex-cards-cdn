@@ -82,7 +82,7 @@
         },
         "reverseHolofoil": {
           "low": 0.25,
-          "mid": 0.65,
+          "mid": 0.66,
           "high": 3.99,
           "market": 0.66,
           "directLow": null
@@ -129,14 +129,14 @@
     "tcgplayer": {
       "prices": {
         "normal": {
-          "low": 0.03,
+          "low": 0.04,
           "mid": 0.2,
           "high": 4,
           "market": 0.11,
           "directLow": null
         },
         "reverseHolofoil": {
-          "low": 0.2,
+          "low": 0.23,
           "mid": 0.45,
           "high": 5,
           "market": 0.46,
@@ -408,7 +408,7 @@
           "mid": 0.28,
           "high": 2,
           "market": 0.24,
-          "directLow": 0.25
+          "directLow": 0.24
         },
         "normal": {
           "low": 0.01,
@@ -548,5 +548,43 @@
         "reverseHoloAvg30": 0.08
       }
     }
+  },
+  {
+    "id": "me3-57",
+    "name": "Doublade",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me3-57/small",
+      "large": "https://images.scrydex.com/pokemon/me3-57/large"
+    },
+    "set": {
+      "name": "Perfect Order",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/03/27"
+    },
+    "number": "57",
+    "rarity": "Common",
+    "subtypes": [
+      "Stage 1"
+    ],
+    "tcgplayer": {}
+  },
+  {
+    "id": "me3-98",
+    "name": "Doublade",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me3-98/small",
+      "large": "https://images.scrydex.com/pokemon/me3-98/large"
+    },
+    "set": {
+      "name": "Perfect Order",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/03/27"
+    },
+    "number": "98",
+    "rarity": "Illustration Rare",
+    "subtypes": [
+      "Stage 1"
+    ],
+    "tcgplayer": {}
   }
 ]

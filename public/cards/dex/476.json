@@ -21,7 +21,7 @@
       "prices": {
         "holofoil": {
           "low": 0.8,
-          "mid": 2.1,
+          "mid": 2,
           "high": 6.99,
           "market": 4.46,
           "directLow": null
@@ -49,15 +49,15 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 3.1,
-          "mid": 4.98,
+          "low": 3.07,
+          "mid": 5,
           "high": 6.47,
           "market": 4.74,
           "directLow": 6.47
         },
         "reverseHolofoil": {
           "low": 1,
-          "mid": 2.59,
+          "mid": 2.54,
           "high": 6,
           "market": 3.9,
           "directLow": null
@@ -105,14 +105,14 @@
       "prices": {
         "normal": {
           "low": 1,
-          "mid": 5.85,
-          "high": 96.94,
+          "mid": 6.28,
+          "high": 96.93,
           "market": 6.28,
           "directLow": 5.42
         },
         "holofoil": {
           "low": 2.24,
-          "mid": 3.28,
+          "mid": 3.75,
           "high": 6.97,
           "market": 4.01,
           "directLow": null
@@ -167,7 +167,7 @@
         },
         "reverseHolofoil": {
           "low": 0.45,
-          "mid": 1.1,
+          "mid": 1.21,
           "high": 3.49,
           "market": 1.21,
           "directLow": null
@@ -222,7 +222,7 @@
         },
         "reverseHolofoil": {
           "low": 1.15,
-          "mid": 2.67,
+          "mid": 2.59,
           "high": 3.49,
           "market": 2.69,
           "directLow": null
@@ -270,7 +270,7 @@
       "prices": {
         "normal": {
           "low": 0.25,
-          "mid": 0.48,
+          "mid": 0.49,
           "high": 19.5,
           "market": 0.39,
           "directLow": 0.38
@@ -600,7 +600,7 @@
       "prices": {
         "reverseHolofoil": {
           "low": 0.02,
-          "mid": 0.21,
+          "mid": 0.2,
           "high": 2,
           "market": 0.11,
           "directLow": null
@@ -813,9 +813,9 @@
       "prices": {
         "reverseHolofoil": {
           "low": 0.02,
-          "mid": 0.27,
+          "mid": 0.28,
           "high": 2.99,
-          "market": 0.28,
+          "market": 0.29,
           "directLow": 0.24
         },
         "normal": {
@@ -846,5 +846,43 @@
         "reverseHoloAvg30": 0.21
       }
     }
+  },
+  {
+    "id": "me3-38",
+    "name": "Probopass",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me3-38/small",
+      "large": "https://images.scrydex.com/pokemon/me3-38/large"
+    },
+    "set": {
+      "name": "Perfect Order",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/03/27"
+    },
+    "number": "38",
+    "rarity": "Common",
+    "subtypes": [
+      "Stage 1"
+    ],
+    "tcgplayer": {}
+  },
+  {
+    "id": "me3-96",
+    "name": "Probopass",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me3-96/small",
+      "large": "https://images.scrydex.com/pokemon/me3-96/large"
+    },
+    "set": {
+      "name": "Perfect Order",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/03/27"
+    },
+    "number": "96",
+    "rarity": "Illustration Rare",
+    "subtypes": [
+      "Stage 1"
+    ],
+    "tcgplayer": {}
   }
 ]

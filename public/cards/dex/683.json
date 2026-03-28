@@ -20,14 +20,14 @@
       "prices": {
         "holofoil": {
           "low": 1.1,
-          "mid": 1.76,
+          "mid": 1.77,
           "high": 15,
           "market": 1.69,
           "directLow": null
         },
         "reverseHolofoil": {
           "low": 2,
-          "mid": 3.06,
+          "mid": 3.05,
           "high": 15,
           "market": 2.94,
           "directLow": null
@@ -129,7 +129,7 @@
     "tcgplayer": {
       "prices": {
         "normal": {
-          "low": 0.05,
+          "low": 0.09,
           "mid": 0.25,
           "high": 19.5,
           "market": 0.24,
@@ -137,10 +137,10 @@
         },
         "reverseHolofoil": {
           "low": 0.2,
-          "mid": 0.67,
+          "mid": 0.68,
           "high": 2,
           "market": 0.75,
-          "directLow": null
+          "directLow": 0.75
         }
       }
     },
@@ -243,7 +243,7 @@
           "mid": 0.18,
           "high": 999,
           "market": 0.14,
-          "directLow": 0.09
+          "directLow": 0.08
         },
         "normal": {
           "low": 0.01,
@@ -254,5 +254,24 @@
         }
       }
     }
+  },
+  {
+    "id": "me3-36",
+    "name": "Aromatisse",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me3-36/small",
+      "large": "https://images.scrydex.com/pokemon/me3-36/large"
+    },
+    "set": {
+      "name": "Perfect Order",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/03/27"
+    },
+    "number": "36",
+    "rarity": "Uncommon",
+    "subtypes": [
+      "Stage 1"
+    ],
+    "tcgplayer": {}
   }
 ]

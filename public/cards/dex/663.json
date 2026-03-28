@@ -22,12 +22,12 @@
           "low": 0.39,
           "mid": 0.93,
           "high": 5,
-          "market": 0.99,
+          "market": 0.97,
           "directLow": null
         },
         "reverseHolofoil": {
           "low": 0.44,
-          "mid": 1.25,
+          "mid": 1.29,
           "high": 3.04,
           "market": 1.32,
           "directLow": null
@@ -82,9 +82,9 @@
         },
         "reverseHolofoil": {
           "low": 0.25,
-          "mid": 0.59,
-          "high": 2.48,
-          "market": 0.6,
+          "mid": 0.57,
+          "high": 2,
+          "market": 0.59,
           "directLow": 0.97
         }
       }
@@ -185,7 +185,7 @@
       "prices": {
         "holofoil": {
           "low": 2.06,
-          "mid": 3.27,
+          "mid": 3.29,
           "high": 12,
           "market": 3.13,
           "directLow": null
@@ -233,7 +233,7 @@
       "prices": {
         "normal": {
           "low": 0.21,
-          "mid": 0.43,
+          "mid": 0.42,
           "high": 1.59,
           "market": 0.42,
           "directLow": 0.35
@@ -351,7 +351,7 @@
         "normal": {
           "low": 0.03,
           "mid": 0.32,
-          "high": 1.49,
+          "high": 1.72,
           "market": 0.32,
           "directLow": null
         }
@@ -408,7 +408,7 @@
           "mid": 0.2,
           "high": 2,
           "market": 0.19,
-          "directLow": 0.18
+          "directLow": 0.19
         }
       }
     },
@@ -456,7 +456,7 @@
           "low": 0.29,
           "mid": 0.99,
           "high": 25.79,
-          "market": 0.94,
+          "market": 0.89,
           "directLow": 0.99
         }
       }
@@ -560,7 +560,7 @@
           "low": 0.02,
           "mid": 0.26,
           "high": 2,
-          "market": 0.23,
+          "market": 0.22,
           "directLow": null
         }
       }
@@ -749,5 +749,43 @@
         "reverseHoloAvg30": 0.11
       }
     }
+  },
+  {
+    "id": "me3-14",
+    "name": "Talonflame",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me3-14/small",
+      "large": "https://images.scrydex.com/pokemon/me3-14/large"
+    },
+    "set": {
+      "name": "Perfect Order",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/03/27"
+    },
+    "number": "14",
+    "rarity": "Uncommon",
+    "subtypes": [
+      "Stage 2"
+    ],
+    "tcgplayer": {}
+  },
+  {
+    "id": "me3-91",
+    "name": "Talonflame",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me3-91/small",
+      "large": "https://images.scrydex.com/pokemon/me3-91/large"
+    },
+    "set": {
+      "name": "Perfect Order",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/03/27"
+    },
+    "number": "91",
+    "rarity": "Illustration Rare",
+    "subtypes": [
+      "Stage 2"
+    ],
+    "tcgplayer": {}
   }
 ]

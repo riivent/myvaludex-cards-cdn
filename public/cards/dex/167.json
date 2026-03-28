@@ -20,16 +20,16 @@
       "prices": {
         "1stEdition": {
           "low": 0.65,
-          "mid": 1.45,
+          "mid": 1.46,
           "high": 3,
           "market": 1.36,
           "directLow": null
         },
         "unlimited": {
           "low": 0.19,
-          "mid": 0.48,
+          "mid": 0.47,
           "high": 20.43,
-          "market": 0.55,
+          "market": 0.57,
           "directLow": 0.3
         }
       }
@@ -185,7 +185,7 @@
       "prices": {
         "normal": {
           "low": 0.74,
-          "mid": 1.4,
+          "mid": 1.5,
           "high": 19.99,
           "market": 1.5,
           "directLow": null
@@ -242,7 +242,7 @@
           "low": 2.66,
           "mid": 3.3,
           "high": 8.63,
-          "market": 2.66,
+          "market": 2.65,
           "directLow": null
         },
         "reverseHolofoil": {
@@ -295,7 +295,7 @@
       "prices": {
         "normal": {
           "low": 0.2,
-          "mid": 0.47,
+          "mid": 0.45,
           "high": 2,
           "market": 0.44,
           "directLow": 0.49
@@ -627,7 +627,7 @@
           "low": 0.01,
           "mid": 0.15,
           "high": 25.15,
-          "market": 0.15,
+          "market": 0.16,
           "directLow": 0.05
         },
         "reverseHolofoil": {
@@ -742,9 +742,9 @@
         },
         "reverseHolofoil": {
           "low": 0.1,
-          "mid": 0.33,
+          "mid": 0.32,
           "high": 7,
-          "market": 0.32,
+          "market": 0.31,
           "directLow": 0.16
         }
       }
@@ -793,13 +793,13 @@
           "mid": 0.2,
           "high": 40,
           "market": 0.17,
-          "directLow": 0.13
+          "directLow": 0.11
         },
         "normal": {
           "low": 0.01,
           "mid": 0.1,
           "high": 20,
-          "market": 0.07,
+          "market": 0.08,
           "directLow": 0.04
         }
       }
@@ -933,5 +933,24 @@
         "reverseHoloAvg30": 0.09
       }
     }
+  },
+  {
+    "id": "me3-1",
+    "name": "Spinarak",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me3-1/small",
+      "large": "https://images.scrydex.com/pokemon/me3-1/large"
+    },
+    "set": {
+      "name": "Perfect Order",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/03/27"
+    },
+    "number": "1",
+    "rarity": "Common",
+    "subtypes": [
+      "Basic"
+    ],
+    "tcgplayer": {}
   }
 ]

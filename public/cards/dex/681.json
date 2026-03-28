@@ -28,9 +28,9 @@
         "reverseHolofoil": {
           "low": 0.49,
           "mid": 0.99,
-          "high": 96.94,
+          "high": 96.93,
           "market": 0.98,
-          "directLow": 96.94
+          "directLow": 96.93
         }
       }
     },
@@ -75,7 +75,7 @@
       "prices": {
         "holofoil": {
           "low": 0.4,
-          "mid": 1.25,
+          "mid": 1.27,
           "high": 96.95,
           "market": 2.03,
           "directLow": 1.27
@@ -133,7 +133,7 @@
           "low": 2,
           "mid": 3.43,
           "high": 138.38,
-          "market": 3.35,
+          "market": 3.34,
           "directLow": 2.99
         }
       }
@@ -225,7 +225,7 @@
         },
         "reverseHolofoil": {
           "low": 0.31,
-          "mid": 0.69,
+          "mid": 0.68,
           "high": 3.99,
           "market": 0.64,
           "directLow": null
@@ -279,7 +279,7 @@
           "directLow": 0.43
         },
         "reverseHolofoil": {
-          "low": 0.24,
+          "low": 0.25,
           "mid": 0.75,
           "high": 5.99,
           "market": 0.78,
@@ -331,14 +331,14 @@
           "mid": 0.61,
           "high": 1.5,
           "market": 0.64,
-          "directLow": null
+          "directLow": 0.5
         },
         "normal": {
           "low": 0.09,
           "mid": 0.4,
           "high": 3.95,
           "market": 0.36,
-          "directLow": 0.31
+          "directLow": 0.29
         }
       }
     },
@@ -440,7 +440,7 @@
           "low": 0.25,
           "mid": 0.55,
           "high": 3,
-          "market": 0.5,
+          "market": 0.49,
           "directLow": 0.65
         },
         "reverseHolofoil": {
@@ -752,7 +752,7 @@
           "mid": 0.3,
           "high": 2.44,
           "market": 0.3,
-          "directLow": 0.24
+          "directLow": 0.21
         }
       }
     },
@@ -806,8 +806,8 @@
           "low": 0.1,
           "mid": 0.29,
           "high": 2,
-          "market": 0.31,
-          "directLow": 0.23
+          "market": 0.3,
+          "directLow": 0.25
         }
       }
     },
@@ -854,8 +854,8 @@
           "low": 0.44,
           "mid": 1.15,
           "high": 10,
-          "market": 1.15,
-          "directLow": 1.6
+          "market": 1.16,
+          "directLow": 1.59
         }
       }
     },
@@ -1079,5 +1079,24 @@
         "reverseHoloAvg30": 0
       }
     }
+  },
+  {
+    "id": "me3-58",
+    "name": "Aegislash",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me3-58/small",
+      "large": "https://images.scrydex.com/pokemon/me3-58/large"
+    },
+    "set": {
+      "name": "Perfect Order",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/03/27"
+    },
+    "number": "58",
+    "rarity": "Uncommon",
+    "subtypes": [
+      "Stage 2"
+    ],
+    "tcgplayer": {}
   }
 ]

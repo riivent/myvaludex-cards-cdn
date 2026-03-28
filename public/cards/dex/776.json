@@ -20,7 +20,7 @@
       "prices": {
         "holofoil": {
           "low": 0.15,
-          "mid": 0.44,
+          "mid": 0.42,
           "high": 5.25,
           "market": 0.4,
           "directLow": 0.2
@@ -126,7 +126,7 @@
           "low": 1.23,
           "mid": 2,
           "high": 8.66,
-          "market": 1.95,
+          "market": 1.96,
           "directLow": 2.4
         }
       }
@@ -173,7 +173,7 @@
       "prices": {
         "holofoil": {
           "low": 2.7,
-          "mid": 4.04,
+          "mid": 4.05,
           "high": 10,
           "market": 4.09,
           "directLow": null
@@ -222,10 +222,10 @@
       "prices": {
         "holofoil": {
           "low": 7.28,
-          "mid": 9.53,
+          "mid": 9.62,
           "high": 29.97,
-          "market": 8.39,
-          "directLow": 11.28
+          "market": 8.45,
+          "directLow": 11.36
         }
       }
     },
@@ -270,7 +270,7 @@
       "prices": {
         "normal": {
           "low": 0.02,
-          "mid": 0.23,
+          "mid": 0.22,
           "high": 19.5,
           "market": 0.2,
           "directLow": 0.13
@@ -380,7 +380,7 @@
       "prices": {
         "reverseHolofoil": {
           "low": 0.15,
-          "mid": 0.67,
+          "mid": 0.68,
           "high": 2.4,
           "market": 0.68,
           "directLow": null
@@ -389,8 +389,8 @@
           "low": 0.05,
           "mid": 0.25,
           "high": 1.49,
-          "market": 0.22,
-          "directLow": 0.25
+          "market": 0.24,
+          "directLow": 0.23
         }
       }
     },
@@ -436,10 +436,10 @@
       "prices": {
         "holofoil": {
           "low": 4.99,
-          "mid": 6.81,
+          "mid": 6.82,
           "high": 20,
           "market": 6.03,
-          "directLow": 7.04
+          "directLow": 6.93
         }
       }
     },
@@ -491,7 +491,7 @@
         },
         "reverseHolofoil": {
           "low": 0.2,
-          "mid": 0.41,
+          "mid": 0.4,
           "high": 2.47,
           "market": 0.37,
           "directLow": 0.38
@@ -596,7 +596,7 @@
           "low": 0.01,
           "mid": 0.2,
           "high": 19.5,
-          "market": 0.15,
+          "market": 0.13,
           "directLow": 0.05
         },
         "normal": {
@@ -652,7 +652,7 @@
           "mid": 0.2,
           "high": 10.14,
           "market": 0.17,
-          "directLow": 0.14
+          "directLow": 0.13
         },
         "normal": {
           "low": 0.01,
@@ -785,5 +785,24 @@
         "reverseHoloAvg30": 0.12
       }
     }
+  },
+  {
+    "id": "me3-17",
+    "name": "Turtonator",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me3-17/small",
+      "large": "https://images.scrydex.com/pokemon/me3-17/large"
+    },
+    "set": {
+      "name": "Perfect Order",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/03/27"
+    },
+    "number": "17",
+    "rarity": "Uncommon",
+    "subtypes": [
+      "Basic"
+    ],
+    "tcgplayer": {}
   }
 ]

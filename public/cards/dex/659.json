@@ -141,12 +141,12 @@
           "low": 0.01,
           "mid": 0.2,
           "high": 4,
-          "market": 0.17,
+          "market": 0.15,
           "directLow": null
         },
         "reverseHolofoil": {
           "low": 0.15,
-          "mid": 0.36,
+          "mid": 0.38,
           "high": 2,
           "market": 0.31,
           "directLow": null
@@ -416,7 +416,7 @@
           "low": 0.25,
           "mid": 0.84,
           "high": 5,
-          "market": 0.84,
+          "market": 0.86,
           "directLow": 0.7
         }
       }
@@ -519,14 +519,14 @@
           "low": 0.01,
           "mid": 0.17,
           "high": 19.5,
-          "market": 0.16,
+          "market": 0.15,
           "directLow": 0.05
         },
         "reverseHolofoil": {
           "low": 0.03,
-          "mid": 0.33,
+          "mid": 0.34,
           "high": 2,
-          "market": 0.32,
+          "market": 0.31,
           "directLow": 0.15
         }
       }
@@ -572,9 +572,9 @@
       "prices": {
         "holofoil": {
           "low": 0.65,
-          "mid": 1.21,
+          "mid": 1.18,
           "high": 9.99,
-          "market": 1.16,
+          "market": 1.13,
           "directLow": 1.24
         }
       }
@@ -708,5 +708,24 @@
         "reverseHoloAvg30": 0.11
       }
     }
+  },
+  {
+    "id": "me3-64",
+    "name": "Bunnelby",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me3-64/small",
+      "large": "https://images.scrydex.com/pokemon/me3-64/large"
+    },
+    "set": {
+      "name": "Perfect Order",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/03/27"
+    },
+    "number": "64",
+    "rarity": "Common",
+    "subtypes": [
+      "Basic"
+    ],
+    "tcgplayer": {}
   }
 ]

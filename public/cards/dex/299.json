@@ -20,7 +20,7 @@
       "prices": {
         "normal": {
           "low": 0.47,
-          "mid": 1.19,
+          "mid": 1.12,
           "high": 5,
           "market": 1.36,
           "directLow": null
@@ -75,9 +75,9 @@
       "prices": {
         "normal": {
           "low": 0.5,
-          "mid": 1.58,
+          "mid": 1.74,
           "high": 5,
-          "market": 1.8,
+          "market": 1.79,
           "directLow": 1.99
         },
         "reverseHolofoil": {
@@ -130,7 +130,7 @@
       "prices": {
         "normal": {
           "low": 0.99,
-          "mid": 1.39,
+          "mid": 1.58,
           "high": 5.99,
           "market": 1.27,
           "directLow": null
@@ -201,18 +201,18 @@
     },
     "cardmarket": {
       "prices": {
-        "averageSellPrice": 0.77,
+        "averageSellPrice": 0.69,
         "lowPrice": 0.05,
-        "trendPrice": 0.69,
+        "trendPrice": 0.66,
         "germanProLow": 0,
         "suggestedPrice": 0,
-        "reverseHoloSell": 5,
+        "reverseHoloSell": 5.33,
         "reverseHoloLow": 0.99,
         "reverseHoloTrend": 5.96,
         "lowPriceExPlus": 0.19,
-        "avg1": 0.08,
-        "avg7": 0.72,
-        "avg30": 0.46,
+        "avg1": 0.25,
+        "avg7": 0.69,
+        "avg30": 0.45,
         "reverseHoloAvg1": 4.99,
         "reverseHoloAvg7": 7.6,
         "reverseHoloAvg30": 4.78
@@ -295,14 +295,14 @@
       "prices": {
         "normal": {
           "low": 0.1,
-          "mid": 0.35,
+          "mid": 0.37,
           "high": 5,
           "market": 0.42,
           "directLow": 0.23
         },
         "reverseHolofoil": {
           "low": 0.75,
-          "mid": 1,
+          "mid": 1.05,
           "high": 2,
           "market": 1.27,
           "directLow": null
@@ -460,7 +460,7 @@
       "prices": {
         "normal": {
           "low": 0.01,
-          "mid": 0.2,
+          "mid": 0.19,
           "high": 1.87,
           "market": 0.14,
           "directLow": null
@@ -470,7 +470,7 @@
           "mid": 0.45,
           "high": 3.99,
           "market": 0.44,
-          "directLow": 0.48
+          "directLow": 0.51
         }
       }
     },
@@ -525,7 +525,7 @@
           "mid": 0.47,
           "high": 2.47,
           "market": 0.5,
-          "directLow": null
+          "directLow": 0.26
         }
       }
     },
@@ -577,7 +577,7 @@
         },
         "reverseHolofoil": {
           "low": 0.14,
-          "mid": 0.44,
+          "mid": 0.45,
           "high": 3,
           "market": 0.5,
           "directLow": null
@@ -690,7 +690,7 @@
           "mid": 0.15,
           "high": 19.5,
           "market": 0.11,
-          "directLow": 0.05
+          "directLow": 0.03
         }
       }
     },
@@ -790,7 +790,7 @@
       "prices": {
         "reverseHolofoil": {
           "low": 0.01,
-          "mid": 0.18,
+          "mid": 0.17,
           "high": 40,
           "market": 0.13,
           "directLow": null
@@ -799,7 +799,7 @@
           "low": 0.01,
           "mid": 0.13,
           "high": 10.1,
-          "market": 0.1,
+          "market": 0.11,
           "directLow": null
         }
       }
@@ -845,7 +845,7 @@
       "prices": {
         "reverseHolofoil": {
           "low": 0.01,
-          "mid": 0.16,
+          "mid": 0.15,
           "high": 999,
           "market": 0.12,
           "directLow": 0.1
@@ -900,14 +900,14 @@
       "prices": {
         "reverseHolofoil": {
           "low": 0.01,
-          "mid": 0.19,
+          "mid": 0.18,
           "high": 40,
-          "market": 0.12,
-          "directLow": 0.1
+          "market": 0.13,
+          "directLow": 0.07
         },
         "normal": {
           "low": 0.01,
-          "mid": 0.13,
+          "mid": 0.14,
           "high": 20,
           "market": 0.05,
           "directLow": 0.02
@@ -933,5 +933,24 @@
         "reverseHoloAvg30": 0.09
       }
     }
+  },
+  {
+    "id": "me3-37",
+    "name": "Nosepass",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me3-37/small",
+      "large": "https://images.scrydex.com/pokemon/me3-37/large"
+    },
+    "set": {
+      "name": "Perfect Order",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/03/27"
+    },
+    "number": "37",
+    "rarity": "Common",
+    "subtypes": [
+      "Basic"
+    ],
+    "tcgplayer": {}
   }
 ]

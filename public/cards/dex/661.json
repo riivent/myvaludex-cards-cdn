@@ -19,7 +19,7 @@
       "prices": {
         "normal": {
           "low": 0.32,
-          "mid": 0.52,
+          "mid": 0.51,
           "high": 5,
           "market": 0.66,
           "directLow": null
@@ -124,7 +124,7 @@
           "low": 0.01,
           "mid": 0.2,
           "high": 4,
-          "market": 0.13,
+          "market": 0.14,
           "directLow": null
         },
         "reverseHolofoil": {
@@ -304,9 +304,9 @@
       "prices": {
         "normal": {
           "low": 2.7,
-          "mid": 3.62,
-          "high": 5.52,
-          "market": 4.01,
+          "mid": 3.5,
+          "high": 5.5,
+          "market": 4.03,
           "directLow": 5.44
         }
       }
@@ -414,7 +414,7 @@
         },
         "reverseHolofoil": {
           "low": 0.1,
-          "mid": 0.33,
+          "mid": 0.32,
           "high": 3.95,
           "market": 0.25,
           "directLow": null
@@ -527,7 +527,7 @@
           "mid": 0.25,
           "high": 19.5,
           "market": 0.21,
-          "directLow": 0.15
+          "directLow": 0.14
         }
       }
     },
@@ -689,9 +689,9 @@
         },
         "normal": {
           "low": 0.01,
-          "mid": 0.1,
+          "mid": 0.11,
           "high": 10.07,
-          "market": 0.06,
+          "market": 0.07,
           "directLow": 0.01
         }
       }
@@ -770,5 +770,24 @@
         "reverseHoloAvg30": 0.09
       }
     }
+  },
+  {
+    "id": "me3-66",
+    "name": "Fletchling",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me3-66/small",
+      "large": "https://images.scrydex.com/pokemon/me3-66/large"
+    },
+    "set": {
+      "name": "Perfect Order",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/03/27"
+    },
+    "number": "66",
+    "rarity": "Common",
+    "subtypes": [
+      "Basic"
+    ],
+    "tcgplayer": {}
   }
 ]

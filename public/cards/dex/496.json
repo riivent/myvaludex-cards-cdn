@@ -20,14 +20,14 @@
       "prices": {
         "normal": {
           "low": 0.14,
-          "mid": 0.38,
+          "mid": 0.37,
           "high": 5,
-          "market": 0.43,
+          "market": 0.44,
           "directLow": 0.21
         },
         "reverseHolofoil": {
           "low": 0.99,
-          "mid": 1.4,
+          "mid": 1.31,
           "high": 1.73,
           "market": 1.56,
           "directLow": null
@@ -75,14 +75,14 @@
       "prices": {
         "normal": {
           "low": 0.21,
-          "mid": 0.45,
+          "mid": 0.44,
           "high": 1.29,
-          "market": 0.61,
+          "market": 0.6,
           "directLow": null
         },
         "reverseHolofoil": {
           "low": 1.45,
-          "mid": 2,
+          "mid": 2.11,
           "high": 3,
           "market": 2.48,
           "directLow": null
@@ -178,7 +178,7 @@
         "normal": {
           "low": 0.45,
           "mid": 0.7,
-          "high": 1.81,
+          "high": 1.76,
           "market": 0.69,
           "directLow": null
         },
@@ -232,7 +232,7 @@
       "prices": {
         "normal": {
           "low": 0.25,
-          "mid": 0.7,
+          "mid": 0.66,
           "high": 4,
           "market": 0.94,
           "directLow": 0.87
@@ -287,7 +287,7 @@
       "prices": {
         "holofoil": {
           "low": 0.5,
-          "mid": 1.76,
+          "mid": 1.77,
           "high": 7.95,
           "market": 1.82,
           "directLow": 2.22
@@ -390,14 +390,14 @@
       "prices": {
         "normal": {
           "low": 0.01,
-          "mid": 0.13,
+          "mid": 0.14,
           "high": 2.12,
-          "market": 0.12,
+          "market": 0.11,
           "directLow": 0.02
         },
         "reverseHolofoil": {
           "low": 0.01,
-          "mid": 0.19,
+          "mid": 0.18,
           "high": 2.99,
           "market": 0.14,
           "directLow": 0.08
@@ -445,9 +445,9 @@
       "prices": {
         "holofoil": {
           "low": 11,
-          "mid": 13.52,
+          "mid": 13.33,
           "high": 24.99,
-          "market": 12.53,
+          "market": 12.64,
           "directLow": 11.6
         }
       }
@@ -471,5 +471,24 @@
         "reverseHoloAvg30": 0
       }
     }
+  },
+  {
+    "id": "me3-5",
+    "name": "Servine",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me3-5/small",
+      "large": "https://images.scrydex.com/pokemon/me3-5/large"
+    },
+    "set": {
+      "name": "Perfect Order",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/03/27"
+    },
+    "number": "5",
+    "rarity": "Common",
+    "subtypes": [
+      "Stage 1"
+    ],
+    "tcgplayer": {}
   }
 ]

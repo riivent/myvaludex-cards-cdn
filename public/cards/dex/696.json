@@ -20,7 +20,7 @@
       "prices": {
         "normal": {
           "low": 2,
-          "mid": 3.48,
+          "mid": 3.49,
           "high": 7.97,
           "market": 4.18,
           "directLow": null
@@ -74,11 +74,11 @@
     "tcgplayer": {
       "prices": {
         "normal": {
-          "low": 2,
-          "mid": 3.83,
+          "low": 1.95,
+          "mid": 3.93,
           "high": 96.95,
-          "market": 3.1,
-          "directLow": 4.72
+          "market": 3.07,
+          "directLow": 3.97
         },
         "reverseHolofoil": {
           "low": 8.08,
@@ -108,5 +108,24 @@
         "reverseHoloAvg30": 5.15
       }
     }
+  },
+  {
+    "id": "me3-44",
+    "name": "Tyrunt",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me3-44/small",
+      "large": "https://images.scrydex.com/pokemon/me3-44/large"
+    },
+    "set": {
+      "name": "Perfect Order",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/03/27"
+    },
+    "number": "44",
+    "rarity": "Common",
+    "subtypes": [
+      "Stage 1"
+    ],
+    "tcgplayer": {}
   }
 ]

@@ -28,7 +28,7 @@
         "reverseHolofoil": {
           "low": 0.1,
           "mid": 0.25,
-          "high": 2,
+          "high": 5,
           "market": 0.21,
           "directLow": null
         }
@@ -76,8 +76,8 @@
         "holofoil": {
           "low": 1.25,
           "mid": 1.99,
-          "high": 19.98,
-          "market": 1.95,
+          "high": 9.99,
+          "market": 1.96,
           "directLow": 2.5
         }
       }
@@ -124,15 +124,15 @@
       "prices": {
         "normal": {
           "low": 0.01,
-          "mid": 0.15,
-          "high": 1.49,
+          "mid": 0.14,
+          "high": 5,
           "market": 0.11,
           "directLow": null
         },
         "reverseHolofoil": {
           "low": 0.1,
           "mid": 0.25,
-          "high": 2,
+          "high": 5,
           "market": 0.23,
           "directLow": null
         }
@@ -234,7 +234,7 @@
       "prices": {
         "normal": {
           "low": 0.01,
-          "mid": 0.13,
+          "mid": 0.12,
           "high": 19.5,
           "market": 0.09,
           "directLow": 0.01
@@ -242,8 +242,8 @@
         "reverseHolofoil": {
           "low": 0.03,
           "mid": 0.2,
-          "high": 1.55,
-          "market": 0.18,
+          "high": 3.8,
+          "market": 0.19,
           "directLow": 0.05
         }
       }
@@ -290,14 +290,14 @@
         "reverseHolofoil": {
           "low": 0.01,
           "mid": 0.18,
-          "high": 2.99,
+          "high": 4,
           "market": 0.12,
-          "directLow": 0.07
+          "directLow": 0.02
         },
         "normal": {
           "low": 0.01,
           "mid": 0.1,
-          "high": 1.53,
+          "high": 4,
           "market": 0.07,
           "directLow": 0.01
         }
@@ -343,18 +343,18 @@
     "tcgplayer": {
       "prices": {
         "reverseHolofoil": {
-          "low": 0.03,
+          "low": 0.12,
           "mid": 0.4,
           "high": 4.99,
-          "market": 0.35,
-          "directLow": 0.35
+          "market": 0.32,
+          "directLow": 0.32
         },
         "normal": {
           "low": 0.01,
           "mid": 0.15,
-          "high": 10,
+          "high": 123.45,
           "market": 0.11,
-          "directLow": 0.1
+          "directLow": 0.01
         }
       }
     },

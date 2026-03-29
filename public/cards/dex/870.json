@@ -22,13 +22,13 @@
           "low": 0.1,
           "mid": 0.31,
           "high": 1.49,
-          "market": 0.32,
+          "market": 0.31,
           "directLow": null
         },
         "normal": {
           "low": 0.01,
           "mid": 0.2,
-          "high": 2.44,
+          "high": 5,
           "market": 0.15,
           "directLow": null
         }
@@ -77,9 +77,9 @@
         "holofoil": {
           "low": 0.4,
           "mid": 1,
-          "high": 5,
-          "market": 0.87,
-          "directLow": 0.88
+          "high": 25,
+          "market": 0.89,
+          "directLow": 0.94
         }
       }
     },
@@ -124,11 +124,11 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 2.18,
-          "mid": 3.19,
+          "low": 1.9,
+          "mid": 3.34,
           "high": 14.95,
-          "market": 3.29,
-          "directLow": 4.83
+          "market": 3.36,
+          "directLow": 5.04
         }
       }
     },
@@ -173,10 +173,10 @@
       "prices": {
         "holofoil": {
           "low": 0.7,
-          "mid": 1.26,
+          "mid": 1.25,
           "high": 12.95,
           "market": 1.05,
-          "directLow": 1
+          "directLow": 0.97
         }
       }
     },
@@ -222,10 +222,10 @@
       "prices": {
         "holofoil": {
           "low": 0.82,
-          "mid": 1.59,
-          "high": 29.95,
-          "market": 1.48,
-          "directLow": null
+          "mid": 1.62,
+          "high": 123.45,
+          "market": 1.44,
+          "directLow": 1.94
         }
       }
     },
@@ -272,14 +272,14 @@
         "normal": {
           "low": 0.01,
           "mid": 0.2,
-          "high": 2,
+          "high": 5,
           "market": 0.15,
           "directLow": null
         },
         "reverseHolofoil": {
           "low": 0.02,
           "mid": 0.25,
-          "high": 2.59,
+          "high": 5,
           "market": 0.21,
           "directLow": null
         }
@@ -327,14 +327,14 @@
         "normal": {
           "low": 0.01,
           "mid": 0.14,
-          "high": 19.5,
+          "high": 123.45,
           "market": 0.12,
           "directLow": 0.03
         },
         "reverseHolofoil": {
           "low": 0.03,
-          "mid": 0.25,
-          "high": 2,
+          "mid": 0.24,
+          "high": 5,
           "market": 0.22,
           "directLow": null
         }
@@ -382,8 +382,8 @@
         "normal": {
           "low": 0.01,
           "mid": 0.12,
-          "high": 19.5,
-          "market": 0.08,
+          "high": 123.45,
+          "market": 0.07,
           "directLow": 0.02
         },
         "reverseHolofoil": {
@@ -439,8 +439,8 @@
           "low": 1.56,
           "mid": 3,
           "high": 999.99,
-          "market": 2.75,
-          "directLow": 2.97
+          "market": 2.73,
+          "directLow": 2.69
         }
       }
     },
@@ -448,7 +448,7 @@
       "prices": {
         "averageSellPrice": 2.25,
         "lowPrice": 0.49,
-        "trendPrice": 2.02,
+        "trendPrice": 2.04,
         "germanProLow": 0,
         "suggestedPrice": 0,
         "reverseHoloSell": 0,
@@ -486,7 +486,7 @@
         "reverseHolofoil": {
           "low": 0.14,
           "mid": 0.28,
-          "high": 2,
+          "high": 5,
           "market": 0.28,
           "directLow": 0.23
         },
@@ -495,7 +495,7 @@
           "mid": 0.12,
           "high": 20,
           "market": 0.1,
-          "directLow": 0.04
+          "directLow": 0.01
         }
       }
     },
@@ -540,8 +540,8 @@
       "prices": {
         "reverseHolofoil": {
           "low": 0.01,
-          "mid": 0.16,
-          "high": 2,
+          "mid": 0.17,
+          "high": 4,
           "market": 0.13,
           "directLow": 0.02
         },
@@ -596,9 +596,9 @@
         "normal": {
           "low": 0.01,
           "mid": 0.15,
-          "high": 1.95,
-          "market": 0.09,
-          "directLow": 0.05
+          "high": 4,
+          "market": 0.1,
+          "directLow": 0.01
         },
         "reverseHolofoil": {
           "low": 0.04,

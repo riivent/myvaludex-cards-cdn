@@ -20,10 +20,10 @@
       "prices": {
         "normal": {
           "low": 0.25,
-          "mid": 0.94,
+          "mid": 0.93,
           "high": 19.98,
           "market": 1.04,
-          "directLow": 1.21
+          "directLow": 1.15
         }
       }
     },
@@ -67,7 +67,7 @@
     "tcgplayer": {
       "prices": {
         "normal": {
-          "low": 0.25,
+          "low": 0.24,
           "mid": 0.6,
           "high": 100,
           "market": 0.78,
@@ -117,7 +117,7 @@
         "1stEdition": {
           "low": 1.5,
           "mid": 2.94,
-          "high": 30.85,
+          "high": 30.71,
           "market": 2.59,
           "directLow": 3.99
         },
@@ -125,7 +125,7 @@
           "low": 0.5,
           "mid": 0.75,
           "high": 19.98,
-          "market": 0.71,
+          "market": 0.7,
           "directLow": 0.64
         }
       }
@@ -180,8 +180,8 @@
           "low": 0.31,
           "mid": 0.99,
           "high": 501.5,
-          "market": 1.02,
-          "directLow": 0.77
+          "market": 1.01,
+          "directLow": null
         }
       }
     },
@@ -225,15 +225,15 @@
     "tcgplayer": {
       "prices": {
         "1stEdition": {
-          "low": 1.19,
-          "mid": 2.12,
+          "low": 1.22,
+          "mid": 3.75,
           "high": 33.3,
           "market": 2.15,
           "directLow": null
         },
         "unlimited": {
           "low": 0.25,
-          "mid": 0.8,
+          "mid": 0.75,
           "high": 20.46,
           "market": 0.85,
           "directLow": 0.48
@@ -281,7 +281,7 @@
       "prices": {
         "normal": {
           "low": 0.23,
-          "mid": 0.53,
+          "mid": 0.54,
           "high": 19.98,
           "market": 0.52,
           "directLow": null
@@ -391,7 +391,7 @@
       "prices": {
         "normal": {
           "low": 29,
-          "mid": 126.6,
+          "mid": 135.87,
           "high": 307.9,
           "market": 17.97,
           "directLow": null
@@ -452,9 +452,9 @@
           "directLow": 0.2
         },
         "reverseHolofoil": {
-          "low": 18,
+          "low": 12,
           "mid": 18.99,
-          "high": 19.98,
+          "high": 20.23,
           "market": 15.98,
           "directLow": null
         }
@@ -563,7 +563,7 @@
         },
         "reverseHolofoil": {
           "low": 0.69,
-          "mid": 1.42,
+          "mid": 1.25,
           "high": 19.98,
           "market": 1.01,
           "directLow": null
@@ -615,6 +615,13 @@
           "high": 19.98,
           "market": 0.57,
           "directLow": 0.3
+        },
+        "reverseHolofoil": {
+          "low": 8,
+          "mid": 8,
+          "high": 8,
+          "market": 1.85,
+          "directLow": null
         }
       }
     },
@@ -833,8 +840,8 @@
           "low": 0.01,
           "mid": 0.12,
           "high": 20,
-          "market": 0.11,
-          "directLow": 0.02
+          "market": 0.12,
+          "directLow": null
         }
       }
     },
@@ -880,14 +887,14 @@
         "normal": {
           "low": 0.01,
           "mid": 0.11,
-          "high": 20,
-          "market": 0.1,
+          "high": 999,
+          "market": 0.08,
           "directLow": 0.01
         },
         "reverseHolofoil": {
           "low": 0.15,
           "mid": 0.31,
-          "high": 2.89,
+          "high": 999,
           "market": 0.3,
           "directLow": 0.25
         }
@@ -936,7 +943,7 @@
           "low": 0.01,
           "mid": 0.15,
           "high": 19.98,
-          "market": 0.08,
+          "market": 0.07,
           "directLow": 0.03
         },
         "reverseHolofoil": {
@@ -990,16 +997,16 @@
         "normal": {
           "low": 0.01,
           "mid": 0.11,
-          "high": 19.98,
-          "market": 0.09,
+          "high": 999,
+          "market": 0.07,
           "directLow": 0.01
         },
         "reverseHolofoil": {
           "low": 0.01,
           "mid": 0.21,
           "high": 4321,
-          "market": 0.22,
-          "directLow": 0.08
+          "market": 0.19,
+          "directLow": 0.06
         }
       }
     }

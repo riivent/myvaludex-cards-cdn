@@ -21,16 +21,16 @@
         "reverseHolofoil": {
           "low": 0.04,
           "mid": 0.2,
-          "high": 20,
+          "high": 1000.17,
           "market": 0.17,
           "directLow": 0.1
         },
         "normal": {
           "low": 0.01,
-          "mid": 0.2,
-          "high": 20,
+          "mid": 0.21,
+          "high": 1000.21,
           "market": 0.21,
-          "directLow": 0.1
+          "directLow": 0.09
         }
       }
     },
@@ -76,14 +76,14 @@
         "normal": {
           "low": 0.01,
           "mid": 0.15,
-          "high": 19.98,
+          "high": 1000.13,
           "market": 0.13,
           "directLow": 0.05
         },
         "reverseHolofoil": {
           "low": 0.02,
           "mid": 0.2,
-          "high": 40,
+          "high": 1000.16,
           "market": 0.16,
           "directLow": 0.03
         }
@@ -129,11 +129,11 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 10,
-          "mid": 15.52,
+          "low": 11.25,
+          "mid": 15.43,
           "high": 91.37,
-          "market": 14.37,
-          "directLow": 19.58
+          "market": 14.73,
+          "directLow": 14.99
         }
       }
     },
@@ -179,15 +179,15 @@
         "reverseHolofoil": {
           "low": 0.02,
           "mid": 0.2,
-          "high": 19.98,
-          "market": 0.13,
+          "high": 1000.1,
+          "market": 0.11,
           "directLow": null
         },
         "normal": {
           "low": 0.01,
           "mid": 0.15,
-          "high": 25,
-          "market": 0.11,
+          "high": 1000.12,
+          "market": 0.12,
           "directLow": 0.05
         }
       }
@@ -236,13 +236,13 @@
           "mid": 0.2,
           "high": 19.98,
           "market": 0.18,
-          "directLow": 0.13
+          "directLow": 0.14
         },
         "reverseHolofoil": {
           "low": 0.02,
           "mid": 0.25,
           "high": 20,
-          "market": 0.21,
+          "market": 0.23,
           "directLow": 0.13
         }
       }

@@ -78,7 +78,7 @@
           "mid": 0.25,
           "high": 1,
           "market": 0.2,
-          "directLow": 0.22
+          "directLow": 0.21
         },
         "reverseHolofoil": {
           "low": 0.71,
@@ -136,8 +136,8 @@
           "directLow": null
         },
         "reverseHolofoil": {
-          "low": 1.13,
-          "mid": 1.82,
+          "low": 1.19,
+          "mid": 3.08,
           "high": 25,
           "market": 1.32,
           "directLow": null
@@ -191,8 +191,8 @@
           "directLow": null
         },
         "reverseHolofoil": {
-          "low": 0.62,
-          "mid": 1.12,
+          "low": 0.64,
+          "mid": 1.13,
           "high": 19.98,
           "market": 1.13,
           "directLow": null
@@ -240,13 +240,13 @@
       "prices": {
         "normal": {
           "low": 0.1,
-          "mid": 0.25,
+          "mid": 0.26,
           "high": 19.98,
           "market": 0.24,
-          "directLow": 0.24
+          "directLow": 0.23
         },
         "reverseHolofoil": {
-          "low": 0.3,
+          "low": 0.45,
           "mid": 1,
           "high": 19.98,
           "market": 0.75,
@@ -352,8 +352,8 @@
           "low": 0.07,
           "mid": 0.21,
           "high": 4,
-          "market": 0.21,
-          "directLow": 0.16
+          "market": 0.2,
+          "directLow": 0.15
         },
         "reverseHolofoil": {
           "low": 0.19,
@@ -462,15 +462,15 @@
           "low": 0.01,
           "mid": 0.15,
           "high": 19.98,
-          "market": 0.13,
+          "market": 0.14,
           "directLow": 0.01
         },
         "reverseHolofoil": {
           "low": 0.02,
           "mid": 0.2,
-          "high": 99999.99,
+          "high": 19.98,
           "market": 0.19,
-          "directLow": 0.1
+          "directLow": 0.11
         }
       }
     },
@@ -517,7 +517,7 @@
           "low": 8.12,
           "mid": 11,
           "high": 94.8,
-          "market": 9.92,
+          "market": 10.22,
           "directLow": null
         }
       }
@@ -541,5 +541,24 @@
         "reverseHoloAvg30": 0
       }
     }
+  },
+  {
+    "id": "me4-70",
+    "name": "Patrat",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me4-70/small",
+      "large": "https://images.scrydex.com/pokemon/me4-70/large"
+    },
+    "set": {
+      "name": "Chaos Rising",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/05/22"
+    },
+    "number": "70",
+    "rarity": "Common",
+    "subtypes": [
+      "Basic"
+    ],
+    "tcgplayer": {}
   }
 ]

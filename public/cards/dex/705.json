@@ -20,14 +20,14 @@
       "prices": {
         "normal": {
           "low": 0.16,
-          "mid": 0.3,
+          "mid": 0.31,
           "high": 19.98,
           "market": 0.31,
           "directLow": null
         },
         "reverseHolofoil": {
           "low": 0.35,
-          "mid": 0.97,
+          "mid": 0.98,
           "high": 96.87,
           "market": 1.09,
           "directLow": 96.87
@@ -129,7 +129,7 @@
     "tcgplayer": {
       "prices": {
         "normal": {
-          "low": 0.07,
+          "low": 0.08,
           "mid": 0.22,
           "high": 19.98,
           "market": 0.2,
@@ -191,7 +191,7 @@
           "directLow": 0.1
         },
         "reverseHolofoil": {
-          "low": 0.3,
+          "low": 0.31,
           "mid": 0.71,
           "high": 19.98,
           "market": 0.67,
@@ -295,14 +295,14 @@
       "prices": {
         "reverseHolofoil": {
           "low": 0.05,
-          "mid": 0.36,
+          "mid": 0.35,
           "high": 1000.36,
-          "market": 0.35,
-          "directLow": 0.23
+          "market": 0.32,
+          "directLow": 0.22
         },
         "normal": {
           "low": 0.01,
-          "mid": 0.2,
+          "mid": 0.22,
           "high": 1000.16,
           "market": 0.22,
           "directLow": 0.07
@@ -350,17 +350,17 @@
       "prices": {
         "normal": {
           "low": 0.01,
-          "mid": 0.17,
+          "mid": 0.18,
           "high": 1000.16,
-          "market": 0.16,
+          "market": 0.18,
           "directLow": 0.05
         },
         "reverseHolofoil": {
           "low": 0.08,
           "mid": 0.32,
           "high": 2,
-          "market": 0.32,
-          "directLow": 0.25
+          "market": 0.34,
+          "directLow": 0.24
         }
       }
     },
@@ -383,5 +383,43 @@
         "reverseHoloAvg30": 0.24
       }
     }
+  },
+  {
+    "id": "me4-67",
+    "name": "Sliggoo",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me4-67/small",
+      "large": "https://images.scrydex.com/pokemon/me4-67/large"
+    },
+    "set": {
+      "name": "Chaos Rising",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/05/22"
+    },
+    "number": "67",
+    "rarity": "Common",
+    "subtypes": [
+      "Stage 1"
+    ],
+    "tcgplayer": {}
+  },
+  {
+    "id": "me4-95",
+    "name": "Sliggoo",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me4-95/small",
+      "large": "https://images.scrydex.com/pokemon/me4-95/large"
+    },
+    "set": {
+      "name": "Chaos Rising",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/05/22"
+    },
+    "number": "95",
+    "rarity": "Illustration Rare",
+    "subtypes": [
+      "Stage 1"
+    ],
+    "tcgplayer": {}
   }
 ]

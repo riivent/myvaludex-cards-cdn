@@ -68,9 +68,9 @@
       "prices": {
         "normal": {
           "low": 0.35,
-          "mid": 0.62,
+          "mid": 0.63,
           "high": 19.98,
-          "market": 0.65,
+          "market": 0.66,
           "directLow": null
         },
         "reverseHolofoil": {
@@ -130,7 +130,7 @@
         },
         "reverseHolofoil": {
           "low": 0.26,
-          "mid": 0.75,
+          "mid": 0.76,
           "high": 19.98,
           "market": 0.76,
           "directLow": 0.96
@@ -291,14 +291,14 @@
           "mid": 0.37,
           "high": 1000.35,
           "market": 0.34,
-          "directLow": null
+          "directLow": 0.37
         },
         "normal": {
           "low": 0.01,
           "mid": 0.23,
           "high": 1000.26,
           "market": 0.23,
-          "directLow": 0.1
+          "directLow": 0.15
         }
       }
     },
@@ -321,5 +321,68 @@
         "reverseHoloAvg30": 0.41
       }
     }
+  },
+  {
+    "id": "me4-65",
+    "name": "Mega Dragalge ex",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me4-65/small",
+      "large": "https://images.scrydex.com/pokemon/me4-65/large"
+    },
+    "set": {
+      "name": "Chaos Rising",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/05/22"
+    },
+    "number": "65",
+    "rarity": "Double Rare",
+    "subtypes": [
+      "Stage 1",
+      "MEGA",
+      "ex"
+    ],
+    "tcgplayer": {}
+  },
+  {
+    "id": "me4-104",
+    "name": "Mega Dragalge ex",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me4-104/small",
+      "large": "https://images.scrydex.com/pokemon/me4-104/large"
+    },
+    "set": {
+      "name": "Chaos Rising",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/05/22"
+    },
+    "number": "104",
+    "rarity": "Ultra Rare",
+    "subtypes": [
+      "Stage 1",
+      "MEGA",
+      "ex"
+    ],
+    "tcgplayer": {}
+  },
+  {
+    "id": "me4-118",
+    "name": "Mega Dragalge ex",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me4-118/small",
+      "large": "https://images.scrydex.com/pokemon/me4-118/large"
+    },
+    "set": {
+      "name": "Chaos Rising",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/05/22"
+    },
+    "number": "118",
+    "rarity": "Special Illustration Rare",
+    "subtypes": [
+      "Stage 1",
+      "MEGA",
+      "ex"
+    ],
+    "tcgplayer": {}
   }
 ]

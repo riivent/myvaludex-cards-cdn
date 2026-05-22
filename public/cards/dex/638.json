@@ -68,14 +68,14 @@
       "prices": {
         "holofoil": {
           "low": 0.63,
-          "mid": 1.56,
+          "mid": 1.57,
           "high": 27.5,
           "market": 1.52,
           "directLow": null
         },
         "reverseHolofoil": {
           "low": 1,
-          "mid": 3.03,
+          "mid": 2.98,
           "high": 37.1,
           "market": 3.07,
           "directLow": null
@@ -123,7 +123,7 @@
       "prices": {
         "holofoil": {
           "low": 0.72,
-          "mid": 1.45,
+          "mid": 1.44,
           "high": 28.1,
           "market": 1.44,
           "directLow": null
@@ -178,7 +178,7 @@
       "prices": {
         "holofoil": {
           "low": 41,
-          "mid": 96.43,
+          "mid": 99.61,
           "high": 926.7,
           "market": 58.99,
           "directLow": null
@@ -275,8 +275,8 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 35.99,
-          "mid": 68,
+          "low": 32.81,
+          "mid": 64.37,
           "high": 683.1,
           "market": 41.81,
           "directLow": null
@@ -386,7 +386,7 @@
         },
         "reverseHolofoil": {
           "low": 0.4,
-          "mid": 0.7,
+          "mid": 0.69,
           "high": 19.94,
           "market": 0.69,
           "directLow": null
@@ -441,7 +441,7 @@
         },
         "holofoil": {
           "low": 0.39,
-          "mid": 0.7,
+          "mid": 0.71,
           "high": 1.76,
           "market": 0.71,
           "directLow": 0.63
@@ -539,7 +539,7 @@
       "prices": {
         "holofoil": {
           "low": 4.68,
-          "mid": 9.03,
+          "mid": 7.52,
           "high": 69.57,
           "market": 6.97,
           "directLow": 5.56
@@ -699,9 +699,9 @@
         "reverseHolofoil": {
           "low": 0.1,
           "mid": 0.29,
-          "high": 18.56,
+          "high": 18.54,
           "market": 0.27,
-          "directLow": 0.2
+          "directLow": 0.23
         }
       }
     },
@@ -748,7 +748,7 @@
           "low": 0.01,
           "mid": 0.15,
           "high": 19.98,
-          "market": 0.14,
+          "market": 0.13,
           "directLow": 0.01
         },
         "reverseHolofoil": {
@@ -800,10 +800,10 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 25.79,
-          "mid": 33.33,
+          "low": 26,
+          "mid": 32.76,
           "high": 207.6,
-          "market": 25.94,
+          "market": 26.12,
           "directLow": null
         }
       }
@@ -827,5 +827,45 @@
         "reverseHoloAvg30": 0
       }
     }
+  },
+  {
+    "id": "me4-64",
+    "name": "Cobalion ex",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me4-64/small",
+      "large": "https://images.scrydex.com/pokemon/me4-64/large"
+    },
+    "set": {
+      "name": "Chaos Rising",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/05/22"
+    },
+    "number": "64",
+    "rarity": "Double Rare",
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "tcgplayer": {}
+  },
+  {
+    "id": "me4-103",
+    "name": "Cobalion ex",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me4-103/small",
+      "large": "https://images.scrydex.com/pokemon/me4-103/large"
+    },
+    "set": {
+      "name": "Chaos Rising",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/05/22"
+    },
+    "number": "103",
+    "rarity": "Ultra Rare",
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "tcgplayer": {}
   }
 ]

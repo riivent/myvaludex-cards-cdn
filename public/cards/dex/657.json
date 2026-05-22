@@ -26,7 +26,7 @@
         },
         "holofoil": {
           "low": 0.8,
-          "mid": 1.41,
+          "mid": 1.64,
           "high": 19.98,
           "market": 2.86,
           "directLow": null
@@ -77,11 +77,11 @@
           "mid": 0.4,
           "high": 4,
           "market": 0.38,
-          "directLow": 0.24
+          "directLow": 0.23
         },
         "reverseHolofoil": {
           "low": 0.35,
-          "mid": 0.89,
+          "mid": 1.27,
           "high": 25.6,
           "market": 1.58,
           "directLow": null
@@ -138,7 +138,7 @@
           "low": 0.34,
           "mid": 0.69,
           "high": 19.98,
-          "market": 0.73,
+          "market": 0.74,
           "directLow": null
         }
       }
@@ -241,12 +241,12 @@
           "low": 0.26,
           "mid": 0.5,
           "high": 3.84,
-          "market": 0.52,
-          "directLow": 0.39
+          "market": 0.53,
+          "directLow": 0.38
         },
         "reverseHolofoil": {
           "low": 0.25,
-          "mid": 1.1,
+          "mid": 1.11,
           "high": 19.98,
           "market": 1.06,
           "directLow": 2.79
@@ -301,7 +301,7 @@
         },
         "reverseHolofoil": {
           "low": 0.32,
-          "mid": 0.52,
+          "mid": 0.51,
           "high": 19.98,
           "market": 0.53,
           "directLow": null
@@ -348,10 +348,10 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 2.97,
-          "mid": 4.97,
+          "low": 3.01,
+          "mid": 5,
           "high": 50.1,
-          "market": 5.35,
+          "market": 5.34,
           "directLow": null
         }
       }
@@ -406,8 +406,8 @@
           "low": 0.01,
           "mid": 0.25,
           "high": 19.98,
-          "market": 0.25,
-          "directLow": 0.17
+          "market": 0.29,
+          "directLow": 0.16
         }
       }
     },
@@ -461,7 +461,7 @@
           "low": 0.03,
           "mid": 0.18,
           "high": 1000.13,
-          "market": 0.15,
+          "market": 0.16,
           "directLow": 0.06
         }
       }
@@ -516,7 +516,7 @@
           "low": 0.01,
           "mid": 0.15,
           "high": 1000.07,
-          "market": 0.08,
+          "market": 0.09,
           "directLow": 0.01
         }
       }
@@ -540,5 +540,43 @@
         "reverseHoloAvg30": 0.11
       }
     }
+  },
+  {
+    "id": "me4-21",
+    "name": "Frogadier",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me4-21/small",
+      "large": "https://images.scrydex.com/pokemon/me4-21/large"
+    },
+    "set": {
+      "name": "Chaos Rising",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/05/22"
+    },
+    "number": "21",
+    "rarity": "Common",
+    "subtypes": [
+      "Stage 1"
+    ],
+    "tcgplayer": {}
+  },
+  {
+    "id": "me4-89",
+    "name": "Frogadier",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me4-89/small",
+      "large": "https://images.scrydex.com/pokemon/me4-89/large"
+    },
+    "set": {
+      "name": "Chaos Rising",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/05/22"
+    },
+    "number": "89",
+    "rarity": "Illustration Rare",
+    "subtypes": [
+      "Stage 1"
+    ],
+    "tcgplayer": {}
   }
 ]

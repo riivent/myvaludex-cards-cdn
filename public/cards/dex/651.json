@@ -19,14 +19,14 @@
       "prices": {
         "normal": {
           "low": 0.5,
-          "mid": 0.82,
+          "mid": 0.84,
           "high": 19.98,
           "market": 1.07,
           "directLow": null
         },
         "holofoil": {
           "low": 1.45,
-          "mid": 2.5,
+          "mid": 2.4,
           "high": 48.6,
           "market": 2.09,
           "directLow": null
@@ -37,7 +37,7 @@
       "prices": {
         "averageSellPrice": 1.89,
         "lowPrice": 0.02,
-        "trendPrice": 2.11,
+        "trendPrice": 2.95,
         "germanProLow": 0,
         "suggestedPrice": 0,
         "reverseHoloSell": 0,
@@ -73,8 +73,8 @@
     "tcgplayer": {
       "prices": {
         "normal": {
-          "low": 0.49,
-          "mid": 0.97,
+          "low": 0.63,
+          "mid": 0.99,
           "high": 19.98,
           "market": 1.05,
           "directLow": null
@@ -83,7 +83,7 @@
           "low": 2.15,
           "mid": 4.26,
           "high": 79.8,
-          "market": 4.95,
+          "market": 5.14,
           "directLow": null
         }
       }
@@ -162,5 +162,24 @@
         "reverseHoloAvg30": 3.82
       }
     }
+  },
+  {
+    "id": "me4-6",
+    "name": "Quilladin",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me4-6/small",
+      "large": "https://images.scrydex.com/pokemon/me4-6/large"
+    },
+    "set": {
+      "name": "Chaos Rising",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/05/22"
+    },
+    "number": "6",
+    "rarity": "Common",
+    "subtypes": [
+      "Stage 1"
+    ],
+    "tcgplayer": {}
   }
 ]

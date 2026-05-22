@@ -22,14 +22,14 @@
           "low": 0.71,
           "mid": 2.25,
           "high": 32.6,
-          "market": 2.52,
+          "market": 2.5,
           "directLow": null
         },
         "reverseHolofoil": {
           "low": 1.4,
           "mid": 2.37,
           "high": 36.8,
-          "market": 2.61,
+          "market": 2.55,
           "directLow": null
         }
       }
@@ -130,14 +130,14 @@
       "prices": {
         "holofoil": {
           "low": 0.95,
-          "mid": 1.99,
+          "mid": 1.97,
           "high": 19.98,
-          "market": 1.59,
+          "market": 1.63,
           "directLow": null
         },
         "reverseHolofoil": {
           "low": 0.99,
-          "mid": 1.76,
+          "mid": 1.8,
           "high": 32.4,
           "market": 1.5,
           "directLow": null
@@ -240,8 +240,8 @@
           "directLow": null
         },
         "reverseHolofoil": {
-          "low": 3.88,
-          "mid": 10,
+          "low": 7,
+          "mid": 10.23,
           "high": 82.5,
           "market": 7.08,
           "directLow": null
@@ -340,12 +340,12 @@
           "low": 0.15,
           "mid": 0.38,
           "high": 19.98,
-          "market": 0.36,
-          "directLow": 0.24
+          "market": 0.37,
+          "directLow": null
         },
         "reverseHolofoil": {
           "low": 0.25,
-          "mid": 0.73,
+          "mid": 0.75,
           "high": 19.98,
           "market": 0.8,
           "directLow": null
@@ -392,14 +392,14 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 0.19,
+          "low": 0.15,
           "mid": 0.4,
           "high": 19.98,
           "market": 0.4,
           "directLow": null
         },
         "reverseHolofoil": {
-          "low": 0.1,
+          "low": 0.16,
           "mid": 0.39,
           "high": 19.98,
           "market": 0.38,
@@ -506,14 +506,14 @@
           "mid": 0.23,
           "high": 999.99,
           "market": 0.12,
-          "directLow": 0.12
+          "directLow": 0.15
         },
         "reverseHolofoil": {
           "low": 0.03,
           "mid": 0.31,
           "high": 999.99,
           "market": 0.29,
-          "directLow": 0.29
+          "directLow": 0.28
         }
       }
     },
@@ -561,7 +561,7 @@
           "mid": 0.3,
           "high": 19.98,
           "market": 0.29,
-          "directLow": 0.25
+          "directLow": null
         },
         "holofoil": {
           "low": 0.01,
@@ -668,17 +668,17 @@
       "prices": {
         "normal": {
           "low": 0.01,
-          "mid": 0.12,
+          "mid": 0.13,
           "high": 19.98,
-          "market": 0.09,
+          "market": 0.1,
           "directLow": 0.01
         },
         "reverseHolofoil": {
           "low": 0.05,
-          "mid": 0.21,
+          "mid": 0.22,
           "high": 19.98,
           "market": 0.18,
-          "directLow": 0.1
+          "directLow": 0.13
         }
       }
     },
@@ -723,7 +723,7 @@
       "prices": {
         "holofoil": {
           "low": 45,
-          "mid": 58.78,
+          "mid": 58.69,
           "high": 396.9,
           "market": 47.89,
           "directLow": null
@@ -773,8 +773,8 @@
           "low": 0.01,
           "mid": 0.23,
           "high": 999,
-          "market": 0.23,
-          "directLow": 0.06
+          "market": 0.24,
+          "directLow": 0.1
         },
         "normal": {
           "low": 0.01,
@@ -785,5 +785,25 @@
         }
       }
     }
+  },
+  {
+    "id": "me4-55",
+    "name": "Krookodile ex",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me4-55/small",
+      "large": "https://images.scrydex.com/pokemon/me4-55/large"
+    },
+    "set": {
+      "name": "Chaos Rising",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/05/22"
+    },
+    "number": "55",
+    "rarity": "Double Rare",
+    "subtypes": [
+      "Stage 2",
+      "ex"
+    ],
+    "tcgplayer": {}
   }
 ]

@@ -27,7 +27,7 @@
         },
         "reverseHolofoil": {
           "low": 0.25,
-          "mid": 0.7,
+          "mid": 0.74,
           "high": 19.98,
           "market": 0.71,
           "directLow": null
@@ -75,17 +75,17 @@
       "prices": {
         "normal": {
           "low": 0.03,
-          "mid": 0.25,
+          "mid": 0.24,
           "high": 19.98,
           "market": 0.15,
           "directLow": null
         },
         "reverseHolofoil": {
           "low": 0.2,
-          "mid": 0.55,
-          "high": 19.74,
-          "market": 0.67,
-          "directLow": 1
+          "mid": 0.58,
+          "high": 19.72,
+          "market": 0.69,
+          "directLow": 1.49
         }
       }
     },
@@ -130,10 +130,10 @@
       "prices": {
         "normal": {
           "low": 15,
-          "mid": 22.65,
-          "high": 134.29,
-          "market": 18.55,
-          "directLow": 22.8
+          "mid": 23.45,
+          "high": 134.27,
+          "market": 18.92,
+          "directLow": 76.96
         }
       }
     },
@@ -178,16 +178,16 @@
       "prices": {
         "normal": {
           "low": 0.02,
-          "mid": 0.23,
+          "mid": 0.22,
           "high": 19.98,
           "market": 0.22,
           "directLow": null
         },
         "reverseHolofoil": {
           "low": 0.1,
-          "mid": 0.41,
+          "mid": 0.4,
           "high": 19.98,
-          "market": 0.43,
+          "market": 0.4,
           "directLow": null
         }
       }
@@ -235,11 +235,11 @@
           "low": 0.14,
           "mid": 0.38,
           "high": 19.98,
-          "market": 0.38,
-          "directLow": null
+          "market": 0.37,
+          "directLow": 0.25
         },
         "reverseHolofoil": {
-          "low": 1.43,
+          "low": 1.61,
           "mid": 4.21,
           "high": 34.79,
           "market": 4.21,
@@ -295,7 +295,7 @@
         },
         "reverseHolofoil": {
           "low": 0.25,
-          "mid": 0.63,
+          "mid": 0.61,
           "high": 19.98,
           "market": 0.55,
           "directLow": null
@@ -353,7 +353,7 @@
           "mid": 0.18,
           "high": 1000.15,
           "market": 0.16,
-          "directLow": null
+          "directLow": 0.05
         }
       }
     },
@@ -400,14 +400,14 @@
           "low": 0.01,
           "mid": 0.24,
           "high": 1000.23,
-          "market": 0.25,
+          "market": 0.23,
           "directLow": 0.15
         },
         "reverseHolofoil": {
           "low": 0.14,
           "mid": 0.35,
           "high": 2.04,
-          "market": 0.35,
+          "market": 0.36,
           "directLow": 0.2
         }
       }
@@ -453,17 +453,17 @@
       "prices": {
         "reverseHolofoil": {
           "low": 0.02,
-          "mid": 0.24,
+          "mid": 0.25,
           "high": 1000.23,
-          "market": 0.25,
+          "market": 0.23,
           "directLow": 0.15
         },
         "normal": {
           "low": 0.01,
           "mid": 0.15,
           "high": 1000.12,
-          "market": 0.08,
-          "directLow": 0.01
+          "market": 0.09,
+          "directLow": 0.05
         }
       }
     },
@@ -520,6 +520,25 @@
     },
     "number": "95",
     "rarity": "Illustration Rare",
+    "subtypes": [
+      "Basic"
+    ],
+    "tcgplayer": {}
+  },
+  {
+    "id": "me4-36",
+    "name": "Espurr",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me4-36/small",
+      "large": "https://images.scrydex.com/pokemon/me4-36/large"
+    },
+    "set": {
+      "name": "Chaos Rising",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/05/22"
+    },
+    "number": "36",
+    "rarity": "Common",
     "subtypes": [
       "Basic"
     ],

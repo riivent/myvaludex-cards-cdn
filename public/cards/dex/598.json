@@ -27,8 +27,8 @@
         },
         "reverseHolofoil": {
           "low": 1,
-          "mid": 1.83,
-          "high": 25.32,
+          "mid": 1.8,
+          "high": 25.3,
           "market": 1.8,
           "directLow": 1.85
         }
@@ -76,14 +76,14 @@
         "normal": {
           "low": 0.15,
           "mid": 0.4,
-          "high": 19.92,
+          "high": 19.9,
           "market": 0.48,
-          "directLow": 0.25
+          "directLow": 0.24
         },
         "reverseHolofoil": {
           "low": 0.39,
-          "mid": 0.57,
-          "high": 18.36,
+          "mid": 0.58,
+          "high": 18.34,
           "market": 0.61,
           "directLow": 0.45
         }
@@ -133,7 +133,7 @@
           "mid": 0.25,
           "high": 19.98,
           "market": 0.08,
-          "directLow": 0.16
+          "directLow": 0.15
         },
         "reverseHolofoil": {
           "low": 0.1,
@@ -192,7 +192,7 @@
         },
         "normal": {
           "low": 0.15,
-          "mid": 0.29,
+          "mid": 0.27,
           "high": 19.98,
           "market": 0.22,
           "directLow": null
@@ -247,7 +247,7 @@
         },
         "reverseHolofoil": {
           "low": 0.17,
-          "mid": 0.37,
+          "mid": 0.36,
           "high": 1.49,
           "market": 0.35,
           "directLow": 0.26
@@ -406,14 +406,14 @@
         "normal": {
           "low": 0.01,
           "mid": 0.15,
-          "high": 99999.99,
+          "high": 1000.12,
           "market": 0.1,
-          "directLow": 0.03
+          "directLow": 0.02
         },
         "reverseHolofoil": {
           "low": 0.01,
           "mid": 0.2,
-          "high": 99999.99,
+          "high": 1000.15,
           "market": 0.15,
           "directLow": null
         }
@@ -460,10 +460,10 @@
       "prices": {
         "holofoil": {
           "low": 3.5,
-          "mid": 5.27,
+          "mid": 5.3,
           "high": 48.75,
-          "market": 5.04,
-          "directLow": 8.5
+          "market": 5.13,
+          "directLow": 7.49
         }
       }
     },
@@ -508,16 +508,16 @@
       "prices": {
         "normal": {
           "low": 0.01,
-          "mid": 0.14,
+          "mid": 0.15,
           "high": 19.98,
-          "market": 0.09,
+          "market": 0.11,
           "directLow": 0.01
         },
         "reverseHolofoil": {
           "low": 0.05,
           "mid": 0.25,
           "high": 19.98,
-          "market": 0.24,
+          "market": 0.25,
           "directLow": 0.09
         }
       }
@@ -565,7 +565,7 @@
           "low": 11.5,
           "mid": 14.99,
           "high": 169.5,
-          "market": 13.16,
+          "market": 13.3,
           "directLow": null
         }
       }
@@ -589,5 +589,24 @@
         "reverseHoloAvg30": 0
       }
     }
+  },
+  {
+    "id": "me4-63",
+    "name": "Ferrothorn",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me4-63/small",
+      "large": "https://images.scrydex.com/pokemon/me4-63/large"
+    },
+    "set": {
+      "name": "Chaos Rising",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/05/22"
+    },
+    "number": "63",
+    "rarity": "Uncommon",
+    "subtypes": [
+      "Stage 1"
+    ],
+    "tcgplayer": {}
   }
 ]

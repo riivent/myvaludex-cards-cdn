@@ -20,8 +20,8 @@
       "prices": {
         "normal": {
           "low": 0.1,
-          "mid": 0.29,
-          "high": 19.92,
+          "mid": 0.26,
+          "high": 19.9,
           "market": 0.26,
           "directLow": 0.19
         },
@@ -82,7 +82,7 @@
         },
         "reverseHolofoil": {
           "low": 0.5,
-          "mid": 0.78,
+          "mid": 0.79,
           "high": 19.98,
           "market": 1,
           "directLow": null
@@ -131,13 +131,13 @@
         "normal": {
           "low": 0.01,
           "mid": 0.25,
-          "high": 19.92,
+          "high": 19.9,
           "market": 0.15,
           "directLow": 0.11
         },
         "reverseHolofoil": {
           "low": 0.3,
-          "mid": 0.59,
+          "mid": 0.6,
           "high": 19.98,
           "market": 0.44,
           "directLow": null
@@ -187,14 +187,14 @@
           "low": 0.01,
           "mid": 0.2,
           "high": 4,
-          "market": 0.05,
+          "market": 0.06,
           "directLow": 0.05
         },
         "reverseHolofoil": {
           "low": 0.1,
-          "mid": 0.32,
-          "high": 18.36,
-          "market": 0.3,
+          "mid": 0.31,
+          "high": 18.34,
+          "market": 0.29,
           "directLow": 0.22
         }
       }
@@ -294,17 +294,17 @@
     "tcgplayer": {
       "prices": {
         "reverseHolofoil": {
-          "low": 0.09,
-          "mid": 0.38,
+          "low": 0.07,
+          "mid": 0.37,
           "high": 19.98,
-          "market": 0.35,
+          "market": 0.38,
           "directLow": 0.3
         },
         "normal": {
           "low": 0.01,
           "mid": 0.24,
           "high": 19.98,
-          "market": 0.24,
+          "market": 0.22,
           "directLow": 0.1
         }
       }
@@ -467,9 +467,9 @@
         },
         "reverseHolofoil": {
           "low": 0.01,
-          "mid": 0.17,
+          "mid": 0.16,
           "high": 1000.12,
-          "market": 0.12,
+          "market": 0.11,
           "directLow": 0.08
         }
       }
@@ -518,7 +518,7 @@
           "mid": 0.24,
           "high": 19.98,
           "market": 0.24,
-          "directLow": 0.05
+          "directLow": 0.09
         },
         "normal": {
           "low": 0.01,
@@ -572,7 +572,7 @@
           "low": 3.99,
           "mid": 5.55,
           "high": 51.5,
-          "market": 5.21,
+          "market": 5.19,
           "directLow": null
         }
       }
@@ -596,5 +596,24 @@
         "reverseHoloAvg30": 0
       }
     }
+  },
+  {
+    "id": "me4-62",
+    "name": "Ferroseed",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me4-62/small",
+      "large": "https://images.scrydex.com/pokemon/me4-62/large"
+    },
+    "set": {
+      "name": "Chaos Rising",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/05/22"
+    },
+    "number": "62",
+    "rarity": "Common",
+    "subtypes": [
+      "Basic"
+    ],
+    "tcgplayer": {}
   }
 ]

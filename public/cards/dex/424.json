@@ -38,16 +38,16 @@
       "prices": {
         "averageSellPrice": 2.36,
         "lowPrice": 0.1,
-        "trendPrice": 2.41,
+        "trendPrice": 3.8,
         "germanProLow": 0,
         "suggestedPrice": 0,
         "reverseHoloSell": 2.51,
         "reverseHoloLow": 0.1,
         "reverseHoloTrend": 2.15,
         "lowPriceExPlus": 0.69,
-        "avg1": 3.9,
-        "avg7": 2.23,
-        "avg30": 2.52,
+        "avg1": 14,
+        "avg7": 4.45,
+        "avg30": 3.07,
         "reverseHoloAvg1": 1.5,
         "reverseHoloAvg7": 2.1,
         "reverseHoloAvg30": 1.85
@@ -75,9 +75,9 @@
       "prices": {
         "normal": {
           "low": 0.1,
-          "mid": 0.29,
-          "high": 19.84,
-          "market": 0.3,
+          "mid": 0.3,
+          "high": 19.8,
+          "market": 0.31,
           "directLow": 0.23
         },
         "reverseHolofoil": {
@@ -91,21 +91,21 @@
     },
     "cardmarket": {
       "prices": {
-        "averageSellPrice": 0.1,
+        "averageSellPrice": 0.16,
         "lowPrice": 0.02,
-        "trendPrice": 0.1,
+        "trendPrice": 0.16,
         "germanProLow": 0,
         "suggestedPrice": 0,
-        "reverseHoloSell": 0,
-        "reverseHoloLow": 0.25,
-        "reverseHoloTrend": 0.77,
+        "reverseHoloSell": 1.38,
+        "reverseHoloLow": 0.49,
+        "reverseHoloTrend": 1.36,
         "lowPriceExPlus": 0.02,
-        "avg1": 0.15,
-        "avg7": 0.1,
-        "avg30": 0.12,
-        "reverseHoloAvg1": 0.6,
-        "reverseHoloAvg7": 1.4,
-        "reverseHoloAvg30": 0.99
+        "avg1": 0.16,
+        "avg7": 0.19,
+        "avg30": 0.14,
+        "reverseHoloAvg1": 0.75,
+        "reverseHoloAvg7": 1.21,
+        "reverseHoloAvg30": 0.87
       }
     }
   },
@@ -185,8 +185,8 @@
     "tcgplayer": {
       "prices": {
         "normal": {
-          "low": 0.43,
-          "mid": 0.75,
+          "low": 0.44,
+          "mid": 0.77,
           "high": 19.98,
           "market": 0.77,
           "directLow": null
@@ -211,12 +211,12 @@
         "reverseHoloLow": 0.48,
         "reverseHoloTrend": 2.47,
         "lowPriceExPlus": 0.5,
-        "avg1": 0.9,
-        "avg7": 0.81,
-        "avg30": 0.88,
-        "reverseHoloAvg1": 1.99,
-        "reverseHoloAvg7": 2.05,
-        "reverseHoloAvg30": 2.24
+        "avg1": 1,
+        "avg7": 0.82,
+        "avg30": 0.89,
+        "reverseHoloAvg1": 2,
+        "reverseHoloAvg7": 2,
+        "reverseHoloAvg30": 2.18
       }
     }
   },
@@ -243,12 +243,12 @@
           "low": 0.24,
           "mid": 0.5,
           "high": 19.98,
-          "market": 0.5,
-          "directLow": 0.77
+          "market": 0.57,
+          "directLow": 0.99
         },
         "reverseHolofoil": {
           "low": 0.7,
-          "mid": 1.34,
+          "mid": 1.36,
           "high": 19.98,
           "market": 1.26,
           "directLow": 1.99
@@ -360,7 +360,7 @@
           "low": 0.04,
           "mid": 0.2,
           "high": 19.98,
-          "market": 0.14,
+          "market": 0.16,
           "directLow": 0.17
         }
       }
@@ -578,10 +578,10 @@
         },
         "reverseHolofoil": {
           "low": 0.01,
-          "mid": 0.26,
+          "mid": 0.25,
           "high": 1000.26,
           "market": 0.24,
-          "directLow": 0.09
+          "directLow": 0.23
         }
       }
     },
@@ -628,15 +628,15 @@
           "low": 0.01,
           "mid": 0.23,
           "high": 999,
-          "market": 0.24,
-          "directLow": 0.08
+          "market": 0.23,
+          "directLow": 0.1
         },
         "holofoil": {
           "low": 0.01,
           "mid": 0.15,
           "high": 999,
-          "market": 0.06,
-          "directLow": 0.04
+          "market": 0.09,
+          "directLow": 0.05
         }
       }
     }
@@ -661,10 +661,10 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 1.24,
+          "low": 1.23,
           "mid": 2.57,
           "high": 4321,
-          "market": 2.51,
+          "market": 2.18,
           "directLow": null
         }
       }

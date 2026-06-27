@@ -50,7 +50,7 @@
       "prices": {
         "normal": {
           "low": 0.4,
-          "mid": 1,
+          "mid": 0.99,
           "high": 19.98,
           "market": 1.22,
           "directLow": null
@@ -107,12 +107,12 @@
           "low": 1.4,
           "mid": 1.89,
           "high": 19.98,
-          "market": 1.53,
+          "market": 1.55,
           "directLow": null
         },
         "reverseHolofoil": {
           "low": 1.39,
-          "mid": 3.12,
+          "mid": 2.99,
           "high": 32.1,
           "market": 5.15,
           "directLow": null
@@ -161,14 +161,14 @@
       "prices": {
         "normal": {
           "low": 0.6,
-          "mid": 1.39,
+          "mid": 1.41,
           "high": 96.9,
           "market": 1.41,
           "directLow": 96.9
         },
         "reverseHolofoil": {
-          "low": 0.99,
-          "mid": 5.85,
+          "low": 1,
+          "mid": 6.3,
           "high": 116.77,
           "market": 6.3,
           "directLow": null
@@ -215,7 +215,7 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 1.99,
+          "low": 2.07,
           "mid": 3.48,
           "high": 35.6,
           "market": 2.92,
@@ -333,7 +333,7 @@
         },
         "reverseHolofoil": {
           "low": 0.86,
-          "mid": 1.49,
+          "mid": 1.37,
           "high": 59.99,
           "market": 1.53,
           "directLow": null
@@ -382,7 +382,7 @@
       "prices": {
         "holofoil": {
           "low": 2.5,
-          "mid": 4.99,
+          "mid": 4.98,
           "high": 59.99,
           "market": 5.15,
           "directLow": null
@@ -433,7 +433,7 @@
           "low": 11.81,
           "mid": 23.69,
           "high": 250,
-          "market": 22.74,
+          "market": 22.72,
           "directLow": null
         }
       }
@@ -486,9 +486,9 @@
         },
         "reverseHolofoil": {
           "low": 0.25,
-          "mid": 0.51,
+          "mid": 0.5,
           "high": 19.98,
-          "market": 0.51,
+          "market": 0.5,
           "directLow": null
         }
       }
@@ -702,13 +702,13 @@
           "mid": 0.61,
           "high": 19.98,
           "market": 0.58,
-          "directLow": null
+          "directLow": 0.55
         },
         "reverseHolofoil": {
           "low": 0.48,
-          "mid": 1.07,
+          "mid": 1.06,
           "high": 96.95,
-          "market": 1.02,
+          "market": 1.01,
           "directLow": 1.12
         }
       }
@@ -754,7 +754,7 @@
       "prices": {
         "normal": {
           "low": 0.04,
-          "mid": 0.19,
+          "mid": 0.2,
           "high": 19.98,
           "market": 0.06,
           "directLow": null
@@ -867,8 +867,8 @@
           "low": 0.35,
           "mid": 0.99,
           "high": 20,
-          "market": 0.55,
-          "directLow": 0.67
+          "market": 0.6,
+          "directLow": 0.99
         }
       }
     },
@@ -916,8 +916,8 @@
           "low": 0.99,
           "mid": 2,
           "high": 20,
-          "market": 1.81,
-          "directLow": 2.45
+          "market": 2,
+          "directLow": 2.46
         }
       }
     },
@@ -962,16 +962,16 @@
       "prices": {
         "reverseHolofoil": {
           "low": 0.05,
-          "mid": 0.21,
+          "mid": 0.22,
           "high": 19.98,
-          "market": 0.18,
+          "market": 0.17,
           "directLow": null
         },
         "normal": {
           "low": 0.01,
           "mid": 0.15,
           "high": 25,
-          "market": 0.03,
+          "market": 0.04,
           "directLow": null
         }
       }
@@ -1072,16 +1072,16 @@
       "prices": {
         "normal": {
           "low": 0.01,
-          "mid": 0.12,
+          "mid": 0.13,
           "high": 19.98,
-          "market": 0.05,
+          "market": 0.06,
           "directLow": 0.01
         },
         "reverseHolofoil": {
           "low": 0.01,
           "mid": 0.25,
           "high": 19.98,
-          "market": 0.25,
+          "market": 0.24,
           "directLow": 0.08
         }
       }

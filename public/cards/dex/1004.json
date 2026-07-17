@@ -20,7 +20,7 @@
       "prices": {
         "holofoil": {
           "low": 1.97,
-          "mid": 3.06,
+          "mid": 3.03,
           "high": 30,
           "market": 2.78,
           "directLow": 2.99
@@ -70,9 +70,9 @@
         "holofoil": {
           "low": 0.25,
           "mid": 0.99,
-          "high": 60,
+          "high": 9.99,
           "market": 0.67,
-          "directLow": 0.6
+          "directLow": 0.7
         }
       }
     },
@@ -118,10 +118,10 @@
       "prices": {
         "holofoil": {
           "low": 2.49,
-          "mid": 4.06,
+          "mid": 4.08,
           "high": 29.99,
-          "market": 3.97,
-          "directLow": 3.5
+          "market": 3.94,
+          "directLow": 4.3
         }
       }
     },
@@ -166,11 +166,11 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 52.79,
+          "low": 52.99,
           "mid": 59.44,
           "high": 379.44,
           "market": 55.71,
-          "directLow": 54.99
+          "directLow": 52.99
         }
       }
     },
@@ -218,12 +218,12 @@
           "mid": 0.25,
           "high": 19.8,
           "market": 0.21,
-          "directLow": 0.3
+          "directLow": null
         },
         "holofoil": {
           "low": 0.03,
           "mid": 0.2,
-          "high": 20,
+          "high": 30,
           "market": 0.13,
           "directLow": null
         }
@@ -271,9 +271,9 @@
       "prices": {
         "holofoil": {
           "low": 9.5,
-          "mid": 12.45,
+          "mid": 12.49,
           "high": 94.8,
-          "market": 12.41,
+          "market": 12.39,
           "directLow": 11.65
         }
       }
@@ -321,12 +321,12 @@
           "low": 0.07,
           "mid": 0.31,
           "high": 19.98,
-          "market": 0.32,
-          "directLow": 0.33
+          "market": 0.31,
+          "directLow": 0.32
         },
         "normal": {
           "low": 0.01,
-          "mid": 0.2,
+          "mid": 0.21,
           "high": 19.98,
           "market": 0.23,
           "directLow": 0.1
@@ -375,18 +375,37 @@
         "normal": {
           "low": 0.01,
           "mid": 0.15,
-          "high": 19.98,
-          "market": 0.09,
+          "high": 30,
+          "market": 0.07,
           "directLow": 0.01
         },
         "reverseHolofoil": {
           "low": 0.01,
           "mid": 0.2,
           "high": 19.98,
-          "market": 0.17,
+          "market": 0.18,
           "directLow": 0.08
         }
       }
     }
+  },
+  {
+    "id": "me5-59",
+    "name": "Chi-Yu",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me5-59/small",
+      "large": "https://images.scrydex.com/pokemon/me5-59/large"
+    },
+    "set": {
+      "name": "Pitch Black",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/07/17"
+    },
+    "number": "59",
+    "rarity": "Rare",
+    "subtypes": [
+      "Basic"
+    ],
+    "tcgplayer": {}
   }
 ]

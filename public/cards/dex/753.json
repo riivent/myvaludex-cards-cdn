@@ -20,7 +20,7 @@
       "prices": {
         "normal": {
           "low": 0.01,
-          "mid": 0.19,
+          "mid": 0.2,
           "high": 19.72,
           "market": 0.08,
           "directLow": null
@@ -30,7 +30,7 @@
           "mid": 0.35,
           "high": 2.99,
           "market": 0.32,
-          "directLow": 0.38
+          "directLow": 0.31
         }
       }
     },
@@ -76,12 +76,12 @@
         "normal": {
           "low": 0.15,
           "mid": 0.53,
-          "high": 1.77,
+          "high": 1.91,
           "market": 0.53,
           "directLow": null
         },
         "reverseHolofoil": {
-          "low": 4.25,
+          "low": 1.57,
           "mid": 6.95,
           "high": 82.1,
           "market": 1.57,
@@ -132,15 +132,15 @@
           "low": 0.01,
           "mid": 0.15,
           "high": 19.98,
-          "market": 0.13,
+          "market": 0.12,
           "directLow": 0.05
         },
         "reverseHolofoil": {
           "low": 0.01,
           "mid": 0.27,
-          "high": 18.4,
+          "high": 18.38,
           "market": 0.25,
-          "directLow": null
+          "directLow": 0.17
         }
       }
     },
@@ -187,14 +187,14 @@
           "low": 0.02,
           "mid": 0.2,
           "high": 19.98,
-          "market": 0.13,
+          "market": 0.12,
           "directLow": 0.08
         },
         "normal": {
           "low": 0.01,
           "mid": 0.15,
           "high": 19.98,
-          "market": 0.1,
+          "market": 0.09,
           "directLow": 0.05
         }
       }
@@ -218,5 +218,43 @@
         "reverseHoloAvg30": 0.09
       }
     }
+  },
+  {
+    "id": "me5-3",
+    "name": "Fomantis",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me5-3/small",
+      "large": "https://images.scrydex.com/pokemon/me5-3/large"
+    },
+    "set": {
+      "name": "Pitch Black",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/07/17"
+    },
+    "number": "3",
+    "rarity": "Common",
+    "subtypes": [
+      "Basic"
+    ],
+    "tcgplayer": {}
+  },
+  {
+    "id": "me5-85",
+    "name": "Fomantis",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me5-85/small",
+      "large": "https://images.scrydex.com/pokemon/me5-85/large"
+    },
+    "set": {
+      "name": "Pitch Black",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/07/17"
+    },
+    "number": "85",
+    "rarity": "Illustration Rare",
+    "subtypes": [
+      "Basic"
+    ],
+    "tcgplayer": {}
   }
 ]

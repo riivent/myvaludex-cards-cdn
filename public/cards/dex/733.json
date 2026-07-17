@@ -22,14 +22,14 @@
           "low": 0.08,
           "mid": 0.28,
           "high": 19.98,
-          "market": 0.28,
+          "market": 0.27,
           "directLow": null
         },
         "reverseHolofoil": {
           "low": 0.19,
           "mid": 0.5,
           "high": 19.98,
-          "market": 0.5,
+          "market": 0.48,
           "directLow": null
         }
       }
@@ -82,9 +82,9 @@
         },
         "reverseHolofoil": {
           "low": 0.56,
-          "mid": 0.77,
+          "mid": 0.76,
           "high": 19.98,
-          "market": 0.75,
+          "market": 0.73,
           "directLow": null
         }
       }
@@ -139,7 +139,7 @@
           "low": 0.03,
           "mid": 0.3,
           "high": 19.98,
-          "market": 0.3,
+          "market": 0.29,
           "directLow": null
         }
       }
@@ -163,5 +163,43 @@
         "reverseHoloAvg30": 0.51
       }
     }
+  },
+  {
+    "id": "me5-68",
+    "name": "Toucannon",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me5-68/small",
+      "large": "https://images.scrydex.com/pokemon/me5-68/large"
+    },
+    "set": {
+      "name": "Pitch Black",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/07/17"
+    },
+    "number": "68",
+    "rarity": "Uncommon",
+    "subtypes": [
+      "Stage 2"
+    ],
+    "tcgplayer": {}
+  },
+  {
+    "id": "me5-94",
+    "name": "Toucannon",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me5-94/small",
+      "large": "https://images.scrydex.com/pokemon/me5-94/large"
+    },
+    "set": {
+      "name": "Pitch Black",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/07/17"
+    },
+    "number": "94",
+    "rarity": "Illustration Rare",
+    "subtypes": [
+      "Stage 2"
+    ],
+    "tcgplayer": {}
   }
 ]

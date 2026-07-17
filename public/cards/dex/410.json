@@ -21,8 +21,8 @@
         "holofoil": {
           "low": 4.79,
           "mid": 93.24,
-          "high": 746.68,
-          "market": 8.04,
+          "high": 746.64,
+          "market": 7.86,
           "directLow": 96.95
         }
       }
@@ -49,7 +49,7 @@
       "prices": {
         "normal": {
           "low": 0.1,
-          "mid": 0.35,
+          "mid": 0.34,
           "high": 19.98,
           "market": 0.47,
           "directLow": null
@@ -104,7 +104,7 @@
       "prices": {
         "normal": {
           "low": 0.25,
-          "mid": 0.74,
+          "mid": 0.78,
           "high": 19.98,
           "market": 0.84,
           "directLow": null
@@ -214,7 +214,7 @@
       "prices": {
         "reverseHolofoil": {
           "low": 0.25,
-          "mid": 0.53,
+          "mid": 0.55,
           "high": 19.98,
           "market": 0.52,
           "directLow": null
@@ -224,7 +224,7 @@
           "mid": 0.25,
           "high": 19.98,
           "market": 0.21,
-          "directLow": null
+          "directLow": 0.19
         }
       }
     },
@@ -271,12 +271,12 @@
           "low": 0.04,
           "mid": 0.25,
           "high": 2,
-          "market": 0.23,
+          "market": 0.25,
           "directLow": 0.05
         },
         "reverseHolofoil": {
           "low": 0.12,
-          "mid": 0.36,
+          "mid": 0.37,
           "high": 19.98,
           "market": 0.35,
           "directLow": null
@@ -302,5 +302,24 @@
         "reverseHoloAvg30": 0.18
       }
     }
+  },
+  {
+    "id": "me5-61",
+    "name": "Shieldon",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me5-61/small",
+      "large": "https://images.scrydex.com/pokemon/me5-61/large"
+    },
+    "set": {
+      "name": "Pitch Black",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/07/17"
+    },
+    "number": "61",
+    "rarity": "Common",
+    "subtypes": [
+      "Stage 1"
+    ],
+    "tcgplayer": {}
   }
 ]

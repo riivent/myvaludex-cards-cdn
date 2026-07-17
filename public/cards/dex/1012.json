@@ -77,15 +77,15 @@
           "low": 0.05,
           "mid": 0.25,
           "high": 19.98,
-          "market": 0.25,
+          "market": 0.24,
           "directLow": 0.13
         },
         "normal": {
           "low": 0.01,
           "mid": 0.17,
           "high": 1000,
-          "market": 0.15,
-          "directLow": 0.09
+          "market": 0.16,
+          "directLow": 0.08
         }
       }
     },
@@ -130,9 +130,9 @@
       "prices": {
         "holofoil": {
           "low": 2,
-          "mid": 6.43,
+          "mid": 6.49,
           "high": 41.86,
-          "market": 6.12,
+          "market": 6.18,
           "directLow": 8.4
         }
       }
@@ -156,5 +156,24 @@
         "reverseHoloAvg30": 0
       }
     }
+  },
+  {
+    "id": "me5-5",
+    "name": "Poltchageist",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me5-5/small",
+      "large": "https://images.scrydex.com/pokemon/me5-5/large"
+    },
+    "set": {
+      "name": "Pitch Black",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/07/17"
+    },
+    "number": "5",
+    "rarity": "Common",
+    "subtypes": [
+      "Basic"
+    ],
+    "tcgplayer": {}
   }
 ]

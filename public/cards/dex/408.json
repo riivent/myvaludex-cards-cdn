@@ -20,9 +20,9 @@
       "prices": {
         "holofoil": {
           "low": 5.24,
-          "mid": 24.55,
-          "high": 176.74,
-          "market": 13.4,
+          "mid": 23.4,
+          "high": 176.7,
+          "market": 13.62,
           "directLow": 96.95
         }
       }
@@ -49,7 +49,7 @@
       "prices": {
         "normal": {
           "low": 0.08,
-          "mid": 0.3,
+          "mid": 0.31,
           "high": 19.98,
           "market": 0.31,
           "directLow": null
@@ -104,14 +104,14 @@
       "prices": {
         "normal": {
           "low": 0.4,
-          "mid": 0.72,
-          "high": 14.62,
+          "mid": 0.79,
+          "high": 14.58,
           "market": 0.94,
           "directLow": 1.04
         },
         "reverseHolofoil": {
           "low": 1.99,
-          "mid": 4.49,
+          "mid": 4.64,
           "high": 53.9,
           "market": 4.82,
           "directLow": null
@@ -217,7 +217,7 @@
           "mid": 0.42,
           "high": 18.7,
           "market": 0.35,
-          "directLow": 0.31
+          "directLow": 0.34
         }
       }
     },
@@ -263,7 +263,7 @@
         "normal": {
           "low": 0.01,
           "mid": 0.15,
-          "high": 20,
+          "high": 30,
           "market": 0.13,
           "directLow": null
         },
@@ -295,5 +295,24 @@
         "reverseHoloAvg30": 0.21
       }
     }
+  },
+  {
+    "id": "me5-44",
+    "name": "Cranidos",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me5-44/small",
+      "large": "https://images.scrydex.com/pokemon/me5-44/large"
+    },
+    "set": {
+      "name": "Pitch Black",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/07/17"
+    },
+    "number": "44",
+    "rarity": "Common",
+    "subtypes": [
+      "Stage 1"
+    ],
+    "tcgplayer": {}
   }
 ]

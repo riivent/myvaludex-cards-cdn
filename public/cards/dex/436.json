@@ -21,7 +21,7 @@
         "normal": {
           "low": 0.04,
           "mid": 0.25,
-          "high": 18.18,
+          "high": 18.14,
           "market": 0.16,
           "directLow": 0.16
         },
@@ -29,7 +29,7 @@
           "low": 0.1,
           "mid": 0.71,
           "high": 19.98,
-          "market": 0.79,
+          "market": 0.81,
           "directLow": null
         }
       }
@@ -78,7 +78,7 @@
           "mid": 0.26,
           "high": 19.98,
           "market": 0.26,
-          "directLow": 0.23
+          "directLow": 0.2
         },
         "reverseHolofoil": {
           "low": 0.24,
@@ -137,7 +137,7 @@
         },
         "reverseHolofoil": {
           "low": 0.72,
-          "mid": 1.99,
+          "mid": 1.97,
           "high": 32.2,
           "market": 1.92,
           "directLow": null
@@ -247,7 +247,7 @@
         },
         "reverseHolofoil": {
           "low": 0.75,
-          "mid": 1.75,
+          "mid": 1.87,
           "high": 33.1,
           "market": 2.03,
           "directLow": null
@@ -572,7 +572,7 @@
           "low": 0.01,
           "mid": 0.2,
           "high": 19.98,
-          "market": 0.02,
+          "market": 0.01,
           "directLow": null
         },
         "reverseHolofoil": {
@@ -627,15 +627,15 @@
           "low": 0.09,
           "mid": 0.25,
           "high": 2.99,
-          "market": 0.22,
-          "directLow": 0.16
+          "market": 0.21,
+          "directLow": 0.15
         },
         "reverseHolofoil": {
           "low": 0.1,
-          "mid": 0.93,
+          "mid": 0.9,
           "high": 19.98,
           "market": 0.78,
-          "directLow": 0.85
+          "directLow": 0.78
         }
       }
     },
@@ -679,7 +679,7 @@
     "tcgplayer": {
       "prices": {
         "reverseHolofoil": {
-          "low": 0.08,
+          "low": 0.09,
           "mid": 0.26,
           "high": 19.98,
           "market": 0.26,
@@ -743,7 +743,7 @@
         "normal": {
           "low": 0.01,
           "mid": 0.15,
-          "high": 1.49,
+          "high": 30,
           "market": 0.08,
           "directLow": 0.05
         }
@@ -791,15 +791,15 @@
         "normal": {
           "low": 0.01,
           "mid": 0.15,
-          "high": 19.98,
+          "high": 30,
           "market": 0.02,
           "directLow": null
         },
         "reverseHolofoil": {
           "low": 0.03,
           "mid": 0.25,
-          "high": 19.98,
-          "market": 0.26,
+          "high": 30,
+          "market": 0.27,
           "directLow": null
         }
       }
@@ -846,15 +846,15 @@
         "reverseHolofoil": {
           "low": 0.1,
           "mid": 0.32,
-          "high": 19.88,
+          "high": 19.86,
           "market": 0.3,
-          "directLow": 0.22
+          "directLow": null
         },
         "normal": {
           "low": 0.01,
           "mid": 0.15,
-          "high": 20,
-          "market": 0.09,
+          "high": 30,
+          "market": 0.1,
           "directLow": null
         }
       }
@@ -901,15 +901,15 @@
         "reverseHolofoil": {
           "low": 0.01,
           "mid": 0.25,
-          "high": 5,
+          "high": 30,
           "market": 0.26,
-          "directLow": null
+          "directLow": 0.08
         },
         "normal": {
           "low": 0.02,
           "mid": 0.19,
           "high": 19.98,
-          "market": 0.14,
+          "market": 0.15,
           "directLow": 0.08
         }
       }
@@ -1010,10 +1010,10 @@
       "prices": {
         "holofoil": {
           "low": 6.39,
-          "mid": 9.74,
+          "mid": 9.7,
           "high": 96.95,
           "market": 8.47,
-          "directLow": 10.9
+          "directLow": 10.56
         }
       }
     },
@@ -1059,8 +1059,8 @@
         "normal": {
           "low": 0.01,
           "mid": 0.15,
-          "high": 19.98,
-          "market": 0.04,
+          "high": 30,
+          "market": 0.03,
           "directLow": 0.01
         },
         "reverseHolofoil": {
@@ -1115,7 +1115,7 @@
           "low": 0.01,
           "mid": 0.17,
           "high": 999,
-          "market": 0.05,
+          "market": 0.06,
           "directLow": 0.01
         },
         "normal": {
@@ -1150,18 +1150,37 @@
         "reverseHolofoil": {
           "low": 0.01,
           "mid": 0.2,
-          "high": 19.98,
-          "market": 0.17,
+          "high": 30,
+          "market": 0.18,
           "directLow": 0.01
         },
         "normal": {
           "low": 0.01,
-          "mid": 0.14,
+          "mid": 0.15,
           "high": 1000,
-          "market": 0.05,
+          "market": 0.06,
           "directLow": 0.01
         }
       }
     }
+  },
+  {
+    "id": "me5-63",
+    "name": "Bronzor",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me5-63/small",
+      "large": "https://images.scrydex.com/pokemon/me5-63/large"
+    },
+    "set": {
+      "name": "Pitch Black",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/07/17"
+    },
+    "number": "63",
+    "rarity": "Common",
+    "subtypes": [
+      "Basic"
+    ],
+    "tcgplayer": {}
   }
 ]

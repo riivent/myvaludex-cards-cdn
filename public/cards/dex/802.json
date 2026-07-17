@@ -20,9 +20,9 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 2.33,
+          "low": 2.4,
           "mid": 3.73,
-          "high": 32.24,
+          "high": 32.2,
           "market": 3.49,
           "directLow": 3
         }
@@ -117,10 +117,10 @@
       "prices": {
         "holofoil": {
           "low": 0.97,
-          "mid": 2.5,
+          "mid": 2.37,
           "high": 4321,
           "market": 2.56,
-          "directLow": 4.55
+          "directLow": 4.09
         }
       }
     },
@@ -166,7 +166,7 @@
       "prices": {
         "holofoil": {
           "low": 1.99,
-          "mid": 4.1,
+          "mid": 4.12,
           "high": 39.88,
           "market": 4.15,
           "directLow": 3.76
@@ -265,7 +265,7 @@
         "holofoil": {
           "low": 11.53,
           "mid": 22.5,
-          "high": 191.7,
+          "high": 191.66,
           "market": 29.93,
           "directLow": 60.59
         }
@@ -314,7 +314,7 @@
           "low": 0.2,
           "mid": 0.75,
           "high": 4321,
-          "market": 0.77,
+          "market": 0.74,
           "directLow": null
         },
         "reverseHolofoil": {
@@ -367,17 +367,17 @@
       "prices": {
         "reverseHolofoil": {
           "low": 1,
-          "mid": 1.68,
+          "mid": 1.6,
           "high": 4321,
           "market": 1.58,
           "directLow": 4.99
         },
         "holofoil": {
           "low": 0.55,
-          "mid": 1.28,
+          "mid": 1.2,
           "high": 6,
           "market": 1.5,
-          "directLow": null
+          "directLow": 0.77
         }
       }
     },
@@ -523,8 +523,8 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 169.5,
-          "mid": 220.35,
+          "low": 140,
+          "mid": 207.49,
           "high": 399.95,
           "market": 233.75,
           "directLow": 310.4
@@ -624,12 +624,12 @@
           "low": 4.5,
           "mid": 6.44,
           "high": 75,
-          "market": 5.68,
+          "market": 5.69,
           "directLow": null
         },
         "reverseHolofoil": {
           "low": 13.99,
-          "mid": 19.48,
+          "mid": 19,
           "high": 4321,
           "market": 18.5,
           "directLow": 19.99
@@ -680,13 +680,13 @@
           "low": 0.03,
           "mid": 0.28,
           "high": 9.99,
-          "market": 0.27,
+          "market": 0.26,
           "directLow": 0.19
         },
         "reverseHolofoil": {
           "low": 0.14,
           "mid": 0.34,
-          "high": 2.95,
+          "high": 30,
           "market": 0.34,
           "directLow": 0.22
         }
@@ -735,7 +735,7 @@
           "low": 0.01,
           "mid": 0.15,
           "high": 1000,
-          "market": 0.05,
+          "market": 0.06,
           "directLow": 0.01
         },
         "reverseHolofoil": {
@@ -769,12 +769,31 @@
       "prices": {
         "holofoil": {
           "low": 14,
-          "mid": 19.15,
+          "mid": 19.02,
           "high": 300,
           "market": 16.02,
-          "directLow": 16.5
+          "directLow": 18.7
         }
       }
     }
+  },
+  {
+    "id": "me5-40",
+    "name": "Marshadow",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me5-40/small",
+      "large": "https://images.scrydex.com/pokemon/me5-40/large"
+    },
+    "set": {
+      "name": "Pitch Black",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/07/17"
+    },
+    "number": "40",
+    "rarity": "Uncommon",
+    "subtypes": [
+      "Basic"
+    ],
+    "tcgplayer": {}
   }
 ]

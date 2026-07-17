@@ -19,7 +19,7 @@
     "tcgplayer": {
       "prices": {
         "reverseHolofoil": {
-          "low": 0.2,
+          "low": 0.19,
           "mid": 0.47,
           "high": 19.98,
           "market": 0.46,
@@ -77,15 +77,15 @@
           "low": 0.05,
           "mid": 0.24,
           "high": 19.98,
-          "market": 0.22,
+          "market": 0.21,
           "directLow": 0.14
         },
         "reverseHolofoil": {
-          "low": 0.05,
+          "low": 0.22,
           "mid": 0.37,
-          "high": 19.2,
+          "high": 19.16,
           "market": 0.34,
-          "directLow": 0.05
+          "directLow": 0.22
         }
       }
     },
@@ -131,7 +131,7 @@
         "holofoil": {
           "low": 0.01,
           "mid": 0.24,
-          "high": 19.06,
+          "high": 19.02,
           "market": 0.22,
           "directLow": 0.04
         },
@@ -187,8 +187,8 @@
           "low": 1.45,
           "mid": 2.48,
           "high": 18.79,
-          "market": 2.48,
-          "directLow": 3.98
+          "market": 2.39,
+          "directLow": 2.87
         }
       }
     },
@@ -234,13 +234,13 @@
         "normal": {
           "low": 0.02,
           "mid": 0.2,
-          "high": 19.98,
+          "high": 30,
           "market": 0.19,
           "directLow": null
         },
         "reverseHolofoil": {
           "low": 0.03,
-          "mid": 0.25,
+          "mid": 0.24,
           "high": 35,
           "market": 0.2,
           "directLow": null
@@ -289,14 +289,14 @@
         "normal": {
           "low": 0.04,
           "mid": 0.2,
-          "high": 19.98,
+          "high": 30,
           "market": 0.14,
           "directLow": 0.09
         },
         "reverseHolofoil": {
           "low": 0.05,
           "mid": 0.25,
-          "high": 19.98,
+          "high": 30,
           "market": 0.19,
           "directLow": null
         }
@@ -343,10 +343,10 @@
       "prices": {
         "holofoil": {
           "low": 1.5,
-          "mid": 3.33,
+          "mid": 3.25,
           "high": 4321,
           "market": 2.71,
-          "directLow": 3.5
+          "directLow": 3.15
         }
       }
     },
@@ -393,7 +393,7 @@
           "low": 0.01,
           "mid": 0.19,
           "high": 40,
-          "market": 0.08,
+          "market": 0.09,
           "directLow": null
         },
         "reverseHolofoil": {
@@ -448,17 +448,55 @@
           "low": 0.02,
           "mid": 0.24,
           "high": 19.98,
-          "market": 0.24,
+          "market": 0.22,
           "directLow": 0.13
         },
         "normal": {
           "low": 0.01,
           "mid": 0.15,
-          "high": 19.98,
-          "market": 0.05,
+          "high": 30,
+          "market": 0.04,
           "directLow": 0.01
         }
       }
     }
+  },
+  {
+    "id": "me5-54",
+    "name": "Thievul",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me5-54/small",
+      "large": "https://images.scrydex.com/pokemon/me5-54/large"
+    },
+    "set": {
+      "name": "Pitch Black",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/07/17"
+    },
+    "number": "54",
+    "rarity": "Uncommon",
+    "subtypes": [
+      "Stage 1"
+    ],
+    "tcgplayer": {}
+  },
+  {
+    "id": "me5-92",
+    "name": "Thievul",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me5-92/small",
+      "large": "https://images.scrydex.com/pokemon/me5-92/large"
+    },
+    "set": {
+      "name": "Pitch Black",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/07/17"
+    },
+    "number": "92",
+    "rarity": "Illustration Rare",
+    "subtypes": [
+      "Stage 1"
+    ],
+    "tcgplayer": {}
   }
 ]

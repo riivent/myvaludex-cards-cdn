@@ -20,17 +20,17 @@
       "prices": {
         "normal": {
           "low": 0.25,
-          "mid": 0.95,
+          "mid": 1,
           "high": 19.98,
           "market": 1.03,
           "directLow": null
         },
         "reverseHolofoil": {
           "low": 1.74,
-          "mid": 2.34,
+          "mid": 2.39,
           "high": 30.5,
           "market": 2,
-          "directLow": 2.23
+          "directLow": 3.09
         }
       }
     },
@@ -75,7 +75,7 @@
       "prices": {
         "normal": {
           "low": 2,
-          "mid": 5.24,
+          "mid": 5.34,
           "high": 58.37,
           "market": 3.63,
           "directLow": 58.37
@@ -123,14 +123,14 @@
       "prices": {
         "normal": {
           "low": 0.5,
-          "mid": 1.15,
+          "mid": 1.25,
           "high": 25.2,
           "market": 1.43,
           "directLow": null
         },
         "reverseHolofoil": {
           "low": 2.99,
-          "mid": 5.08,
+          "mid": 5.04,
           "high": 70,
           "market": 5.5,
           "directLow": null
@@ -182,7 +182,7 @@
           "mid": 9.74,
           "high": 109.8,
           "market": 9.55,
-          "directLow": 6.47
+          "directLow": null
         },
         "reverseHolofoil": {
           "low": 10.78,
@@ -336,15 +336,15 @@
       "prices": {
         "reverseHolofoil": {
           "low": 0.57,
-          "mid": 0.87,
+          "mid": 0.86,
           "high": 19.98,
           "market": 0.8,
-          "directLow": null
+          "directLow": 1.25
         },
         "holofoil": {
           "low": 0.3,
-          "mid": 1.15,
-          "high": 19.74,
+          "mid": 1.13,
+          "high": 19.7,
           "market": 1.16,
           "directLow": 1
         }
@@ -390,17 +390,17 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 0.06,
-          "mid": 0.37,
+          "low": 0.1,
+          "mid": 0.36,
           "high": 5,
-          "market": 0.36,
-          "directLow": 0.2
+          "market": 0.35,
+          "directLow": 0.3
         },
         "reverseHolofoil": {
           "low": 0.09,
           "mid": 0.34,
-          "high": 2,
-          "market": 0.29,
+          "high": 30,
+          "market": 0.3,
           "directLow": null
         }
       }
@@ -424,5 +424,43 @@
         "reverseHoloAvg30": 0.3
       }
     }
+  },
+  {
+    "id": "me5-62",
+    "name": "Bastiodon",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me5-62/small",
+      "large": "https://images.scrydex.com/pokemon/me5-62/large"
+    },
+    "set": {
+      "name": "Pitch Black",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/07/17"
+    },
+    "number": "62",
+    "rarity": "Rare",
+    "subtypes": [
+      "Stage 2"
+    ],
+    "tcgplayer": {}
+  },
+  {
+    "id": "me5-93",
+    "name": "Bastiodon",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me5-93/small",
+      "large": "https://images.scrydex.com/pokemon/me5-93/large"
+    },
+    "set": {
+      "name": "Pitch Black",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/07/17"
+    },
+    "number": "93",
+    "rarity": "Illustration Rare",
+    "subtypes": [
+      "Stage 2"
+    ],
+    "tcgplayer": {}
   }
 ]

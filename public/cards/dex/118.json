@@ -30,7 +30,7 @@
           "mid": 0.45,
           "high": 17.1,
           "market": 0.43,
-          "directLow": null
+          "directLow": 0.25
         }
       }
     },
@@ -77,7 +77,7 @@
           "low": 0.1,
           "mid": 0.5,
           "high": 2.5,
-          "market": 0.51,
+          "market": 0.57,
           "directLow": 0.54
         }
       }
@@ -133,7 +133,7 @@
           "mid": 6.02,
           "high": 65.92,
           "market": 6.18,
-          "directLow": 5.92
+          "directLow": 5.93
         }
       }
     },
@@ -178,16 +178,16 @@
       "prices": {
         "1stEdition": {
           "low": 1.5,
-          "mid": 2.66,
+          "mid": 2.52,
           "high": 32.2,
-          "market": 2.78,
+          "market": 2.86,
           "directLow": null
         },
         "unlimited": {
           "low": 0.1,
           "mid": 1,
-          "high": 16.62,
-          "market": 1.31,
+          "high": 16.58,
+          "market": 1.32,
           "directLow": 0.75
         }
       }
@@ -233,14 +233,14 @@
       "prices": {
         "1stEdition": {
           "low": 2.77,
-          "mid": 4.76,
+          "mid": 4.66,
           "high": 38,
           "market": 4.25,
           "directLow": null
         },
         "unlimited": {
           "low": 1.44,
-          "mid": 2.86,
+          "mid": 2.87,
           "high": 22.99,
           "market": 2.74,
           "directLow": null
@@ -287,15 +287,15 @@
     "tcgplayer": {
       "prices": {
         "normal": {
-          "low": 1.5,
-          "mid": 2.5,
+          "low": 1,
+          "mid": 2.38,
           "high": 49.93,
-          "market": 2.24,
+          "market": 2.26,
           "directLow": 2.79
         },
         "reverseHolofoil": {
-          "low": 8.72,
-          "mid": 62.99,
+          "low": 35.89,
+          "mid": 65.99,
           "high": 178.7,
           "market": 12.78,
           "directLow": null
@@ -343,14 +343,14 @@
       "prices": {
         "normal": {
           "low": 3.02,
-          "mid": 7.09,
+          "mid": 7.17,
           "high": 41.1,
           "market": 5.14,
           "directLow": null
         },
         "reverseHolofoil": {
           "low": 13.12,
-          "mid": 13.37,
+          "mid": 19.19,
           "high": 29.99,
           "market": 17.17,
           "directLow": null
@@ -397,8 +397,8 @@
     "tcgplayer": {
       "prices": {
         "normal": {
-          "low": 0.3,
-          "mid": 0.69,
+          "low": 0.25,
+          "mid": 0.67,
           "high": 19.98,
           "market": 0.58,
           "directLow": null
@@ -453,14 +453,14 @@
       "prices": {
         "normal": {
           "low": 0.19,
-          "mid": 0.51,
-          "high": 18.52,
-          "market": 0.51,
+          "mid": 0.5,
+          "high": 18.48,
+          "market": 0.48,
           "directLow": 0.29
         },
         "reverseHolofoil": {
           "low": 20.83,
-          "mid": 49.99,
+          "mid": 49.97,
           "high": 499.9,
           "market": 18.15,
           "directLow": null
@@ -563,7 +563,7 @@
       "prices": {
         "normal": {
           "low": 0.12,
-          "mid": 0.35,
+          "mid": 0.36,
           "high": 19.98,
           "market": 0.39,
           "directLow": null
@@ -618,14 +618,14 @@
       "prices": {
         "normal": {
           "low": 0.05,
-          "mid": 0.24,
+          "mid": 0.25,
           "high": 19.98,
-          "market": 0.22,
+          "market": 0.21,
           "directLow": 0.19
         },
         "reverseHolofoil": {
           "low": 0.12,
-          "mid": 0.53,
+          "mid": 0.52,
           "high": 24.99,
           "market": 0.54,
           "directLow": null
@@ -730,7 +730,7 @@
           "low": 0.01,
           "mid": 0.15,
           "high": 2.99,
-          "market": 0.05,
+          "market": 0.04,
           "directLow": 0.05
         },
         "reverseHolofoil": {
@@ -738,7 +738,7 @@
           "mid": 0.31,
           "high": 18.3,
           "market": 0.31,
-          "directLow": null
+          "directLow": 0.25
         }
       }
     },
@@ -793,7 +793,7 @@
           "mid": 0.25,
           "high": 17.28,
           "market": 0.16,
-          "directLow": null
+          "directLow": 0.2
         }
       }
     },
@@ -847,7 +847,7 @@
           "low": 0.01,
           "mid": 0.15,
           "high": 1000,
-          "market": 0.1,
+          "market": 0.08,
           "directLow": 0.05
         }
       }
@@ -893,15 +893,15 @@
       "prices": {
         "normal": {
           "low": 0.01,
-          "mid": 0.16,
+          "mid": 0.17,
           "high": 20,
           "market": 0.17,
-          "directLow": 0.06
+          "directLow": 0.07
         },
         "reverseHolofoil": {
           "low": 0.01,
           "mid": 0.25,
-          "high": 38,
+          "high": 19.98,
           "market": 0.24,
           "directLow": 0.23
         }
@@ -948,19 +948,57 @@
       "prices": {
         "reverseHolofoil": {
           "low": 0.01,
-          "mid": 0.21,
-          "high": 19.98,
-          "market": 0.21,
+          "mid": 0.22,
+          "high": 30,
+          "market": 0.23,
           "directLow": 0.1
         },
         "normal": {
           "low": 0.01,
           "mid": 0.15,
           "high": 19.98,
-          "market": 0.1,
+          "market": 0.12,
           "directLow": 0.01
         }
       }
     }
+  },
+  {
+    "id": "me5-13",
+    "name": "Goldeen",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me5-13/small",
+      "large": "https://images.scrydex.com/pokemon/me5-13/large"
+    },
+    "set": {
+      "name": "Pitch Black",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/07/17"
+    },
+    "number": "13",
+    "rarity": "Common",
+    "subtypes": [
+      "Basic"
+    ],
+    "tcgplayer": {}
+  },
+  {
+    "id": "me5-87",
+    "name": "Goldeen",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me5-87/small",
+      "large": "https://images.scrydex.com/pokemon/me5-87/large"
+    },
+    "set": {
+      "name": "Pitch Black",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/07/17"
+    },
+    "number": "87",
+    "rarity": "Illustration Rare",
+    "subtypes": [
+      "Basic"
+    ],
+    "tcgplayer": {}
   }
 ]

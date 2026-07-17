@@ -27,7 +27,7 @@
         },
         "reverseHolofoil": {
           "low": 0.01,
-          "mid": 0.31,
+          "mid": 0.3,
           "high": 2.99,
           "market": 0.29,
           "directLow": 0.24
@@ -75,7 +75,7 @@
       "prices": {
         "holofoil": {
           "low": 0.15,
-          "mid": 0.52,
+          "mid": 0.51,
           "high": 19.98,
           "market": 0.58,
           "directLow": null
@@ -147,7 +147,7 @@
         },
         "normal": {
           "low": 0.05,
-          "mid": 0.23,
+          "mid": 0.22,
           "high": 19.98,
           "market": 0.16,
           "directLow": null
@@ -258,8 +258,8 @@
         "normal": {
           "low": 0.01,
           "mid": 0.16,
-          "high": 25.06,
-          "market": 0.09,
+          "high": 30,
+          "market": 0.07,
           "directLow": 0.04
         }
       }
@@ -283,5 +283,24 @@
         "reverseHoloAvg30": 0.24
       }
     }
+  },
+  {
+    "id": "me5-66",
+    "name": "Pikipek",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me5-66/small",
+      "large": "https://images.scrydex.com/pokemon/me5-66/large"
+    },
+    "set": {
+      "name": "Pitch Black",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/07/17"
+    },
+    "number": "66",
+    "rarity": "Common",
+    "subtypes": [
+      "Basic"
+    ],
+    "tcgplayer": {}
   }
 ]

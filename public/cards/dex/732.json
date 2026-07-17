@@ -22,15 +22,15 @@
           "low": 0.01,
           "mid": 0.23,
           "high": 19.4,
-          "market": 0.24,
-          "directLow": null
+          "market": 0.23,
+          "directLow": 0.1
         },
         "reverseHolofoil": {
           "low": 0.08,
           "mid": 0.4,
           "high": 19.46,
           "market": 0.4,
-          "directLow": null
+          "directLow": 0.28
         }
       }
     },
@@ -132,7 +132,7 @@
           "low": 0.01,
           "mid": 0.17,
           "high": 25.07,
-          "market": 0.08,
+          "market": 0.09,
           "directLow": null
         },
         "reverseHolofoil": {
@@ -163,5 +163,24 @@
         "reverseHoloAvg30": 0.26
       }
     }
+  },
+  {
+    "id": "me5-67",
+    "name": "Trumbeak",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me5-67/small",
+      "large": "https://images.scrydex.com/pokemon/me5-67/large"
+    },
+    "set": {
+      "name": "Pitch Black",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/07/17"
+    },
+    "number": "67",
+    "rarity": "Common",
+    "subtypes": [
+      "Stage 1"
+    ],
+    "tcgplayer": {}
   }
 ]

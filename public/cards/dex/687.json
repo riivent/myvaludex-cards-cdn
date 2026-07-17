@@ -20,10 +20,10 @@
       "prices": {
         "holofoil": {
           "low": 2.75,
-          "mid": 5.1,
+          "mid": 5.17,
           "high": 4321,
           "market": 4.92,
-          "directLow": 96.13
+          "directLow": 5.97
         }
       }
     },
@@ -75,7 +75,7 @@
         },
         "reverseHolofoil": {
           "low": 0.25,
-          "mid": 0.79,
+          "mid": 0.81,
           "high": 19.98,
           "market": 0.94,
           "directLow": 1
@@ -228,7 +228,7 @@
       "prices": {
         "holofoil": {
           "low": 8.3,
-          "mid": 18.61,
+          "mid": 18.66,
           "high": 189.9,
           "market": 19.5,
           "directLow": null
@@ -278,12 +278,12 @@
           "low": 0.02,
           "mid": 0.2,
           "high": 1000,
-          "market": 0.08,
+          "market": 0.07,
           "directLow": null
         },
         "reverseHolofoil": {
-          "low": 0.15,
-          "mid": 0.36,
+          "low": 0.1,
+          "mid": 0.35,
           "high": 23.49,
           "market": 0.32,
           "directLow": null
@@ -331,9 +331,9 @@
       "prices": {
         "holofoil": {
           "low": 3.6,
-          "mid": 6.72,
+          "mid": 6.8,
           "high": 35,
-          "market": 5.29,
+          "market": 5.34,
           "directLow": 9.99
         }
       }
@@ -380,7 +380,7 @@
         "normal": {
           "low": 0.03,
           "mid": 0.25,
-          "high": 1.54,
+          "high": 2,
           "market": 0.05,
           "directLow": 0.05
         },
@@ -434,7 +434,7 @@
       "prices": {
         "reverseHolofoil": {
           "low": 0.75,
-          "mid": 1.17,
+          "mid": 1.16,
           "high": 19.98,
           "market": 1.18,
           "directLow": null
@@ -442,9 +442,9 @@
         "normal": {
           "low": 0.25,
           "mid": 0.61,
-          "high": 19.74,
+          "high": 19.7,
           "market": 0.61,
-          "directLow": 0.43
+          "directLow": 0.35
         }
       }
     },
@@ -641,9 +641,9 @@
       "prices": {
         "holofoil": {
           "low": 1,
-          "mid": 2.37,
+          "mid": 2.44,
           "high": 9.99,
-          "market": 2.32,
+          "market": 2.3,
           "directLow": 3.03
         }
       }
@@ -690,9 +690,9 @@
       "prices": {
         "holofoil": {
           "low": 2.99,
-          "mid": 4.06,
+          "mid": 4.05,
           "high": 50.3,
-          "market": 4.05,
+          "market": 4.01,
           "directLow": 7.74
         }
       }
@@ -738,7 +738,7 @@
       "prices": {
         "holofoil": {
           "low": 6.99,
-          "mid": 8.8,
+          "mid": 8.82,
           "high": 68.67,
           "market": 7.99,
           "directLow": 8.49
@@ -788,14 +788,14 @@
           "low": 0.07,
           "mid": 0.25,
           "high": 19.98,
-          "market": 0.16,
+          "market": 0.17,
           "directLow": 0.24
         },
         "normal": {
           "low": 0.02,
-          "mid": 0.17,
+          "mid": 0.18,
           "high": 2.99,
-          "market": 0.15,
+          "market": 0.16,
           "directLow": 0.09
         }
       }
@@ -850,7 +850,7 @@
         "reverseHolofoil": {
           "low": 0.05,
           "mid": 0.25,
-          "high": 19.06,
+          "high": 19.02,
           "market": 0.19,
           "directLow": 0.08
         }
@@ -899,13 +899,13 @@
           "low": 0.05,
           "mid": 0.3,
           "high": 40,
-          "market": 0.3,
+          "market": 0.31,
           "directLow": 0.21
         },
         "normal": {
           "low": 0.01,
           "mid": 0.2,
-          "high": 20,
+          "high": 30,
           "market": 0.13,
           "directLow": null
         }
@@ -955,8 +955,8 @@
           "low": 0.98,
           "mid": 1.99,
           "high": 4321,
-          "market": 1.45,
-          "directLow": 1.99
+          "market": 1.44,
+          "directLow": 1.88
         }
       }
     },
@@ -1065,7 +1065,7 @@
           "low": 0.03,
           "mid": 0.2,
           "high": 19.98,
-          "market": 0.18,
+          "market": 0.17,
           "directLow": 0.09
         }
       }
@@ -1089,5 +1089,24 @@
         "reverseHoloAvg30": 0.1
       }
     }
+  },
+  {
+    "id": "me5-52",
+    "name": "Malamar",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me5-52/small",
+      "large": "https://images.scrydex.com/pokemon/me5-52/large"
+    },
+    "set": {
+      "name": "Pitch Black",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/07/17"
+    },
+    "number": "52",
+    "rarity": "Uncommon",
+    "subtypes": [
+      "Stage 1"
+    ],
+    "tcgplayer": {}
   }
 ]

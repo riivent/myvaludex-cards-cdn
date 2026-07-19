@@ -27,9 +27,9 @@
         },
         "unlimited": {
           "low": 0.25,
-          "mid": 0.77,
+          "mid": 0.76,
           "high": 15.59,
-          "market": 1.03,
+          "market": 1,
           "directLow": 0.79
         }
       }
@@ -75,10 +75,10 @@
       "prices": {
         "normal": {
           "low": 0.25,
-          "mid": 0.89,
+          "mid": 0.9,
           "high": 6.4,
           "market": 1.11,
-          "directLow": null
+          "directLow": 0.75
         }
       }
     },
@@ -124,7 +124,7 @@
         "1stEdition": {
           "low": 3.86,
           "mid": 5.91,
-          "high": 4317.71,
+          "high": 4317.63,
           "market": 5.91,
           "directLow": 19.95
         },
@@ -132,7 +132,7 @@
           "low": 1.13,
           "mid": 2,
           "high": 30.1,
-          "market": 2.67,
+          "market": 2.48,
           "directLow": null
         }
       }
@@ -185,8 +185,8 @@
         },
         "unlimited": {
           "low": 0.59,
-          "mid": 1.25,
-          "high": 22.25,
+          "mid": 1.26,
+          "high": 22.26,
           "market": 2.26,
           "directLow": 5.24
         }
@@ -234,7 +234,7 @@
         "normal": {
           "low": 13.57,
           "mid": 16,
-          "high": 38.98,
+          "high": 49.99,
           "market": 13.67,
           "directLow": null
         },
@@ -288,14 +288,14 @@
       "prices": {
         "normal": {
           "low": 0.67,
-          "mid": 1.01,
+          "mid": 1.02,
           "high": 19.98,
           "market": 1.02,
           "directLow": null
         },
         "reverseHolofoil": {
           "low": 7,
-          "mid": 29.98,
+          "mid": 28.99,
           "high": 97.2,
           "market": 15.47,
           "directLow": null
@@ -346,7 +346,7 @@
           "mid": 1.3,
           "high": 96.95,
           "market": 1.3,
-          "directLow": 0.98
+          "directLow": 0.9
         },
         "reverseHolofoil": {
           "low": 39.95,
@@ -400,7 +400,7 @@
           "low": 0.13,
           "mid": 0.41,
           "high": 19.98,
-          "market": 0.39,
+          "market": 0.42,
           "directLow": null
         },
         "reverseHolofoil": {
@@ -515,7 +515,7 @@
         },
         "reverseHolofoil": {
           "low": 0.02,
-          "mid": 0.6,
+          "mid": 0.59,
           "high": 24.99,
           "market": 0.65,
           "directLow": null
@@ -564,9 +564,9 @@
         "reverseHolofoil": {
           "low": 0.19,
           "mid": 0.5,
-          "high": 18.86,
+          "high": 18.74,
           "market": 0.5,
-          "directLow": 0.38
+          "directLow": 0.42
         },
         "normal": {
           "low": 0.14,
@@ -621,13 +621,13 @@
           "mid": 0.19,
           "high": 19.98,
           "market": 0.12,
-          "directLow": 0.07
+          "directLow": 0.1
         },
         "reverseHolofoil": {
           "low": 0.23,
-          "mid": 0.5,
+          "mid": 0.49,
           "high": 19.98,
-          "market": 0.49,
+          "market": 0.5,
           "directLow": null
         }
       }
@@ -673,17 +673,17 @@
       "prices": {
         "reverseHolofoil": {
           "low": 0.79,
-          "mid": 1.43,
+          "mid": 1.44,
           "high": 16.34,
-          "market": 1.35,
-          "directLow": 1.39
+          "market": 1.3,
+          "directLow": 1.44
         },
         "normal": {
           "low": 0.01,
           "mid": 0.17,
           "high": 1000,
-          "market": 0.07,
-          "directLow": 0.05
+          "market": 0.14,
+          "directLow": 0.04
         }
       }
     },
@@ -785,14 +785,14 @@
           "low": 0.05,
           "mid": 0.25,
           "high": 999,
-          "market": 0.25,
-          "directLow": 0.23
+          "market": 0.26,
+          "directLow": 0.24
         },
         "normal": {
           "low": 0.01,
-          "mid": 0.16,
+          "mid": 0.17,
           "high": 19.98,
-          "market": 0.13,
+          "market": 0.19,
           "directLow": 0.01
         }
       }

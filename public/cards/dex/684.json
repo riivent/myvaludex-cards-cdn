@@ -67,16 +67,16 @@
       "prices": {
         "normal": {
           "low": 0.15,
-          "mid": 0.33,
+          "mid": 0.32,
           "high": 19.98,
           "market": 0.32,
           "directLow": null
         },
         "reverseHolofoil": {
           "low": 0.69,
-          "mid": 0.99,
+          "mid": 1,
           "high": 19.98,
-          "market": 1.11,
+          "market": 1.2,
           "directLow": null
         }
       }
@@ -146,7 +146,7 @@
         },
         "reverseHolofoil": {
           "low": 1,
-          "mid": 1.9,
+          "mid": 2,
           "high": 19.98,
           "market": 1.6,
           "directLow": null
@@ -242,7 +242,7 @@
       "prices": {
         "normal": {
           "low": 0.17,
-          "mid": 0.35,
+          "mid": 0.34,
           "high": 19.98,
           "market": 0.31,
           "directLow": null
@@ -304,10 +304,10 @@
         },
         "normal": {
           "low": 0.01,
-          "mid": 0.19,
+          "mid": 0.18,
           "high": 18.34,
           "market": 0.16,
-          "directLow": 0.04
+          "directLow": 0.01
         }
       }
     },
@@ -354,15 +354,15 @@
           "low": 0.1,
           "mid": 0.41,
           "high": 3.99,
-          "market": 0.37,
-          "directLow": null
+          "market": 0.36,
+          "directLow": 0.37
         },
         "normal": {
-          "low": 0.03,
-          "mid": 0.25,
+          "low": 0.01,
+          "mid": 0.26,
           "high": 20,
           "market": 0.29,
-          "directLow": null
+          "directLow": 0.09
         }
       }
     },
@@ -409,15 +409,15 @@
           "low": 0.01,
           "mid": 0.23,
           "high": 19.98,
-          "market": 0.23,
-          "directLow": 0.1
+          "market": 0.22,
+          "directLow": 0.12
         },
         "normal": {
           "low": 0.01,
           "mid": 0.15,
           "high": 1000,
-          "market": 0.12,
-          "directLow": 0.04
+          "market": 0.1,
+          "directLow": 0.02
         }
       }
     },

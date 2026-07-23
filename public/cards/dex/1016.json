@@ -21,16 +21,16 @@
         "reverseHolofoil": {
           "low": 0.01,
           "mid": 0.25,
-          "high": 19.98,
+          "high": 999,
           "market": 0.23,
           "directLow": 0.15
         },
         "holofoil": {
           "low": 0.01,
-          "mid": 0.18,
-          "high": 10.7,
+          "mid": 0.19,
+          "high": 999,
           "market": 0.15,
-          "directLow": 0.05
+          "directLow": 0.01
         }
       }
     },
@@ -76,10 +76,10 @@
       "prices": {
         "holofoil": {
           "low": 1.75,
-          "mid": 4.33,
+          "mid": 4.36,
           "high": 4321,
-          "market": 3.19,
-          "directLow": null
+          "market": 3.12,
+          "directLow": 2.9
         }
       }
     },
@@ -124,10 +124,10 @@
       "prices": {
         "holofoil": {
           "low": 10.01,
-          "mid": 15.69,
-          "high": 184.8,
-          "market": 15.65,
-          "directLow": 12.24
+          "mid": 15.79,
+          "high": 999,
+          "market": 16.08,
+          "directLow": 12.4
         }
       }
     },
@@ -173,9 +173,9 @@
       "prices": {
         "holofoil": {
           "low": 9.99,
-          "mid": 13.49,
-          "high": 133.4,
-          "market": 12.24,
+          "mid": 13.38,
+          "high": 999,
+          "market": 11.4,
           "directLow": null
         }
       }
@@ -221,11 +221,11 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 38,
-          "mid": 46.31,
-          "high": 472.1,
-          "market": 42.51,
-          "directLow": 47.11
+          "low": 38.31,
+          "mid": 46.08,
+          "high": 999,
+          "market": 42.04,
+          "directLow": 46.62
         }
       }
     },
@@ -272,14 +272,14 @@
           "low": 0.01,
           "mid": 0.17,
           "high": 4321,
-          "market": 0.14,
+          "market": 0.15,
           "directLow": 0.01
         },
         "reverseHolofoil": {
           "low": 0.01,
           "mid": 0.2,
-          "high": 19.98,
-          "market": 0.18,
+          "high": 999,
+          "market": 0.19,
           "directLow": 0.1
         }
       }

@@ -22,12 +22,12 @@
           "low": 0.01,
           "mid": 0.15,
           "high": 20,
-          "market": 0.09,
-          "directLow": 0.01
+          "market": 0.1,
+          "directLow": null
         },
         "reverseHolofoil": {
           "low": 0.05,
-          "mid": 0.23,
+          "mid": 0.22,
           "high": 19.98,
           "market": 0.17,
           "directLow": null
@@ -85,7 +85,7 @@
           "mid": 0.22,
           "high": 19.98,
           "market": 0.18,
-          "directLow": 0.11
+          "directLow": null
         }
       }
     },
@@ -129,11 +129,11 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 5,
-          "mid": 7.53,
+          "low": 5.48,
+          "mid": 7.51,
           "high": 96.95,
-          "market": 6.86,
-          "directLow": 7.05
+          "market": 6.78,
+          "directLow": 7.12
         }
       }
     },
@@ -181,10 +181,10 @@
           "mid": 0.15,
           "high": 20,
           "market": 0.11,
-          "directLow": 0.01
+          "directLow": 0.03
         },
         "reverseHolofoil": {
-          "low": 0.02,
+          "low": 0.03,
           "mid": 0.2,
           "high": 40,
           "market": 0.11,
@@ -234,7 +234,7 @@
         "normal": {
           "low": 0.01,
           "mid": 0.15,
-          "high": 19.98,
+          "high": 1000,
           "market": 0.03,
           "directLow": 0.01
         },
@@ -288,7 +288,7 @@
       "prices": {
         "holofoil": {
           "low": 1.49,
-          "mid": 2.41,
+          "mid": 2.4,
           "high": 400,
           "market": 2.33,
           "directLow": 3.49
@@ -338,14 +338,14 @@
           "low": 0.01,
           "mid": 0.15,
           "high": 999,
-          "market": 0.06,
-          "directLow": 0.01
+          "market": 0.05,
+          "directLow": 0.02
         },
         "reverseHolofoil": {
           "low": 0.03,
           "mid": 0.23,
           "high": 999,
-          "market": 0.23,
+          "market": 0.22,
           "directLow": 0.1
         }
       }

@@ -1,5 +1,53 @@
 [
   {
+    "id": "svp-6",
+    "name": "Pawmot",
+    "images": {
+      "small": "https://images.pokemontcg.io/svp/6.png",
+      "large": "https://images.pokemontcg.io/svp/6_hires.png"
+    },
+    "set": {
+      "name": "Scarlet & Violet Black Star Promos",
+      "series": "Scarlet & Violet",
+      "releaseDate": "2023/01/01"
+    },
+    "number": "6",
+    "rarity": "Promo",
+    "subtypes": [
+      "Stage 2"
+    ],
+    "tcgplayer": {
+      "prices": {
+        "holofoil": {
+          "low": 0.99,
+          "mid": 2.5,
+          "high": 46.6,
+          "market": 2.41,
+          "directLow": 0.99
+        }
+      }
+    },
+    "cardmarket": {
+      "prices": {
+        "averageSellPrice": 2.74,
+        "lowPrice": 1.5,
+        "trendPrice": 3.49,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 1.59,
+        "avg1": 3.94,
+        "avg7": 2.63,
+        "avg30": 2.85,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
+      }
+    }
+  },
+  {
     "id": "sv1-76",
     "name": "Pawmot",
     "images": {
@@ -26,10 +74,10 @@
           "directLow": 0.22
         },
         "holofoil": {
-          "low": 0.01,
+          "low": 0.02,
           "mid": 0.2,
           "high": 8.4,
-          "market": 0.18,
+          "market": 0.19,
           "directLow": 0.02
         }
       }
@@ -55,6 +103,109 @@
     }
   },
   {
+    "id": "sv1-209",
+    "name": "Pawmot",
+    "images": {
+      "small": "https://images.pokemontcg.io/sv1/209.png",
+      "large": "https://images.pokemontcg.io/sv1/209_hires.png"
+    },
+    "set": {
+      "name": "Scarlet & Violet",
+      "series": "Scarlet & Violet",
+      "releaseDate": "2023/03/31"
+    },
+    "number": "209",
+    "rarity": "Illustration Rare",
+    "subtypes": [
+      "Stage 2"
+    ],
+    "tcgplayer": {
+      "prices": {
+        "holofoil": {
+          "low": 9,
+          "mid": 12,
+          "high": 225.4,
+          "market": 11.94,
+          "directLow": 12.49
+        }
+      }
+    },
+    "cardmarket": {
+      "prices": {
+        "averageSellPrice": 5.43,
+        "lowPrice": 1.19,
+        "trendPrice": 5.22,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0,
+        "reverseHoloLow": 0,
+        "reverseHoloTrend": 0,
+        "lowPriceExPlus": 2,
+        "avg1": 5.3,
+        "avg7": 4.85,
+        "avg30": 5.14,
+        "reverseHoloAvg1": 0,
+        "reverseHoloAvg7": 0,
+        "reverseHoloAvg30": 0
+      }
+    }
+  },
+  {
+    "id": "sv2-76",
+    "name": "Pawmot",
+    "images": {
+      "small": "https://images.pokemontcg.io/sv2/76.png",
+      "large": "https://images.pokemontcg.io/sv2/76_hires.png"
+    },
+    "set": {
+      "name": "Paldea Evolved",
+      "series": "Scarlet & Violet",
+      "releaseDate": "2023/06/09"
+    },
+    "number": "76",
+    "rarity": "Rare",
+    "subtypes": [
+      "Stage 2"
+    ],
+    "tcgplayer": {
+      "prices": {
+        "holofoil": {
+          "low": 0.01,
+          "mid": 0.2,
+          "high": 17,
+          "market": 0.1,
+          "directLow": 0.09
+        },
+        "reverseHolofoil": {
+          "low": 0.05,
+          "mid": 0.25,
+          "high": 19.98,
+          "market": 0.24,
+          "directLow": 0.19
+        }
+      }
+    },
+    "cardmarket": {
+      "prices": {
+        "averageSellPrice": 0.06,
+        "lowPrice": 0.02,
+        "trendPrice": 0.1,
+        "germanProLow": 0,
+        "suggestedPrice": 0,
+        "reverseHoloSell": 0.15,
+        "reverseHoloLow": 0.02,
+        "reverseHoloTrend": 0.25,
+        "lowPriceExPlus": 0.02,
+        "avg1": 0.06,
+        "avg7": 0.1,
+        "avg30": 0.09,
+        "reverseHoloAvg1": 0.1,
+        "reverseHoloAvg7": 0.23,
+        "reverseHoloAvg30": 0.17
+      }
+    }
+  },
+  {
     "id": "sv3-73",
     "name": "Pawmot ex",
     "images": {
@@ -76,9 +227,9 @@
       "prices": {
         "holofoil": {
           "low": 0.35,
-          "mid": 0.97,
+          "mid": 0.98,
           "high": 50,
-          "market": 0.9,
+          "market": 0.87,
           "directLow": 0.99
         }
       }
@@ -127,7 +278,7 @@
           "mid": 4,
           "high": 78.2,
           "market": 3.87,
-          "directLow": 4.44
+          "directLow": 4.66
         }
       }
     },
@@ -172,16 +323,16 @@
       "prices": {
         "reverseHolofoil": {
           "low": 0.01,
-          "mid": 0.23,
+          "mid": 0.22,
           "high": 999,
-          "market": 0.22,
-          "directLow": 0.12
+          "market": 0.21,
+          "directLow": 0.1
         },
         "holofoil": {
           "low": 0.01,
-          "mid": 0.18,
+          "mid": 0.19,
           "high": 999,
-          "market": 0.19,
+          "market": 0.18,
           "directLow": 0.01
         }
       }

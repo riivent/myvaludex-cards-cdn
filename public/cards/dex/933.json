@@ -21,7 +21,7 @@
         "normal": {
           "low": 0.01,
           "mid": 0.15,
-          "high": 20,
+          "high": 9999.99,
           "market": 0.12,
           "directLow": 0.01
         },
@@ -84,7 +84,7 @@
           "low": 0.03,
           "mid": 0.2,
           "high": 19.98,
-          "market": 0.14,
+          "market": 0.15,
           "directLow": null
         }
       }
@@ -180,7 +180,7 @@
           "low": 0.01,
           "mid": 0.27,
           "high": 999,
-          "market": 0.31,
+          "market": 0.3,
           "directLow": 0.25
         },
         "normal": {
@@ -188,7 +188,7 @@
           "mid": 0.17,
           "high": 999,
           "market": 0.13,
-          "directLow": 0.03
+          "directLow": 0.1
         }
       }
     }

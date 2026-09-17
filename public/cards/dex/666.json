@@ -20,10 +20,10 @@
       "prices": {
         "holofoil": {
           "low": 0.8,
-          "mid": 2.28,
-          "high": 29.84,
+          "mid": 2.05,
+          "high": 29.82,
           "market": 3.18,
-          "directLow": 13.6
+          "directLow": 14.28
         }
       }
     },
@@ -75,7 +75,7 @@
         },
         "reverseHolofoil": {
           "low": 9.99,
-          "mid": 14.34,
+          "mid": 14.46,
           "high": 109.9,
           "market": 9.38,
           "directLow": null
@@ -125,15 +125,15 @@
           "low": 0.25,
           "mid": 0.65,
           "high": 16.5,
-          "market": 0.65,
+          "market": 0.66,
           "directLow": 0.98
         },
         "reverseHolofoil": {
           "low": 0.33,
-          "mid": 0.94,
+          "mid": 0.95,
           "high": 19.98,
-          "market": 0.94,
-          "directLow": 1.08
+          "market": 0.93,
+          "directLow": 1.07
         }
       }
     },
@@ -180,13 +180,13 @@
           "low": 0.18,
           "mid": 0.32,
           "high": 19.98,
-          "market": 0.3,
+          "market": 0.29,
           "directLow": null
         },
         "reverseHolofoil": {
           "low": 0.35,
           "mid": 0.66,
-          "high": 13,
+          "high": 1.25,
           "market": 0.64,
           "directLow": 0.62
         }
@@ -233,16 +233,16 @@
       "prices": {
         "normal": {
           "low": 0.01,
-          "mid": 0.21,
-          "high": 15.24,
+          "mid": 0.22,
+          "high": 15.22,
           "market": 0.18,
           "directLow": 0.09
         },
         "reverseHolofoil": {
           "low": 0.05,
           "mid": 0.35,
-          "high": 16.34,
-          "market": 0.34,
+          "high": 16.32,
+          "market": 0.32,
           "directLow": 0.28
         }
       }
@@ -343,7 +343,7 @@
       "prices": {
         "reverseHolofoil": {
           "low": 0.09,
-          "mid": 0.28,
+          "mid": 0.27,
           "high": 19.98,
           "market": 0.27,
           "directLow": 0.25
@@ -352,7 +352,7 @@
           "low": 0.01,
           "mid": 0.17,
           "high": 19.46,
-          "market": 0.17,
+          "market": 0.16,
           "directLow": 0.01
         }
       }
@@ -398,9 +398,9 @@
       "prices": {
         "holofoil": {
           "low": 3.5,
-          "mid": 6.04,
+          "mid": 6,
           "high": 126.4,
-          "market": 5.5,
+          "market": 5.52,
           "directLow": 6.98
         }
       }
@@ -439,6 +439,25 @@
     },
     "number": "9",
     "rarity": "Uncommon",
+    "subtypes": [
+      "Stage 2"
+    ],
+    "tcgplayer": {}
+  },
+  {
+    "id": "me55-8",
+    "name": "Vivillon",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me55-8/small",
+      "large": "https://images.scrydex.com/pokemon/me55-8/large"
+    },
+    "set": {
+      "name": "30th Celebration",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/09/16"
+    },
+    "number": "8",
+    "rarity": "Common",
     "subtypes": [
       "Stage 2"
     ],

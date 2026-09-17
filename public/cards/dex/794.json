@@ -21,7 +21,7 @@
       "prices": {
         "holofoil": {
           "low": 4.25,
-          "mid": 7.61,
+          "mid": 7.71,
           "high": 43,
           "market": 6.64,
           "directLow": 9.99
@@ -71,7 +71,7 @@
       "prices": {
         "holofoil": {
           "low": 4.75,
-          "mid": 8.71,
+          "mid": 8.43,
           "high": 96.84,
           "market": 7.21,
           "directLow": 8.39
@@ -121,7 +121,7 @@
       "prices": {
         "holofoil": {
           "low": 1.73,
-          "mid": 4.99,
+          "mid": 5,
           "high": 96.95,
           "market": 5.12,
           "directLow": 90.47
@@ -171,10 +171,10 @@
       "prices": {
         "holofoil": {
           "low": 5.96,
-          "mid": 8.18,
+          "mid": 8.22,
           "high": 50,
-          "market": 8.09,
-          "directLow": 10.41
+          "market": 8.17,
+          "directLow": 12.08
         }
       }
     },
@@ -221,7 +221,7 @@
       "prices": {
         "holofoil": {
           "low": 10.6,
-          "mid": 16.35,
+          "mid": 16.36,
           "high": 212.4,
           "market": 16.01,
           "directLow": 212.4
@@ -269,17 +269,17 @@
     "tcgplayer": {
       "prices": {
         "normal": {
-          "low": 1.95,
+          "low": 1.94,
           "mid": 2.79,
-          "high": 5.99,
-          "market": 2.85,
-          "directLow": 4.66
+          "high": 6.99,
+          "market": 2.94,
+          "directLow": 4.67
         },
         "reverseHolofoil": {
           "low": 1.75,
-          "mid": 2.85,
+          "mid": 2.84,
           "high": 9.99,
-          "market": 2.64,
+          "market": 2.59,
           "directLow": 3.82
         }
       }
@@ -327,9 +327,9 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 10,
-          "mid": 14.03,
-          "high": 193.3,
+          "low": 9,
+          "mid": 14.05,
+          "high": 96.95,
           "market": 14.07,
           "directLow": 15.28
         }
@@ -379,10 +379,10 @@
       "prices": {
         "holofoil": {
           "low": 20.25,
-          "mid": 26.98,
+          "mid": 27.41,
           "high": 249.99,
           "market": 23.56,
-          "directLow": 217.21
+          "directLow": 33
         }
       }
     },
@@ -581,9 +581,9 @@
         "holofoil": {
           "low": 10.7,
           "mid": 14,
-          "high": 167.6,
-          "market": 12.18,
-          "directLow": 13.25
+          "high": 167.59,
+          "market": 12.36,
+          "directLow": 15.22
         }
       }
     },
@@ -629,14 +629,14 @@
       "prices": {
         "holofoil": {
           "low": 2,
-          "mid": 2.97,
+          "mid": 2.99,
           "high": 96.95,
           "market": 2.88,
-          "directLow": 48.96
+          "directLow": 4.97
         },
         "reverseHolofoil": {
           "low": 2.81,
-          "mid": 5.19,
+          "mid": 5.15,
           "high": 125.4,
           "market": 4.08,
           "directLow": 5.97
@@ -662,5 +662,24 @@
         "reverseHoloAvg30": 1.91
       }
     }
+  },
+  {
+    "id": "me55c-57",
+    "name": "Buzzwole-GX",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me55c-57/small",
+      "large": "https://images.scrydex.com/pokemon/me55c-57/large"
+    },
+    "set": {
+      "name": "30th Celebration: Classic Collection",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/09/16"
+    },
+    "number": "57",
+    "rarity": "Rare Holo GX",
+    "subtypes": [
+      "Basic",
+      "GX"
+    ]
   }
 ]

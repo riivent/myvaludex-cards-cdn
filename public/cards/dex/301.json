@@ -75,8 +75,8 @@
       "prices": {
         "normal": {
           "low": 0.5,
-          "mid": 1.6,
-          "high": 15.9,
+          "mid": 1.61,
+          "high": 15.88,
           "market": 1.63,
           "directLow": 3.49
         },
@@ -129,7 +129,7 @@
     "tcgplayer": {
       "prices": {
         "normal": {
-          "low": 1.15,
+          "low": 1.2,
           "mid": 1.54,
           "high": 43,
           "market": 2.27,
@@ -201,8 +201,8 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 14.53,
-          "mid": 29.95,
+          "low": 11.19,
+          "mid": 28.48,
           "high": 359.5,
           "market": 14.53,
           "directLow": 37.97
@@ -257,8 +257,8 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 64.76,
-          "mid": 86.79,
+          "low": 64.5,
+          "mid": 85.74,
           "high": 709.7,
           "market": 82.66,
           "directLow": null
@@ -361,13 +361,13 @@
       "prices": {
         "normal": {
           "low": 1,
-          "mid": 1.62,
+          "mid": 1.63,
           "high": 31.1,
           "market": 1.62,
           "directLow": null
         },
         "reverseHolofoil": {
-          "low": 4.1,
+          "low": 4.07,
           "mid": 10.49,
           "high": 89.8,
           "market": 3.98,
@@ -478,7 +478,7 @@
         },
         "reverseHolofoil": {
           "low": 0.48,
-          "mid": 1.34,
+          "mid": 1.22,
           "high": 19.98,
           "market": 1.18,
           "directLow": null
@@ -526,14 +526,14 @@
       "prices": {
         "normal": {
           "low": 0.1,
-          "mid": 0.35,
+          "mid": 0.34,
           "high": 19.98,
           "market": 0.48,
           "directLow": null
         },
         "reverseHolofoil": {
           "low": 0.61,
-          "mid": 1.19,
+          "mid": 1.28,
           "high": 23.49,
           "market": 1.2,
           "directLow": null
@@ -588,9 +588,9 @@
         },
         "reverseHolofoil": {
           "low": 0.44,
-          "mid": 0.96,
+          "mid": 0.92,
           "high": 19.98,
-          "market": 0.9,
+          "market": 0.88,
           "directLow": 1
         }
       }
@@ -636,9 +636,9 @@
       "prices": {
         "holofoil": {
           "low": 6.99,
-          "mid": 11.8,
+          "mid": 12.85,
           "high": 95.51,
-          "market": 8.5,
+          "market": 8.48,
           "directLow": 17.07
         }
       }
@@ -684,14 +684,14 @@
       "prices": {
         "holofoil": {
           "low": 0.56,
-          "mid": 1.55,
+          "mid": 1.59,
           "high": 19.98,
           "market": 1.6,
           "directLow": null
         },
         "reverseHolofoil": {
           "low": 1.07,
-          "mid": 2.28,
+          "mid": 2.12,
           "high": 19.98,
           "market": 1.34,
           "directLow": null
@@ -741,15 +741,15 @@
           "low": 0.25,
           "mid": 0.82,
           "high": 19.98,
-          "market": 0.82,
-          "directLow": 0.82
+          "market": 0.81,
+          "directLow": null
         },
         "normal": {
           "low": 0.1,
           "mid": 0.5,
           "high": 10.4,
-          "market": 0.51,
-          "directLow": 0.51
+          "market": 0.52,
+          "directLow": 0.52
         }
       }
     },
@@ -795,14 +795,14 @@
         "normal": {
           "low": 0.01,
           "mid": 0.21,
-          "high": 6,
+          "high": 3.6,
           "market": 0.2,
           "directLow": 0.01
         },
         "reverseHolofoil": {
           "low": 0.11,
-          "mid": 0.4,
-          "high": 11,
+          "mid": 0.39,
+          "high": 7.6,
           "market": 0.39,
           "directLow": 0.28
         }
@@ -852,7 +852,7 @@
           "mid": 0.32,
           "high": 19.98,
           "market": 0.32,
-          "directLow": 0.14
+          "directLow": 0.24
         },
         "normal": {
           "low": 0.01,
@@ -897,6 +897,25 @@
     },
     "number": "166",
     "rarity": "Uncommon",
+    "subtypes": [
+      "Stage 1"
+    ],
+    "tcgplayer": {}
+  },
+  {
+    "id": "me55c-5",
+    "name": "Delcatty",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me55c-5/small",
+      "large": "https://images.scrydex.com/pokemon/me55c-5/large"
+    },
+    "set": {
+      "name": "30th Celebration: Classic Collection",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/09/16"
+    },
+    "number": "5",
+    "rarity": "Rare Holo",
     "subtypes": [
       "Stage 1"
     ],

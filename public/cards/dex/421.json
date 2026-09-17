@@ -20,15 +20,15 @@
       "prices": {
         "normal": {
           "low": 0.3,
-          "mid": 0.99,
+          "mid": 0.97,
           "high": 19.98,
           "market": 1.13,
           "directLow": null
         },
         "reverseHolofoil": {
           "low": 4.5,
-          "mid": 5.51,
-          "high": 39.59,
+          "mid": 6.85,
+          "high": 37.1,
           "market": 5.51,
           "directLow": null
         }
@@ -75,14 +75,14 @@
       "prices": {
         "normal": {
           "low": 3,
-          "mid": 39.9,
+          "mid": 69.7,
           "high": 101.99,
           "market": 12.98,
           "directLow": null
         },
         "reverseHolofoil": {
           "low": 4,
-          "mid": 6.6,
+          "mid": 7.45,
           "high": 1299.9,
           "market": 10.26,
           "directLow": null
@@ -130,7 +130,7 @@
       "prices": {
         "normal": {
           "low": 1.5,
-          "mid": 3.1,
+          "mid": 3.2,
           "high": 41.7,
           "market": 3.83,
           "directLow": null
@@ -240,7 +240,7 @@
       "prices": {
         "normal": {
           "low": 5.65,
-          "mid": 6.97,
+          "mid": 6.99,
           "high": 100,
           "market": 7.67,
           "directLow": null
@@ -342,8 +342,8 @@
       "prices": {
         "normal": {
           "low": 0.29,
-          "mid": 0.7,
-          "high": 20.4,
+          "mid": 0.72,
+          "high": 18.08,
           "market": 0.73,
           "directLow": null
         },
@@ -403,8 +403,8 @@
           "directLow": null
         },
         "reverseHolofoil": {
-          "low": 2.22,
-          "mid": 3.4,
+          "low": 2.69,
+          "mid": 3.88,
           "high": 41.6,
           "market": 3.03,
           "directLow": null
@@ -452,7 +452,7 @@
       "prices": {
         "reverseHolofoil": {
           "low": 0.41,
-          "mid": 0.74,
+          "mid": 0.72,
           "high": 19.98,
           "market": 0.69,
           "directLow": null
@@ -555,7 +555,7 @@
       "prices": {
         "holofoil": {
           "low": 0.44,
-          "mid": 1.02,
+          "mid": 1.06,
           "high": 22.8,
           "market": 1.06,
           "directLow": 1.12
@@ -588,5 +588,24 @@
         "reverseHoloAvg30": 1
       }
     }
+  },
+  {
+    "id": "me55-7",
+    "name": "Cherrim",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me55-7/small",
+      "large": "https://images.scrydex.com/pokemon/me55-7/large"
+    },
+    "set": {
+      "name": "30th Celebration",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/09/16"
+    },
+    "number": "7",
+    "rarity": "Common",
+    "subtypes": [
+      "Stage 1"
+    ],
+    "tcgplayer": {}
   }
 ]

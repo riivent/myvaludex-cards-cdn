@@ -69,7 +69,7 @@
       "prices": {
         "holofoil": {
           "low": 3.25,
-          "mid": 4.7,
+          "mid": 4.94,
           "high": 64.78,
           "market": 8.79,
           "directLow": null
@@ -118,10 +118,10 @@
       "prices": {
         "holofoil": {
           "low": 9.79,
-          "mid": 15.64,
+          "mid": 15.68,
           "high": 138.98,
           "market": 15.63,
-          "directLow": 15.28
+          "directLow": 16.94
         }
       }
     },
@@ -221,7 +221,7 @@
         },
         "reverseHolofoil": {
           "low": 1.48,
-          "mid": 2.38,
+          "mid": 2.34,
           "high": 29.6,
           "market": 2.1,
           "directLow": null
@@ -270,9 +270,9 @@
       "prices": {
         "holofoil": {
           "low": 7.04,
-          "mid": 16.26,
+          "mid": 16.19,
           "high": 245.12,
-          "market": 16.27,
+          "market": 16.38,
           "directLow": 245.12
         }
       }
@@ -318,9 +318,9 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 69.13,
-          "mid": 124.95,
-          "high": 876.62,
+          "low": 55,
+          "mid": 122.93,
+          "high": 876.6,
           "market": 113.46,
           "directLow": 74.99
         }
@@ -374,7 +374,7 @@
         },
         "reverseHolofoil": {
           "low": 1.76,
-          "mid": 2.89,
+          "mid": 3,
           "high": 30.3,
           "market": 2.78,
           "directLow": null
@@ -422,7 +422,7 @@
       "prices": {
         "holofoil": {
           "low": 0.25,
-          "mid": 0.92,
+          "mid": 0.91,
           "high": 35,
           "market": 0.84,
           "directLow": null
@@ -432,7 +432,7 @@
           "mid": 1.59,
           "high": 97,
           "market": 1.73,
-          "directLow": 14.99
+          "directLow": 14.98
         }
       }
     },
@@ -480,7 +480,7 @@
           "mid": 7.35,
           "high": 12.87,
           "market": 7.42,
-          "directLow": null
+          "directLow": 7.25
         }
       }
     },
@@ -532,9 +532,9 @@
         },
         "reverseHolofoil": {
           "low": 0.83,
-          "mid": 1.78,
+          "mid": 1.76,
           "high": 4968.31,
-          "market": 1.73,
+          "market": 1.69,
           "directLow": 2.97
         }
       }
@@ -581,9 +581,9 @@
       "prices": {
         "holofoil": {
           "low": 9,
-          "mid": 12.17,
-          "high": 4317.25,
-          "market": 12.23,
+          "mid": 12.2,
+          "high": 4317.23,
+          "market": 12.29,
           "directLow": 11.56
         }
       }
@@ -629,8 +629,8 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 37.94,
-          "mid": 50.5,
+          "low": 30.57,
+          "mid": 50,
           "high": 259.38,
           "market": 31.36,
           "directLow": null
@@ -727,11 +727,11 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 3.75,
-          "mid": 5.67,
-          "high": 96.95,
-          "market": 5.56,
-          "directLow": 4.83
+          "low": 4,
+          "mid": 5.75,
+          "high": 99999.99,
+          "market": 5.49,
+          "directLow": 6.54
         }
       }
     },
@@ -782,7 +782,7 @@
           "directLow": 0.44
         },
         "holofoil": {
-          "low": 0.1,
+          "low": 0.09,
           "mid": 0.4,
           "high": 999.99,
           "market": 0.38,
@@ -830,10 +830,10 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 0.05,
+          "low": 0.04,
           "mid": 0.3,
           "high": 35,
-          "market": 0.29,
+          "market": 0.31,
           "directLow": 0.19
         }
       }
@@ -880,7 +880,7 @@
       "prices": {
         "holofoil": {
           "low": 3.12,
-          "mid": 5,
+          "mid": 5.01,
           "high": 500,
           "market": 4.83,
           "directLow": 96.86
@@ -909,8 +909,8 @@
     "tcgplayer": {
       "prices": {
         "holofoil": {
-          "low": 0.39,
-          "mid": 0.84,
+          "low": 0.1,
+          "mid": 0.83,
           "high": 19.98,
           "market": 0.74,
           "directLow": 0.7
@@ -1013,9 +1013,9 @@
       "prices": {
         "holofoil": {
           "low": 0.01,
-          "mid": 0.2,
+          "mid": 0.21,
           "high": 999,
-          "market": 0.23,
+          "market": 0.2,
           "directLow": 0.1
         },
         "reverseHolofoil": {
@@ -1061,6 +1061,25 @@
     },
     "number": "91",
     "rarity": "Illustration Rare",
+    "subtypes": [
+      "Basic"
+    ],
+    "tcgplayer": {}
+  },
+  {
+    "id": "me55-76",
+    "name": "Xerneas",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me55-76/small",
+      "large": "https://images.scrydex.com/pokemon/me55-76/large"
+    },
+    "set": {
+      "name": "30th Celebration",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/09/16"
+    },
+    "number": "76",
+    "rarity": "Rare",
     "subtypes": [
       "Basic"
     ],

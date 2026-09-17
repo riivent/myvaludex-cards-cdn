@@ -21,9 +21,9 @@
       "prices": {
         "holofoil": {
           "low": 2.5,
-          "mid": 4.24,
+          "mid": 4.27,
           "high": 9999,
-          "market": 5.12,
+          "market": 5.09,
           "directLow": null
         }
       }
@@ -73,7 +73,7 @@
           "mid": 4.25,
           "high": 96.46,
           "market": 4.79,
-          "directLow": 4.05
+          "directLow": 3.15
         }
       }
     },
@@ -119,9 +119,9 @@
       "prices": {
         "holofoil": {
           "low": 4.01,
-          "mid": 7.1,
+          "mid": 7.23,
           "high": 96.95,
-          "market": 7.27,
+          "market": 7.15,
           "directLow": 7
         }
       }
@@ -168,7 +168,7 @@
       "prices": {
         "holofoil": {
           "low": 12,
-          "mid": 17.78,
+          "mid": 17.81,
           "high": 197.6,
           "market": 17.54,
           "directLow": null
@@ -274,11 +274,11 @@
           "mid": 1.09,
           "high": 2.84,
           "market": 1.2,
-          "directLow": null
+          "directLow": 1
         },
         "reverseHolofoil": {
           "low": 1.15,
-          "mid": 2.68,
+          "mid": 2.84,
           "high": 26.1,
           "market": 2.03,
           "directLow": null
@@ -328,14 +328,14 @@
           "low": 1.2,
           "mid": 1.88,
           "high": 3,
-          "market": 1.81,
+          "market": 1.83,
           "directLow": null
         },
         "holofoil": {
           "low": 0.75,
-          "mid": 2.19,
+          "mid": 2.04,
           "high": 57,
-          "market": 2.75,
+          "market": 2.79,
           "directLow": 16.32
         }
       }
@@ -359,5 +359,43 @@
         "reverseHoloAvg30": 1.53
       }
     }
+  },
+  {
+    "id": "me55-112",
+    "name": "Kommo-o",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me55-112/small",
+      "large": "https://images.scrydex.com/pokemon/me55-112/large"
+    },
+    "set": {
+      "name": "30th Celebration",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/09/16"
+    },
+    "number": "112",
+    "rarity": "Common",
+    "subtypes": [
+      "Stage 2"
+    ],
+    "tcgplayer": {}
+  },
+  {
+    "id": "me55-143",
+    "name": "Kommo-o",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me55-143/small",
+      "large": "https://images.scrydex.com/pokemon/me55-143/large"
+    },
+    "set": {
+      "name": "30th Celebration",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/09/16"
+    },
+    "number": "143",
+    "rarity": "Illustration Rare",
+    "subtypes": [
+      "Stage 2"
+    ],
+    "tcgplayer": {}
   }
 ]

@@ -23,7 +23,7 @@
           "mid": 6.5,
           "high": 1000,
           "market": 5.3,
-          "directLow": null
+          "directLow": 5.3
         }
       }
     },
@@ -68,10 +68,10 @@
       "prices": {
         "holofoil": {
           "low": 3,
-          "mid": 5.16,
+          "mid": 5,
           "high": 9999,
-          "market": 4.94,
-          "directLow": 5.47
+          "market": 4.97,
+          "directLow": 5.96
         }
       }
     },
@@ -118,15 +118,15 @@
           "low": 0.02,
           "mid": 0.21,
           "high": 19.9,
-          "market": 0.18,
+          "market": 0.21,
           "directLow": null
         },
         "normal": {
           "low": 0.01,
           "mid": 0.18,
           "high": 20,
-          "market": 0.09,
-          "directLow": 0.05
+          "market": 0.11,
+          "directLow": 0.03
         }
       }
     },
@@ -179,7 +179,7 @@
         "reverseHolofoil": {
           "low": 0.1,
           "mid": 0.28,
-          "high": 8,
+          "high": 2,
           "market": 0.28,
           "directLow": null
         }
@@ -226,16 +226,16 @@
       "prices": {
         "reverseHolofoil": {
           "low": 0.03,
-          "mid": 0.32,
+          "mid": 0.31,
           "high": 19.98,
-          "market": 0.32,
+          "market": 0.3,
           "directLow": 0.15
         },
         "normal": {
           "low": 0.01,
           "mid": 0.2,
           "high": 19.98,
-          "market": 0.17,
+          "market": 0.16,
           "directLow": 0.01
         }
       }
@@ -281,10 +281,10 @@
       "prices": {
         "holofoil": {
           "low": 42.99,
-          "mid": 53.66,
+          "mid": 53.98,
           "high": 225,
-          "market": 51.51,
-          "directLow": 49.99
+          "market": 50.51,
+          "directLow": 49.98
         }
       }
     },
@@ -337,8 +337,8 @@
         "reverseHolofoil": {
           "low": 0.04,
           "mid": 0.25,
-          "high": 6,
-          "market": 0.22,
+          "high": 4.2,
+          "market": 0.21,
           "directLow": 0.1
         }
       }
@@ -391,7 +391,7 @@
         },
         "reverseHolofoil": {
           "low": 0.03,
-          "mid": 0.23,
+          "mid": 0.22,
           "high": 19.98,
           "market": 0.18,
           "directLow": 0.14
@@ -417,5 +417,45 @@
         "reverseHoloAvg30": 1.71
       }
     }
+  },
+  {
+    "id": "me55-15",
+    "name": "Fuecoco ex",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me55-15/small",
+      "large": "https://images.scrydex.com/pokemon/me55-15/large"
+    },
+    "set": {
+      "name": "30th Celebration",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/09/16"
+    },
+    "number": "15",
+    "rarity": "Double Rare",
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "tcgplayer": {}
+  },
+  {
+    "id": "me55-147",
+    "name": "Fuecoco ex",
+    "images": {
+      "small": "https://images.scrydex.com/pokemon/me55-147/small",
+      "large": "https://images.scrydex.com/pokemon/me55-147/large"
+    },
+    "set": {
+      "name": "30th Celebration",
+      "series": "Mega Evolution",
+      "releaseDate": "2026/09/16"
+    },
+    "number": "147",
+    "rarity": "Special Illustration Rare",
+    "subtypes": [
+      "Basic",
+      "ex"
+    ],
+    "tcgplayer": {}
   }
 ]
